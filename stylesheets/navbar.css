@@ -1,0 +1,61 @@
+/**
+* NAVBAR STYLINGS
+**/
+
+/* Stylings for unordered lists */
+.navbar ul {
+
+    /* Removes bullet points from navbar */
+    list-style-type: none;
+
+    /* Aligns navbar with edge of page */
+    padding: 0;
+}
+
+/* Stylings for links in unordered list items */
+.navbar li a {
+
+    /* Setting font of link text */
+    font: 15px helvetica, sans-serif;
+
+    /* Displays element as a block element */ 
+    display: block;
+
+    /* Space around element, first term is vertical, second term is horizontal */
+    padding: 14px 20px;
+
+    /* Removes the underline from the link text */
+    text-decoration: none;
+
+    /* Setting text colour to grey */
+    color: grey;
+}
+
+/* Stylings for unordered list item when active */
+.navbar li a.active {
+
+    /* Setting text colour to white */
+    color: green;
+}
+
+/* Stylings for unordered list item when not active and the mouse is hovering over */
+.navbar li a:hover:not(.active) {
+    
+    /* Setting text colour to black */
+    color: black;
+}
+
+/* Stylings for unordered list item that are part of the justify-left class*/
+.navbar li.justify-left {
+
+    /* Causes list items to align themselves horizontally */
+    float: left;
+}
+
+/* Stylings for unordered list items that are part of the justify-right class */
+.navbar li.justify-right {
+
+    /* Append the element to the right of the page */
+    float: right;
+}
+

@@ -1,0 +1,42 @@
+/**
+* TABLE STYLINGS
+**/
+
+/* Class that contains the table */
+.table-wrapper {
+
+	/* Adding padding so it loks good */
+	padding: 20px;
+}
+
+/* Stylings for element with table class */
+.table {
+
+	/* Setting width of element to size of page */
+	width: 100%;
+}
+
+/* For each of the following elements, we want a single black border around them */
+table, th, td {
+	border: 1px solid black;
+
+	/* Removes the default double border */
+	border-collapse: collapse;
+}
+
+/* Putting padding in cells */
+th, td {
+	padding: 15px;
+}
+
+/* th has a default of aligning to the middle, so aligning it left */
+th {
+	text-align: left;
+}
+
+/* Class that contains the image */
+.image-wrapper {
+
+	/* Aligning the element to the center of the page */
+	text-align: center;
+}
