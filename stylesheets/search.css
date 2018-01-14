@@ -17,16 +17,3 @@
     /* Moving element to absolute middle of page, vertically and horizontally */
     transform: translateX(-50%) translateY(-50%);
 }
-
-/* Large field stylings */
-.large-field {
-
-	/* Setting font size */
-	font-size: 15pt; 
-
-	/* Setting height of field */
-	height: 30px; 
-
-	/* Rounding the corners of the input fields */
-	border-radius: 4px;
-}

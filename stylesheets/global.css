@@ -104,10 +104,10 @@
 	font-size: 15pt; 
 
 	/* Setting height of field */
-	height: 40px; 
+	height: 30px; 
 
 	/* Rounding the corners */
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 /*
