@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
-		<link rel="stylesheet" type="text/css" href="stylesheets/footer.css">
-		<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/global.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/createObject.css">
 	</head>
 	<body>
 
@@ -35,11 +36,54 @@
 			</ul>
 		</div>
 
+		<br>
+		<br>
+
+		<h1 class = "specific-padding">
+			Create a New Object
+		</h1>
+		<div class = "horiz-div large-text">
+			<form>
+				<div class = "input-spacing">
+					<label>Name:
+						<input class = "large-field" type = "text" placeholder = "Name"></input>
+					</label>
+				</div>
+
+				<div class = "input-spacing">
+					<label>Description:</label>
+					<br>
+					<textarea placeholder = "Description"></textarea>
+				</div>
+				
+				<div class = "input-spacing">
+					<label>Latitude:</label>
+					<input class = "large-field" placeholder = "Latitude"></input>
+					
+					
+				</div>
+
+				<div class = "input-spacing">
+					<label>Longitude:</label>
+					<input class = "large-field" placeholder = "Longitude"></input>
+				</div>
+
+				<div class = "input-spacing">
+					<label>Select image to upload:</label>
+					<input type = "file">
+				</div>
+
+				<div class = "input-spacing">
+					<input class = "large-field" type = "submit" value = "Create"></input>
+				</div>
+			</form>
+		</div>
+
 		<!-- Footer -->
-		<div class = "footer">
+		<footer class = "footer">
 			<p> 
 				Made with 🥑 &nbsp;by Kevin Hardy-Cooper &copy; 2018
 			</p>
-		</div>
+		</footer>
 	</body>
 </html>

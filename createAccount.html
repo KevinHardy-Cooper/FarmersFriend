@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
-		<link rel="stylesheet" type="text/css" href="stylesheets/footer.css">
-		<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/global.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/createAccount.css">
 	</head>
 	<body>
 
@@ -35,11 +36,58 @@
 			</ul>
 		</div>
 
+		<br>
+		<br>
+
+		<h1 class = "specific-padding">
+			Create a New Account
+		</h1>
+
+		<div class = "horiz-div large-text">
+			<form>
+				
+				<div class = "input-spacing">
+					<label>Full Name:</label>
+						<input class = "large-field" type = "text" placeholder = "Full Name"></input>
+				</div>
+
+				<div class = "input-spacing">
+					<label>Email Address:</label>
+					<input class = "large-field" type = "email" placeholder = "johnny@appleseed.com"></input>
+				</div>
+				
+				<div class = "input-spacing">
+					<label>Create a password:</label>
+					<input class = "large-field" type = "password" placeholder = "Password"></input>
+				</div>
+
+				<div class = "input-spacing">
+					<label>Re-enter password:</label>
+					<input class = "large-field" type = "password" placeholder = "Password"></input>
+				</div>
+
+				<div class = "input-spacing">
+					<label>Date of birth:</label>
+					<input class = "large-field" type = "date">
+				</div>
+
+				<div class = "input-spacing">
+					<label>Are you a farmer?</label>
+					<input class = "large-field" type = "radio" name = "isFarmer" value = "yes"> Yes
+					<input class = "large-field" type = "radio" name = "isFarmer" value = "no"> No <br>
+				</div>
+
+				<div class = "input-spacing">
+					<input class = "large-field" type = "submit" value = "Create"></input>
+				</div>
+			</form>
+		</div>
+
 		<!-- Footer -->
-		<div class = "footer">
+		<footer class = "footer">
 			<p> 
 				Made with 🥑 &nbsp;by Kevin Hardy-Cooper &copy; 2018
 			</p>
-		</div>
+		</footer>
 	</body>
 </html>

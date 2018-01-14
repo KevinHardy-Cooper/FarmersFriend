@@ -1,0 +1,195 @@
+/*
+* === GLOBAL STYLINGS ===
+*/
+
+/*
+* --- NAVBAR ---
+*/
+
+/* Stylings for unordered lists */
+.navbar ul {
+
+    /* Removes bullet points from navbar */
+    list-style-type: none;
+
+    /* Aligns navbar with edge of page */
+    padding: 0;
+}
+
+/* Stylings for links in unordered list items */
+.navbar li a {
+
+    /* Setting font of link text */
+    font: 15px helvetica, sans-serif;
+
+    /* Displays element as a block element */ 
+    display: block;
+
+    /* Space around element, first term is vertical, second term is horizontal */
+    padding: 14px 20px;
+
+    /* Removes the underline from the link text */
+    text-decoration: none;
+
+    /* Setting text colour to grey */
+    color: grey;
+}
+
+/* Stylings for unordered list item when active */
+.navbar li a.active {
+
+    /* Setting text colour to white */
+    color: green;
+}
+
+/* Stylings for unordered list item when not active and the mouse is hovering over */
+.navbar li a:hover:not(.active) {
+    
+    /* Setting text colour to black */
+    color: black;
+}
+
+/* Stylings for unordered list item that are part of the justify-left class*/
+.navbar li.justify-left {
+
+    /* Causes list items to align themselves horizontally */
+    float: left;
+}
+
+/* Stylings for unordered list items that are part of the justify-right class */
+.navbar li.justify-right {
+
+    /* Append the element to the right of the page */
+    float: right;
+}
+
+
+/*
+* --- FOOTER ---
+*/
+
+.footer {
+
+    /* Setting text colour to grey */
+    color: grey;
+
+    /* Setting the position of the element */
+    position: fixed;
+
+    /* Justifying the element to the bottom of the page */
+    bottom: 0;
+
+    /* Setting the text in the element to be aligned in the middle of the page */
+    text-align: center;
+
+    /* Setting the width of the element to 100% of the page */
+    width: 100%;
+}
+
+/*
+* --- LARGE TEXT ---
+*/
+
+.large-text {
+    font: 15pt helvetica, sans-serif;
+}
+
+/*
+* --- LARGE FIELD ---
+*/
+
+.large-field {
+
+    /* Setting font size */
+	font-size: 15pt; 
+
+	/* Setting height of field */
+	height: 40px; 
+
+	/* Rounding the corners */
+	border-radius: 5px;
+}
+
+/*
+* --- HORIZONTAL ALIGNMENT ---
+*/
+
+.horiz-div {
+	/* Element is positioned relative to it's parent element*/
+	position: absolute;
+
+    /* Positioning element 50% of the page width from the left side of the page */
+    left: 50%;
+
+    /* Moving element to absolute middle of page, vertically and horizontally */
+    transform: translateX(-50%);
+}
+
+/*
+* -- IMAGE ALIGNMENT ---
+*/
+
+.image-wrapper {
+	text-align: center;
+}
+
+/*
+* --- INPOT SPACING ---
+*/
+
+.input-spacing {
+	padding-top: 20px;
+}
+
+/*
+* --- SPECIFIC PADDING ---
+*/
+.specific-padding {
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+
+/*
+* --- SCROLLABLE DIVS ---
+*/
+
+.scrollable-div {
+	/* Class that makes div scrollable in the y-direction if the content is greater than the div's height */
+	overflow-y: scroll;
+	height: 200px;
+}
+
+/**
+* --- TABLE-RELATED STYLINGS ---
+**/
+
+/* Stylings for element with table class */
+.table {
+
+	/* Setting width of element to size of page */
+	width: 100%;
+}
+
+/* For each of the following elements, we want a single black border around them */
+table, th, td {
+	border: 1px solid black;
+
+	/* Removes the default double border */
+	border-collapse: collapse;
+}
+
+/* Putting padding in cells */
+th, td {
+	padding: 10px;
+}
+
+/* th has a default of aligning to the middle, so aligning it left */
+th {
+	text-align: left;
+}
+
+/* Set width of table cell */
+.wide-td {
+	width: 30%;
+}
