@@ -181,7 +181,7 @@ table, th, td {
 
 /* Putting padding in cells */
 th, td {
-	padding: 10px;
+	padding: 5px;
 }
 
 /* th has a default of aligning to the middle, so aligning it left */
