@@ -2,6 +2,13 @@
 * === GLOBAL STYLINGS ===
 */
 
+/* 
+* --- WEBSITE FONT ---
+*/
+body {
+   font-family: helvetica, sans-serif;
+}
+
 /*
 * --- NAVBAR ---
 */
@@ -19,8 +26,8 @@
 /* Stylings for links in unordered list items */
 .navbar li a {
 
-    /* Setting font of link text */
-    font: 15px helvetica, sans-serif;
+    /* Setting font size of link text */
+    font: 15pt;
 
     /* Displays element as a block element */ 
     display: block;
@@ -91,7 +98,7 @@
 */
 
 .large-text {
-    font: 15pt helvetica, sans-serif;
+    font-size: 15pt;
 }
 
 /*
@@ -101,13 +108,13 @@
 .large-field {
 
     /* Setting font size */
-	font-size: 15pt; 
+	font-size: 15pt;
 
 	/* Setting height of field */
 	height: 30px; 
 
 	/* Rounding the corners */
-	border-radius: 3px;
+	border-radius: 5px;
 }
 
 /*
@@ -130,7 +137,7 @@
 */
 
 .image-wrapper {
-	text-align: center;
+    text-align: center;
 }
 
 /*
@@ -139,6 +146,15 @@
 
 .input-spacing {
 	padding-top: 20px;
+}
+
+/*
+* -- REQUIRED FIELDS * ---
+*/
+
+.required:after { 
+    color: red;
+    content: "*"; 
 }
 
 /*

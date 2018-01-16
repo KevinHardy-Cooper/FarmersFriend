@@ -1,6 +1,10 @@
-/**
-* SEARCH STYLINGS
-**/
+/*
+* === CREATE OBJECT PAGE SPECIFIC STYLINGS ===
+*/
+
+/*
+* --- SEARCH DIV ---
+*/
 
 /* All encompassing div for search elements */
 .search {
@@ -16,4 +20,44 @@
 
     /* Moving element to absolute middle of page, vertically and horizontally */
     transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+/*
+* --- BACKGROUND IMAGE ---
+*/
+
+body {
+	background-image: url("../assets/img/farmer_search.jpg");
+	background-repeat: no-repeat;
+	background-color: #f0f8ff;
+	background-size: cover;
+}
+
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* when on mobile, remove image, adjust font sizes, and padding */
+@media only screen and (max-width: 667px) {
+	body {
+		background-image: none;
+	}
+	h1 {
+		text-align: center;
+	}
+
+	.specific-padding {
+		padding: 0px;
+	}
+
+	.navbar li a:not(.active){
+		font-size: 8pt;
+		padding: 14px 5px;
+	}
+
+	.footer {
+		font-size: 8pt;
+	}
 }

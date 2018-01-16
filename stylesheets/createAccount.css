@@ -1,0 +1,66 @@
+/*
+* === CREATE ACCOUNT PAGE SPECIFIC STYLINGS ===
+*/
+
+/*
+* --- BACKGROUND IMAGE ---
+*/
+
+body {
+	background-color: #f0f8ff;
+}
+
+/*
+* --- NAVBAR ---
+*/
+
+.navbar li a{
+	color: navy;
+}
+
+/* Stylings for unordered list item when active */
+.navbar li a.active {
+    color: darkgreen;
+}
+
+/*
+* --- FOOTER ---
+*/
+
+.footer {
+	color: navy;
+}
+
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* when on mobile, remove image, adjust font sizes, and padding */
+@media only screen and (max-width: 667px) {
+	body {
+		background-image: none;
+	}
+	h1 {
+		text-align: center;
+	}
+
+	.specific-padding {
+		padding: 0px;
+	}
+
+	.navbar li a:not(.active){
+		font-size: 8pt;
+		padding: 14px 5px;
+	}
+
+	.footer {
+		font-size: 8pt;
+	}
+}
+
+/* When in landscape mode, attach footer to bottom of page instead of it's usual fixed position */
+@media only screen and (max-height: 600px) {
+	.footer {
+		position: relative;
+	}
+}

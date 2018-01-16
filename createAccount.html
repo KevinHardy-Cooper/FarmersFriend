@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
@@ -43,39 +44,40 @@
 			Create a New Account
 		</h1>
 
-		<div class = "horiz-div large-text">
+		<div class = "specific-padding large-text">
 			<form>
-				
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Full Name:</label>
-						<input class = "large-field" type = "text" placeholder = "Full Name"></input>
+					<input class = "large-field" type = "text" placeholder = "Full Name" required></input>
 				</div>
 
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Email Address:</label>
-					<input class = "large-field" type = "email" placeholder = "johnny@appleseed.com"></input>
+					<input class = "large-field" type = "email" placeholder = "user@farm.com" required></input>
 				</div>
 				
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Create a password:</label>
-					<input class = "large-field" type = "password" placeholder = "Password"></input>
+					<input class = "large-field" type = "password" placeholder = "Password" required></input>
 				</div>
 
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Re-enter password:</label>
-					<input class = "large-field" type = "password" placeholder = "Password"></input>
+					<input class = "large-field" type = "password" placeholder = "Password" required></input>
 				</div>
 
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Date of birth:</label>
-					<input class = "large-field" type = "date">
+					<input class = "large-field" type = "date" required>
 				</div>
 
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Are you a farmer?</label>
-					<input class = "large-field" type = "radio" name = "isFarmer" value = "yes"> Yes
-					<input class = "large-field" type = "radio" name = "isFarmer" value = "no"> No <br>
+					<input class = "large-field" type = "radio" name = "isFarmer" value = "yes" required> Yes
+					<input class = "large-field" type = "radio" name = "isFarmer" value = "no"> No
 				</div>
+
+				<br>
 
 				<div class = "input-spacing">
 					<input class = "large-field" type = "submit" value = "Create"></input>

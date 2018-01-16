@@ -1,0 +1,87 @@
+/*
+* === CREATE OBJECT PAGE SPECIFIC STYLINGS ===
+*/
+
+/*
+* --- BACKGROUND IMAGE ---
+*/
+
+body {
+	background-color: #f0f8ff;
+}
+
+/*
+* --- NAVBAR ---
+*/
+
+.navbar li a{
+	color: navy;
+}
+
+/* Stylings for unordered list item when active */
+.navbar li a.active {
+    color: darkgreen;
+}
+
+/*
+* --- FOOTER ---
+*/
+
+.footer {
+	color: navy;
+}
+
+/*
+* --- TEXTAREA ---
+*/
+
+/* Stylings inspired by https://www.w3schools.com/css/css_form.asp*/
+textarea {
+
+	/* Setting the dimensions of description box */
+    height: 150px;
+    width: 300px;
+
+    /* Set border specs */
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+
+    /* Disabling ability to resize textarea box */
+    resize: none;
+
+    font-size: 15pt;
+}
+
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* when on mobile, remove image, adjust font sizes, and padding */
+@media only screen and (max-width: 667px) {
+    body {
+        background-image: none;
+    }
+    h1 {
+        text-align: center;
+    }
+
+    .specific-padding {
+        padding: 0px;
+    }
+
+    .navbar li a:not(.active){
+        font-size: 8pt;
+        padding: 14px 5px;
+    }
+
+    .footer {
+        font-size: 8pt;
+    }
+}
+
+/* When in landscape mode, attach footer to bottom of page instead of it's usual fixed position */
+@media only screen and (max-height: 600px) {
+    .footer {
+        position: relative;
+    }
+}

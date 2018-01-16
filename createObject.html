@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
@@ -42,30 +43,28 @@
 		<h1 class = "specific-padding">
 			Create a New Object
 		</h1>
-		<div class = "horiz-div large-text">
+
+		<div class = "specific-padding large-text">
 			<form>
-				<div class = "input-spacing">
-					<label>Name:
-						<input class = "large-field" type = "text" placeholder = "Name"></input>
-					</label>
+				<div class = "input-spacing required">
+					<label>Name:</label>
+					<input class = "large-field" type = "text" placeholder = "Name" required></input>
 				</div>
 
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Description:</label>
 					<br>
-					<textarea placeholder = "Description"></textarea>
+					<textarea placeholder = "Description" required></textarea>
 				</div>
 				
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Latitude:</label>
-					<input class = "large-field" placeholder = "Latitude"></input>
-					
-					
+					<input class = "large-field" type = "number" placeholder = "Latitude" required></input>
 				</div>
 
-				<div class = "input-spacing">
+				<div class = "input-spacing required">
 					<label>Longitude:</label>
-					<input class = "large-field" placeholder = "Longitude"></input>
+					<input class = "large-field" placeholder = "Longitude" required></input>
 				</div>
 
 				<div class = "input-spacing">

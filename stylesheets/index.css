@@ -1,9 +1,51 @@
+/*
+* === INDEX PAGE SPECIFIC STYLINGS ===
+*/
+
+/*
+* --- BACKGROUND IMAGE ---
+*/
+
 body {
 	background-image: url("../assets/img/Farmer.jpg");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
+	background-color: #f0f8ff;
 }
 
-.footer {
-	color: black;
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* When the background image no longer takes up the whole page, we need to change the colour of the footer */
+@media only screen and (min-width: 885px) {
+	.footer {
+		color: #f0f8ff;
+	}
+}
+
+@media only screen and (max-width: 884px) {
+	.footer {
+		color: grey;
+	}
+}
+
+/* when on mobile, remove image and adjust font sizes */
+@media only screen and (max-width: 667px) {
+	body {
+		background-image: none;
+	}
+	h1 {
+		text-align: center;
+		padding-top: 10%;
+	}
+
+	.navbar li a:not(.active){
+		font-size: 8pt;
+		padding: 14px 5px;
+	}
+
+	.footer {
+		font-size: 8pt;
+	}
 }
