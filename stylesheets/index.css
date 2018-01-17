@@ -48,4 +48,18 @@ body {
 	.footer {
 		font-size: 8pt;
 	}
+
+	.small-screen-image {
+		width: 50%;
+		content: url("../assets/img/vector-farm.png");
+		padding-top: 55%;
+		/*transform: translateY(-10%);*/
+	}
+}
+
+/* When screen gets too small, remove image */
+@media only screen and (max-width: 350px) {
+	.small-screen-image {
+		content: none;
+	}
 }
