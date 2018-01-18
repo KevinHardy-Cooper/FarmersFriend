@@ -3,61 +3,13 @@
 */
 
 /*
-* --- SEARCH DIV ---
-*/
-
-/* All encompassing div for search elements */
-.search {
-
-	/* Element is positioned relative to it's parent element, in this case, body */
-	position: absolute;
-
-	/* Positioning element 50% of the page height from the top of the page */
-    top: 50%;
-
-    /* Positioning element 50% of the page width from the left side of the page */
-    left: 50%;
-
-    /* Moving element to absolute middle of page, vertically and horizontally */
-    transform: translateX(-50%) translateY(-50%);
-}
-
-
-
-/*
 * --- BACKGROUND IMAGE ---
 */
 
-body {
-	background-image: url("../assets/img/farmer_search.jpg");
-	background-repeat: no-repeat;
-	background-color: #f0f8ff;
-	background-size: cover;
-}
+/* Took out image for simplicity */
 
-/*
-* -- RESPONSIVE STYLINGS ---
-*/
-
-/* when on mobile, remove image, adjust font sizes, and padding */
-@media only screen and (max-width: 667px) {
-	body {
-		background-image: none;
-	}
-	h1 {
-		text-align: center;
-	}
-
-	.specific-padding {
-		padding: 0px;
-	}
-
-	.navbar li a:not(.active){
-		font-size: 8pt;
-		padding: 14px 5px;
-	}
-
-	.footer {
-		font-size: 8pt;
-	}
-}
+/*body {*/
+	/*background-image: url("../assets/img/farmer_search.jpg");*/ 
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+/*}*/

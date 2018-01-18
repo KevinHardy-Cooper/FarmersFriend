@@ -3,10 +3,12 @@
 */
 
 /* 
-* --- WEBSITE FONT ---
+* --- WEBSITE FONT AND BACKGROUND COLOUR ---
 */
+
 body {
-   font-family: helvetica, sans-serif;
+    font-family: helvetica, sans-serif;
+    background-color: #f0f8ff;
 }
 
 /*
@@ -33,7 +35,7 @@ body {
     display: block;
 
     /* Space around element, first term is vertical, second term is horizontal */
-    padding: 14px 20px;
+    padding: 14px 5px;
 
     /* Removes the underline from the link text */
     text-decoration: none;
@@ -45,7 +47,7 @@ body {
 /* Stylings for unordered list item when active */
 .navbar li a.active {
 
-    /* Setting text colour to white */
+    /* Setting text colour to green */
     color: green;
 }
 
@@ -83,7 +85,7 @@ body {
     /* Setting the position of the element */
     position: fixed;
 
-    /* Justifying the element to the bottom of the page */
+    /* Placing the element at the bottom of the page */
     bottom: 0;
 
     /* Setting the text in the element to be aligned in the middle of the page */
@@ -97,6 +99,7 @@ body {
 * --- LARGE TEXT ---
 */
 
+/* Self-explanatory */
 .large-text {
     font-size: 15pt;
 }
@@ -105,6 +108,7 @@ body {
 * --- LARGE FIELD ---
 */
 
+/* Large field with rounded corners */
 .large-field {
 
     /* Setting font size */
@@ -122,6 +126,7 @@ body {
 */
 
 .horiz-div {
+
 	/* Element is positioned relative to it's parent element*/
 	position: absolute;
 
@@ -133,17 +138,40 @@ body {
 }
 
 /*
+* --- HORIZONTAL AND VERTICAL ALIGNMENT ---
+*/
+
+.middle-div {
+
+    /* Element is positioned relative to it's parent element, in this case, body */
+    position: absolute;
+
+    /* Positioning element 50% of the page height from the top of the page */
+    top: 50%;
+
+    /* Positioning element 50% of the page width from the left side of the page */
+    left: 50%;
+
+    /* Moving element to absolute middle of page, vertically and horizontally */
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/*
 * -- IMAGE ALIGNMENT ---
 */
 
+/* Centering image and padding it horizontally */
 .image-wrapper {
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /*
 * --- INPOT SPACING ---
 */
 
+/* Padding input fields on the top */
 .input-spacing {
 	padding-top: 20px;
 }
@@ -152,6 +180,7 @@ body {
 * -- REQUIRED FIELDS * ---
 */
 
+/* After divs that are given the .required class, a red star will be placed, indicating that that element is required to be filled out */
 .required:after { 
     color: red;
     content: "*"; 
@@ -160,17 +189,28 @@ body {
 /*
 * --- SPECIFIC PADDING ---
 */
+
+/* Very specific padding, in this case, on the top and on the left */
 .specific-padding {
 	padding-top: 10px;
 	padding-left: 20px;
 }
 
+/*
+* --- THICK BORDER ---
+*/
+
+/* This was a work-around as the select element would not show it's edges on mobile, which could cause confusion */
+.thick-border {
+    border: 1px solid lightgrey;
+}
 
 /*
 * --- SCROLLABLE DIVS ---
 */
 
 .scrollable-div {
+
 	/* Class that makes div scrollable in the y-direction if the content is greater than the div's height */
 	overflow-y: scroll;
 	height: 200px;
@@ -208,4 +248,30 @@ th {
 /* Set width of table cell */
 .wide-td {
 	width: 30%;
+}
+
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* when on mobile, adjust font sizes, alignment, heights of elements, and padding */
+@media only screen and (max-width: 667px) {
+    .navbar li a {
+        font-size: 9pt;
+    }
+
+    .footer {
+        font-size: 8pt;
+    }
+
+    .specific-padding {
+        padding: 0px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    .scrollable-div {
+        height: 300px;
+    }
 }

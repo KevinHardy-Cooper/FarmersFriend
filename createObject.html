@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+		<!-- Meta scaling from desktop to mobile -->
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		
+		<!-- Title of the page -->
 		<title>Farmer's Friend</title>
 
-		<!-- Importing external stylesheet -->
+		<!-- Importing external stylesheets -->
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/createObject.css">
 	</head>
@@ -23,8 +27,9 @@
 						Search
 					</a>
 				</li>
-				<!-- When on this page, show tab as coloured -->
 				<li class = "justify-right">
+
+					<!-- When on this page, show tab as coloured -->
 					<a class = "active" href = "createObject.html">
 						Create Object
 					</a>
@@ -37,41 +42,50 @@
 			</ul>
 		</div>
 
+		<!-- Skipping some lines for formatting -->
 		<br>
 		<br>
 
+		<!-- Headline for the page -->
 		<h1 class = "specific-padding">
 			Create a New Object
 		</h1>
 
+		<!-- Form begins... -->
 		<div class = "specific-padding large-text">
 			<form>
+
+				<!-- Name field -->
 				<div class = "input-spacing required">
 					<label>Name:</label>
 					<input class = "large-field" type = "text" placeholder = "Name" required></input>
 				</div>
 
+				<!-- Description field -->
 				<div class = "input-spacing required">
 					<label>Description:</label>
-					<br>
-					<textarea placeholder = "Description" required></textarea>
+					<textarea placeholder = "Why would people want to visit?" required></textarea>
 				</div>
 				
+				<!-- Latitude field -->
 				<div class = "input-spacing required">
 					<label>Latitude:</label>
 					<input class = "large-field" type = "number" placeholder = "Latitude" required></input>
 				</div>
 
+				<!-- Longitude field -->
 				<div class = "input-spacing required">
 					<label>Longitude:</label>
 					<input class = "large-field" placeholder = "Longitude" required></input>
 				</div>
 
+				<!-- Choose image field -->
 				<div class = "input-spacing">
 					<label>Select image to upload:</label>
 					<input type = "file">
 				</div>
 
+				<!-- Submit buttom field -->
 				<div class = "input-spacing">
 					<input class = "large-field" type = "submit" value = "Create"></input>
 				</div>
