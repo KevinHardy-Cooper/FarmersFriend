@@ -3,22 +3,26 @@
 */
 
 /*
-* --- DIV IMAGE ---
+* --- ANIMAL IMAGE ---
 */
 
 .animal {
 	
-	/* Setting the content of the div element */
+	/* Setting the content of the element */
 	content: url("../assets/img/vector-chicken.png");
+}
+
+/*
+* --- MAGNIFYING GLASS IMAGE ---
+*/
+
+.mag-glass {
 	
-	/* Setting the position of the element */
-    position: fixed;
+	/* Setting the width of the image */
+    width: 20px;
 
-    /* Placing the element at the bottom of the page */
-    bottom: 40px;
-
-    /* Setting the width of the image */
-    width: 100px;
+    /* Aligning the image within the button, vertically */
+    vertical-align: -3px;
 }
 
 /* When screen gets too small in height, remove image */

@@ -2,6 +2,10 @@
 * === RESULTS PAGE SPECIFIC STYLINGS ===
 */
 
+.results-image {
+	width: 100px;
+}
+
 .footer {
     position: relative;
 }

@@ -4,23 +4,13 @@
 
 
 /*
-* --- DIV IMAGE ---
+* --- ANIMAL IMAGE ---
 */
 
 .animal {
     
-    /* Setting the content of the div element */
+    /* Setting the content of the element */
     content: url("../assets/img/vector-horse.png");
-    
-    /* Setting the position of the element */
-    position: fixed;
-
-    /* Placing the element at the bottom of the page */
-    bottom: 40px;
-
-    /* Setting the width of the image */
-    width: 100px;
-
 }
 
 /*

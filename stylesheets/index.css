@@ -7,8 +7,9 @@
 */
 
 .barn-image {
+    /* Setting the content of the element */
 	content: url("../assets/img/vector-farm.png");
-}				
+}
 
 /*
 * -- RESPONSIVE STYLINGS ---

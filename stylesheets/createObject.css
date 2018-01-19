@@ -28,23 +28,13 @@ textarea {
 }
 
 /*
-* --- DIV IMAGE ---
+* --- ANIMAL IMAGE ---
 */
 
 .animal {
     
-    /* Setting the content of the div element */
+    /* Setting the content of the element */
     content: url("../assets/img/vector-pig.png");
-    
-    width: 100px;
-    /* Setting the position of the element */
-    position: fixed;
-
-    /* Placing the element at the bottom of the page */
-    bottom: 40px;
-
-    /* Placing the element to the right of the page */
-    right: 10px;
 }
 
 /*

@@ -3,6 +3,22 @@
 */
 
 /*
+* -- USER-UPLOADED IMAGE STYLINGS ---
+*/
+
+.user-farm-image {
+	width: 200px;
+}
+
+/*
+* -- FOOTER STYLINGS ---
+*/
+
+.footer {
+	position: relative;
+}
+
+/*
 * -- RESPONSIVE STYLINGS ---
 */
 

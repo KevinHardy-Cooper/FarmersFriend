@@ -99,6 +99,14 @@ body {
 }
 
 /*
+* -- FOOTER IMAGE ---
+*/
+
+.footer-emoji {
+    width: 20px;
+}
+
+/*
 * --- LARGE TEXT ---
 */
 
@@ -250,6 +258,29 @@ th {
 .wide-td {
 	width: 30%;
 }
+
+/**
+* --- ANIMAL IMAGE STYLINGS ---
+**/
+
+.animal {
+
+    /* Setting the width of the image */
+    width: 100px;
+
+    /* Placing the element at the bottom of the page */
+    bottom: 40px;
+
+    /* Setting the position of the element */
+    position: fixed;
+}
+
+.animal-right {
+    
+    /* Placing the element to the right of the page */
+    right: 10px;
+}
+
 
 /*
 * -- RESPONSIVE STYLINGS ---
