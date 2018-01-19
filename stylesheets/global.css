@@ -70,6 +70,9 @@ body {
 
     /* Append the element to the right of the page */
     float: right;
+
+    /* Adding some padding on the left side of each element */
+    padding-left: 5px;
 }
 
 
@@ -163,8 +166,7 @@ body {
 /* Centering image and padding it horizontally */
 .image-wrapper {
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 100%;
 }
 
 /*
@@ -211,9 +213,8 @@ body {
 
 .scrollable-div {
 
-	/* Class that makes div scrollable in the y-direction if the content is greater than the div's height */
-	overflow-y: scroll;
-	height: 200px;
+	/* Class that makes div scrollable in the x-direction if the content is greater than the div's width */
+	overflow-x: scroll;
 }
 
 /**
@@ -255,13 +256,13 @@ th {
 */
 
 /* when on mobile, adjust font sizes, alignment, heights of elements, and padding */
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 667px) and (min-width: 370px){
     .navbar li a {
         font-size: 9pt;
     }
 
     .footer {
-        font-size: 8pt;
+        font-size: 9pt;
     }
 
     .specific-padding {
@@ -271,7 +272,16 @@ th {
     h1 {
         text-align: center;
     }
-    .scrollable-div {
-        height: 300px;
+}
+
+@media only screen and (max-width: 369px) {
+    .navbar li a {
+        font-size: 7pt;
+    }
+    h1 {
+        text-align: center;
+    }
+    .footer {
+        font-size: 7pt;
     }
 }

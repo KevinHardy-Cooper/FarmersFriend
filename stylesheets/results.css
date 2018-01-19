@@ -2,13 +2,6 @@
 * === RESULTS PAGE SPECIFIC STYLINGS ===
 */
 
-/*
-* -- RESPONSIVE STYLINGS ---
-*/
-
-/* When in landscape mode, attach footer to bottom of content instead of it's usual fixed position at the bottom of the page */
-@media only screen and (max-height: 600px) {
-    .footer {
-        position: relative;
-    }
+.footer {
+    position: relative;
 }

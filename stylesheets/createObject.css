@@ -14,7 +14,7 @@ textarea {
     
 	/* Setting the dimensions of description box */
     height: 150px;
-    width: 300px;
+    width: 250px;
 
     /* Set border specs */
     border-radius: 5px;
@@ -28,15 +28,48 @@ textarea {
 }
 
 /*
+* --- DIV IMAGE ---
+*/
+
+.animal {
+    
+    /* Setting the content of the div element */
+    content: url("../assets/img/vector-pig.png");
+    
+    width: 100px;
+    /* Setting the position of the element */
+    position: fixed;
+
+    /* Placing the element at the bottom of the page */
+    bottom: 40px;
+
+    /* Placing the element to the right of the page */
+    right: 10px;
+}
+
+/*
 * -- RESPONSIVE STYLINGS ---
 */
 
 /* When in landscape mode, attach footer to bottom of content instead of it's usual fixed position at the bottom of the page, and change height of textarea */
 @media only screen and (max-height: 600px) {
+    .animal {
+        visibility: hidden;
+    }
     .footer {
         position: relative;
     }
     textarea {
         height: 50px;
+    }
+}
+
+/* When the screen gets too small width-wise, remove animal from page, and set footer to bottom of content */
+@media only screen and (max-width: 370px) {
+    .animal {
+        visibility: hidden;
+    }
+    .footer {
+        position: relative;
     }
 }

@@ -3,6 +3,26 @@
 */
 
 /*
+* --- DIV IMAGE ---
+*/
+
+.animal {
+    
+    /* Setting the content of the div element */
+    content: url("../assets/img/vector-cow.png");
+    
+    width: 100px;
+    /* Setting the position of the element */
+    position: fixed;
+
+    /* Placing the element at the bottom of the page */
+    bottom: 40px;
+
+    /* Placing the element to the right of the page */
+    right: 10px;
+}
+
+/*
 * -- RESPONSIVE STYLINGS ---
 */
 
@@ -11,4 +31,18 @@
 	.footer {
 		position: relative;
 	}
+    .animal {
+        visibility: hidden;
+    }
+}
+
+
+/* When the screen gets too small width-wise, remove animal from page, and set footer to bottom of content */
+@media only screen and (max-width: 375px) {
+    .animal {
+        visibility: hidden;
+    }
+    .footer {
+        position: relative;
+    }
 }

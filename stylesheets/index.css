@@ -3,24 +3,12 @@
 */
 
 /*
-* --- BACKGROUND IMAGE ---
-*/
-
-/* Took out image for simplicity */
-
-/*body {*/
-	/*background-image: url("../assets/img/Farmer.jpg");*/ 
-	/*background-repeat: no-repeat;*/
-	/*background-size: cover;*/
-/*}*/
-
-/*
-* --- DIV CONTENT (THE BARN) ---
+* -- BARN IMAGE ---
 */
 
 .barn-image {
 	content: url("../assets/img/vector-farm.png");
-}
+}				
 
 /*
 * -- RESPONSIVE STYLINGS ---
@@ -28,14 +16,28 @@
 
 /* When screen gets too small in width, remove image */
 @media only screen and (max-width: 350px) {
+	.horiz-div {
+		position: relative;
+	}
 	.barn-image {
-		content: none;
+		visibility: hidden;
 	}
 }
 
 /* When screen gets too small in height, remove image */
 @media only screen and (max-height: 630px) {
 	.barn-image {
-		content: none;
+		visibility: hidden;
+	}
+	.horiz-div {
+		position: relative;
 	}
 }
+
+/* When screen gets too small in height, remove image */
+@media only screen and (max-height: 374px) {
+	.footer {
+		position: relative;
+	}
+}
+

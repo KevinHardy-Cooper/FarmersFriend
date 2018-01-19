@@ -2,6 +2,9 @@
 <html>
 	<head>
 
+		<!-- Character encoding -->
+		<meta charset = "UTF-8">
+
 		<!-- Meta scaling from desktop to mobile -->
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 
@@ -23,20 +26,25 @@
 					</a>
 				</li>
 				<li class = "justify-right">
-					<a href = "search.html">
-						Search
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "createObject.html">
-						Create Object
+					<a href = "signIn.html">
+						Sign In
 					</a>
 				</li>
 				<li class = "justify-right">
 
 					<!-- When on this page, show tab as coloured -->
 					<a class = "active" href = "createAccount.html">
-						Create Account
+						Sign Up
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "createObject.html">
+						Register Farm
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "search.html">
+						Search
 					</a>
 				</li>
 			</ul>
@@ -48,57 +56,78 @@
 
 		<!-- Headline for the page -->
 		<h1 class = "specific-padding">
-			Create a New Account
+			Create an Account
 		</h1>
 
 		<!-- Form begins... -->
 		<div class = "specific-padding large-text">
-			<form>
+			
+			<!-- TODO: Set action attribute to somewhere useful -->
+			<form method = "post">
 
 				<!-- Full Name field -->
 				<div class = "input-spacing required">
-					<label>Full Name:</label>
-					<input class = "large-field" type = "text" placeholder = "Full Name" required></input>
+					<label>
+						Full Name:
+						<input class = "large-field" type = "text" placeholder = "Full Name" name = "user-full-name" required>
+					</label>
 				</div>
 
 				<!-- Email Address field -->
 				<div class = "input-spacing required">
-					<label>Email Address:</label>
-					<input class = "large-field" type = "email" placeholder = "user@farm.com" required></input>
+					<label>
+						Email Address:
+						<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "user-email-address" required>
+					</label>
 				</div>
 				
 				<!-- Enter Password field -->
 				<div class = "input-spacing required">
-					<label>Create a password:</label>
-					<input class = "large-field" type = "password" placeholder = "Password" required></input>
+					<label>
+						Create a password:
+						<input class = "large-field" type = "password" placeholder = "Password" name = "user-password" required>
+					</label>
 				</div>
 
 				<!-- Re-enter Password field -->
 				<div class = "input-spacing required">
-					<label>Re-enter password:</label>
-					<input class = "large-field" type = "password" placeholder = "Password" required></input>
+					<label>
+						Re-enter password:
+						<input class = "large-field" type = "password" placeholder = "Password" required>
+					</label>
 				</div>
 
 				<!-- Date of Birth field -->
-				<div class = "input-spacing required">
-					<label>Date of birth:</label>
-					<input class = "large-field" type = "date" required>
+				<div class = "input-spacing">
+					<label>
+						Why do you want to make a Farmer's Friend account? <br> Please check all that apply:
+					</label>
+
+					<br>
+
+					<input class = "large-field" type = "checkbox" value = "to-write-reviews" name = "to-write-reviews"> To Write Reviews <br>
+
+					<input class = "large-field" type = "checkbox" value = "to-register-farms" name = "to-register-farms"> To Register Farm(s) <br>
+
+					<input class = "large-field" type = "checkbox" value = "to-browse-amazing-farms" name = "to-browse-amazing-farms"> To Browse Amazing Farms <br>
 				</div>
 
 				<!-- Are you a farmer field -->
 				<!-- TODO: Increase the size of the radio buttons -->
-				<div class = "input-spacing required">
+				<div class = "input-spacing">
 					<label>Are you a farmer?</label>
-					<input class = "large-field" type = "radio" name = "isFarmer" value = "yes" required> Yes
-					<input class = "large-field" type = "radio" name = "isFarmer" value = "no"> No
+					<input class = "large-field" type = "radio" name = "user-is-farmer" value = "yes"> Yes
+					<input class = "large-field" type = "radio" name = "user-is-farmer" value = "no"> No
 				</div>
 
 				<!-- Submit button field -->
 				<div class = "input-spacing">
-					<input class = "large-field" type = "submit" value = "Create"></input>
+					<input class = "large-field" type = "submit" value = "Create">
 				</div>
 			</form>
 		</div>
+
+		<img class = "animal" alt = "Image of cow">
 
 		<!-- Footer -->
 		<footer class = "footer">

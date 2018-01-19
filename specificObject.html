@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+		<!-- Character encoding -->
+		<meta charset = "UTF-8">
+
 		<!-- Meta scaling from desktop to mobile -->
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 
@@ -22,18 +26,23 @@
 					</a>
 				</li>
 				<li class = "justify-right">
-					<a href = "search.html">
-						Search
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "createObject.html">
-						Create Object
+					<a href = "signIn.html">
+						Sign In
 					</a>
 				</li>
 				<li class = "justify-right">
 					<a href = "createAccount.html">
-						Create Account
+						Sign Up
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "createObject.html">
+						Register Farm
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "search.html">
+						Search
 					</a>
 				</li>
 			</ul>
@@ -50,6 +59,9 @@
 				Farmer Kev's Farm
 			</h3>
 
+			<!-- Image of farm -->
+			<img src = "assets/img/two-silos.jpg" alt = "Image of farm" width = "200px">
+
 			<!-- Specific Object\s description -->
 			<p>
 				Hobby farm that sells free-range eggs and more than enough swiss chard.
@@ -59,9 +71,8 @@
 		</div>
 
 		<!-- Map displaying returned results -->
-		<div class = "image-wrapper">
-			<img src = "assets/img/map-results.png" width="100%">
-		</div>
+		<!-- TODO: Use iframe tags to embed map -->
+		<img alt = "Map displaying returned results" class = "image-wrapper" src = "assets/img/map-results.png">
 
 		<!-- Table containing returned reviews and data about these reviews -->
 		<div class = "specific-padding scrollable-div">

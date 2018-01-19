@@ -1,0 +1,51 @@
+/*
+* === SIGN IN PAGE SPECIFIC STYLINGS ===
+*/
+
+
+/*
+* --- DIV IMAGE ---
+*/
+
+.animal {
+    
+    /* Setting the content of the div element */
+    content: url("../assets/img/vector-horse.png");
+    
+    /* Setting the position of the element */
+    position: fixed;
+
+    /* Placing the element at the bottom of the page */
+    bottom: 40px;
+
+    /* Setting the width of the image */
+    width: 100px;
+
+}
+
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* When screen gets too small in height, remove image */
+@media only screen and (max-height: 500px) {
+    .animal {
+        visibility: hidden;
+    }
+}
+
+/* When screen gets too small in width, make everything relative and hide image*/
+@media only screen and (max-height: 374px) {
+    .animal {
+        visibility: hidden;
+    }
+    .horiz-div {
+        position: relative;
+    }
+    .middle-div {
+        position: relative;
+    }
+    .footer {
+        position: relative;
+    }
+}

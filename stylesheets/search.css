@@ -3,13 +3,39 @@
 */
 
 /*
-* --- BACKGROUND IMAGE ---
+* --- DIV IMAGE ---
 */
 
-/* Took out image for simplicity */
+.animal {
+	
+	/* Setting the content of the div element */
+	content: url("../assets/img/vector-chicken.png");
+	
+	/* Setting the position of the element */
+    position: fixed;
 
-/*body {*/
-	/*background-image: url("../assets/img/farmer_search.jpg");*/ 
-	/*background-repeat: no-repeat;*/
-	/*background-size: cover;*/
-/*}*/
+    /* Placing the element at the bottom of the page */
+    bottom: 40px;
+
+    /* Setting the width of the image */
+    width: 100px;
+}
+
+/* When screen gets too small in height, remove image */
+@media only screen and (max-height: 500px) {
+	.animal {
+		visibility: hidden;
+	}
+	.horiz-div {
+		position: relative;
+	}
+
+}
+@media only screen and (max-height: 374px) {
+	.middle-div {
+		position: relative;
+	}
+		.footer {
+		position: relative;
+	}
+}

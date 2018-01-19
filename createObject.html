@@ -2,6 +2,9 @@
 <html>
 	<head>
 
+		<!-- Character encoding -->
+		<meta charset = "UTF-8">
+
 		<!-- Meta scaling from desktop to mobile -->
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 		
@@ -23,20 +26,25 @@
 					</a>
 				</li>
 				<li class = "justify-right">
-					<a href = "search.html">
-						Search
+					<a href = "signIn.html">
+						Sign In
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "createAccount.html">
+						Sign Up
 					</a>
 				</li>
 				<li class = "justify-right">
 
 					<!-- When on this page, show tab as coloured -->
 					<a class = "active" href = "createObject.html">
-						Create Object
+						Register Farm
 					</a>
 				</li>
 				<li class = "justify-right">
-					<a href = "createAccount.html">
-						Create Account
+					<a href = "search.html">
+						Search
 					</a>
 				</li>
 			</ul>
@@ -48,49 +56,63 @@
 
 		<!-- Headline for the page -->
 		<h1 class = "specific-padding">
-			Create a New Object
+			Register your Farm
 		</h1>
 
 		<!-- Form begins... -->
 		<div class = "specific-padding large-text">
-			<form>
 
-				<!-- Name field -->
+			<!-- TODO: Set action attribute to somewhere useful -->
+			<form method = "post">
+
+				<!-- Farm Name field -->
 				<div class = "input-spacing required">
-					<label>Name:</label>
-					<input class = "large-field" type = "text" placeholder = "Name" required></input>
+					<label>
+						Farm Name:
+						<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm-name" required>
+					</label>
 				</div>
 
 				<!-- Description field -->
 				<div class = "input-spacing required">
-					<label>Description:</label>
-					<textarea placeholder = "Why would people want to visit?" required></textarea>
+					<label>
+						Description:
+						<textarea placeholder = "Why would people want to visit?" name = "farm-description" required></textarea>
+					</label>	
 				</div>
 				
 				<!-- Latitude field -->
 				<div class = "input-spacing required">
-					<label>Latitude:</label>
-					<input class = "large-field" type = "number" placeholder = "Latitude" required></input>
+					<label>
+						Latitude:
+						<input class = "large-field" type = "number" placeholder = "Latitude" name = "farm-latitude" required>
+					</label>
 				</div>
 
 				<!-- Longitude field -->
-				<div class = "input-spacing required">
-					<label>Longitude:</label>
-					<input class = "large-field" placeholder = "Longitude" required></input>
+				<div class = "input-spacing rsequired">
+					<label>
+						Longitude:
+						<input class = "large-field" type = "number" placeholder = "Longitude" name = "farm-longitude" required>
+					</label>	
 				</div>
 
 				<!-- Choose image field -->
 				<div class = "input-spacing">
-					<label>Select image to upload:</label>
-					<input type = "file">
+					<label>
+						Select image to upload:
+						<input class = "thick-border" type = "file" name = "farm-image">
+					</label>
 				</div>
 
 				<!-- Submit buttom field -->
 				<div class = "input-spacing">
-					<input class = "large-field" type = "submit" value = "Create"></input>
+					<input class = "large-field" type = "submit" value = "Create">
 				</div>
 			</form>
 		</div>
+
+		<img class = "animal" alt = "Image of a pig">
 
 		<!-- Footer -->
 		<footer class = "footer">

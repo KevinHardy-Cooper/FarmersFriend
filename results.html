@@ -2,6 +2,9 @@
 <html>
 	<head>
 
+		<!-- Character encoding -->
+		<meta charset = "UTF-8">
+
 		<!-- Meta scaling from desktop to mobile -->
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 
@@ -23,18 +26,23 @@
 					</a>
 				</li>
 				<li class = "justify-right">
-					<a href = "search.html">
-						Search
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "createObject.html">
-						Create Object
+					<a href = "signIn.html">
+						Sign In
 					</a>
 				</li>
 				<li class = "justify-right">
 					<a href = "createAccount.html">
-						Create Account
+						Sign Up
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "createObject.html">
+						Register Farm
+					</a>
+				</li>
+				<li class = "justify-right">
+					<a href = "search.html">
+						Search
 					</a>
 				</li>
 			</ul>
@@ -52,20 +60,23 @@
 		</div>
 
 		<!-- Map displaying returned results -->
-		<div class = "image-wrapper">
-			<img src = "assets/img/map-results.png" width="100%">
-		</div>
+		<!-- TODO: Use iframe tags to embed map -->
+		<img alt = "Map displaying returned results" class = "image-wrapper" src = "assets/img/map-results.png">
 
 		<!-- Table containing returned results and data about these results -->
 		<div class = "specific-padding scrollable-div">
 			<table class = "table">
 				<tr>
+					<th>Farm Image</th>
 					<th>Farm</th>
 					<th>Date Joined</th>
 					<th>Most Recent Review</th>
 					<th>Average Rating</th>
 				</tr>
 				<tr>
+					<td>
+						<img src = "assets/img/two-silos.jpg" width = "100px">
+					</td>
 					<td>
 						<a href = "specificObject.html">
 							Farmer Kev's Farm
@@ -77,6 +88,9 @@
 				</tr>
 				<tr>
 					<td>
+						<img src = "assets/img/corn-field.jpeg" width = "100px">
+					</td>
+					<td>
 						<a href = "specificObject.html">
 							Woodfield Farm & Market
 						</a>
@@ -87,6 +101,9 @@
 				</tr>
 				<tr>
 					<td>
+						<img src = "assets/img/cow-calves.jpeg" width = "100px">
+					</td>
+					<td>
 						<a href = "specificObject.html">
 							Maple Grove Farm
 						</a>
@@ -96,6 +113,9 @@
 					<td>&#9734; &#9734; &#9734; &#9734; &#9734;</td>
 				</tr>
 				<tr>
+					<td>
+						<img src = "assets/img/truck-mountains.jpg" width = "100px">
+					</td>
 					<td>
 						<a href = "specificObject.html">
 							Lit Farm
