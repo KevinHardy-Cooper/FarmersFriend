@@ -1,71 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
 	<head>
 
 		<!-- Character encoding -->
-		<meta charset = "UTF-8">
+		<meta charset = "UTF-8"/>
 
-		<!-- Meta scaling from desktop to mobile --><meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1"/>
 		
+		<!-- Page author -->
+		<meta name = "author" content = "Kevin Hardy-Cooper"/>
+
+		<!-- Page description -->
+		<meta name = "description" content = "Find and review farms"/>
+
+		<!-- Page keywords -->
+		<meta name = "keywords" content = "farmer, farm, friend, review, search"/>
+
 		<!-- Title of the page -->
 		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
-		<link rel="stylesheet" type="text/css" href="stylesheets/global.css">
-		<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="stylesheets/index.css" type="text/css" rel="stylesheet"/>
+
+
+		<!-- Add-on task #1 -->
+
+		<!-- OpenGraph Protocol Meta Data, inspired by http://ogp.me/ -->
+		<meta property = "og:title" content = "Farmer's Friend"/>
+		<meta property = "og:type" content = "website"/>
+		<meta property = "og:image" content = "assets/img/vector-farm.png"/>
+		<meta property = "og:url" content = "index.html"/>
+		<meta property = "og:description" content = "Find and review farms"/>
+
+		<!-- Twitter Cards, inspired by https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started -->
+		<meta name = "twitter:card" content = "summary"/>
+		<meta name = "twitter:site" content = "website"/>
+		<meta name = "twitter:creator" content = "Kevin Hardy-Cooper"/>
+		<meta name = "twitter:title" content = "Farmer's Friend"/>
+		<meta name = "twitter:description" content = "Find and review farms"/>
+		<meta name = "twitter:image" content = "assets/img/vector-farm.png"/>
+
+		<!-- If the user saves this webpage to their home screen -->
+		<link rel = "apple-touch-icon" href = "assets/img/icon.png"/>
+		<link rel = "apple-touch-startup-image" href = "assets/img/icon.png"/>
 	</head>
 	<body>
+		<header>
 
-		<!-- Navbar -->
-		<div class = "navbar">
-			<ul>
-				<li class = "justify-left">
+			<!-- Navbar -->
+			<nav>
+				<ul>
+					<li class = "justify-left">
 
-					<!-- When on this page, show tab as coloured -->
-					<a class = "active" href = "#">
-						Farmer's Friend
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "signIn.html">
-						Sign In
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "createAccount.html">
-						Sign Up
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "createObject.html">
-						Register Farm
-					</a>
-				</li>
-				<li class = "justify-right">
-					<a href = "search.html">
-						Search
-					</a>
-				</li>
-			</ul>
-		</div>
+						<!-- When on this page, show tab as coloured -->
+						<a class = "active" href = "#">
+							Farmer's Friend
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "sign_in.html">
+							Sign In
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "registration.html">
+							Sign Up
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "submission.html">
+							Register Farm
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "search.html">
+							Search
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
 		<!-- Skipping some lines for formatting -->
 		<br>
 		<br>
 		<br>
 
-		<!-- Headline for the page -->
-		<h1 class = "horiz-div">
-			Find and review farms.
-		</h1>
-		
-		<!-- Nice image of barn -->
-		<img class = "middle-div barn-image" alt = "Image of a barn">
+		<main>
+			<article>
+				
+				<!-- Headline for the page -->
+				<h1 class = "horiz-div">
+					Find and review farms.
+				</h1>
+				
+				<picture>
+
+					<!-- Nice image of barn -->
+					<img class = "middle-div barn-image" alt = "Image of a barn">
+				</picture>
+			</article>
+
+		</main>
 		
 		<!-- Footer -->
-		<footer class = "footer">
+		<footer>
 			<p> 
-				Made with <img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> &nbsp;by Kevin Hardy-Cooper &copy; 2018
+				Made with 
+				<picture>
+					<source srcset = "assets/img/corn.png">
+					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
+				</picture>
+				&nbsp;by Kevin Hardy-Cooper &copy; 2018
 			</p>
 		</footer>
 	</body>

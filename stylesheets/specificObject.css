@@ -14,7 +14,7 @@
 * -- FOOTER STYLINGS ---
 */
 
-.footer {
+footer {
 	position: relative;
 }
 
@@ -24,7 +24,7 @@
 
 /* When in landscape mode, attach footer to bottom of content instead of it's usual fixed position at the bottom of the page */
 @media only screen and (max-height: 667px) {
-    .footer {
+    footer {
         position: relative;
     }
 }

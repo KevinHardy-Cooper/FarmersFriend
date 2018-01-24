@@ -16,7 +16,7 @@ body {
 */
 
 /* Stylings for unordered lists */
-.navbar ul {
+nav ul {
 
     /* Removes bullet points from navbar */
     list-style-type: none;
@@ -26,7 +26,7 @@ body {
 }
 
 /* Stylings for links in unordered list items */
-.navbar li a {
+nav li a {
 
     /* Setting font size of link text */
     font: 15pt;
@@ -45,28 +45,28 @@ body {
 }
 
 /* Stylings for unordered list item when active */
-.navbar li a.active {
+nav li a.active {
 
     /* Setting text colour to green */
     color: green;
 }
 
 /* Stylings for unordered list item when not active and the mouse is hovering over */
-.navbar li a:hover:not(.active) {
+nav li a:hover:not(.active) {
     
     /* Setting text colour to black */
     color: black;
 }
 
 /* Stylings for unordered list item that are part of the justify-left class*/
-.navbar li.justify-left {
+nav li.justify-left {
 
     /* Causes list items to align themselves horizontally */
     float: left;
 }
 
 /* Stylings for unordered list items that are part of the justify-right class */
-.navbar li.justify-right {
+nav li.justify-right {
 
     /* Append the element to the right of the page */
     float: right;
@@ -80,7 +80,7 @@ body {
 * --- FOOTER ---
 */
 
-.footer {
+footer {
 
     /* Setting text colour to grey */
     color: grey;
@@ -288,11 +288,11 @@ th {
 
 /* when on mobile, adjust font sizes, alignment, heights of elements, and padding */
 @media only screen and (max-width: 667px) and (min-width: 370px){
-    .navbar li a {
+    nav li a {
         font-size: 9pt;
     }
 
-    .footer {
+    footer {
         font-size: 9pt;
     }
 
@@ -306,13 +306,13 @@ th {
 }
 
 @media only screen and (max-width: 369px) {
-    .navbar li a {
+    nav li a {
         font-size: 7pt;
     }
     h1 {
         text-align: center;
     }
-    .footer {
+    footer {
         font-size: 7pt;
     }
 }

@@ -46,7 +46,7 @@ textarea {
     .animal {
         visibility: hidden;
     }
-    .footer {
+    footer {
         position: relative;
     }
     textarea {
@@ -59,7 +59,7 @@ textarea {
     .animal {
         visibility: hidden;
     }
-    .footer {
+    footer {
         position: relative;
     }
 }

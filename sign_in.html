@@ -12,14 +12,14 @@
 		<meta name = "author" content = "Kevin Hardy-Cooper">
 
 		<!-- Page description -->
-		<meta name = "description" content = "Search for farms">
-
+		<meta name = "description" content = "Sign into your account to review farms, and post farms">
+		
 		<!-- Title of the page -->
 		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
 		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="stylesheets/search.css" type="text/css" rel="stylesheet"/>
+		<link href="stylesheets/sign_in.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -28,12 +28,14 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "index.html">
+						<a  href = "index.html">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.html">
+
+						<!-- When on this page, show tab as coloured -->
+						<a class = "active" href = "#">
 							Sign In
 						</a>
 					</li>
@@ -48,9 +50,7 @@
 						</a>
 					</li>
 					<li class = "justify-right">
-
-					<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "#">
+						<a href = "search.html">
 							Search
 						</a>
 					</li>
@@ -68,65 +68,48 @@
 
 				<!-- Headline for the page -->
 				<h1 class = "horiz-div">
-					Find an amazing farm.
+					Sign In
 				</h1>
-				
+
 				<!-- Skipping some lines for formatting -->
 				<br>
 				<br>
 				<br>
-
+				
 				<!-- Search Form begins... -->
 				<div class = "middle-div large-text">
-					<form method = "get" action = "results_sample.html">
 
-						<!-- Name field -->
+					<!-- After successful login, email / username will be displayed where "Sign In" is in the navbar -->
+					<form method = "post" action = "index.html">
+
+						<!-- Email field -->
 						<label>
-							Search
-							<input class = "large-field" type = "search" placeholder = "Names" name = "name">
+							Email:
+							<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "sign-in-email" required>
 						</label>
+
+						<br>
+						
+						<!-- Password field -->
 						<label>
-							or
-						<!-- Ratings field -->
-							<select class = "large-field thick-border" name = "rating">
-								<option value = "0"> 
-									Ratings 
-								</option>
-								<option value = "1"> 
-									&#9734; 
-								</option>
-								<option value = "2"> 
-									&#9734; &#9734; 
-								</option>
-								<option value = "3"> 
-									&#9734; &#9734; &#9734; 
-								</option>
-								<option value = "4"> 
-									&#9734; &#9734; &#9734; &#9734;
-								</option>
-								<option value = "5"> 
-									&#9734; &#9734; &#9734; &#9734; &#9734; 
-								</option>
-							</select>
+							Password:			
+							<input class = "large-field" type = "password" placeholder = "***********" name = "sign-in-password" required>
 						</label>	
 						
+						<br>
+						
 						<!-- Submit button field -->
-						<button type = "submit" class = "large-field">
-							<picture>
-								<source srcset = "assets/img/magnifying-glass.png">
-								<img alt = "Search" class = "mag-glass" src = "assets/img/magnifying-glass.png">
-							</picture>
-						</button>
+						<input class = "large-field" type = "submit" value = "Sign In">
 					</form>
-				</div>
+				</div>		
 			</article>
 
 			<picture>
-				<img class = "animal" alt = "Image of a chicken">
+				<img class = "animal" alt = "Image of a horse">
 			</picture>
 
 		</main>
-		
+
 		<!-- Footer -->
 		<footer>
 			<p> 

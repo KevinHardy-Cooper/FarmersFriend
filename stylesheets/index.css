@@ -37,7 +37,7 @@
 
 /* When screen gets too small in height, remove image */
 @media only screen and (max-height: 374px) {
-	.footer {
+	footer {
 		position: relative;
 	}
 }

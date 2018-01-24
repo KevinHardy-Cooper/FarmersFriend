@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Character encoding -->
+		<meta charset = "UTF-8">
+
+		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		
+		<!-- Page author -->
+		<meta name = "author" content = "Kevin Hardy-Cooper">
+
+		<!-- Page description -->
+		<meta name = "description" content = "Results of search for farms">
+
+		<!-- Title of the page -->
+		<title>Farmer's Friend</title>
+
+		<!-- Importing external stylesheet -->
+		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="stylesheets/results.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+
+			<!-- Navbar -->
+			<nav>
+				<ul>
+					<li class = "justify-left">
+						<a href = "index.html">
+							Farmer's Friend
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "sign_in.html">
+							Sign In
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "registration.html">
+							Sign Up
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "submission.html">
+							Register Farm
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "search.html">
+							Search
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Adding some line spaces for formatting -->
+		<br>
+		<br>
+
+		<main>
+			<article>
+
+				<!-- Text providing feedback to the user about what page they are on and the state -->
+				<div class = "specific-padding">
+					<h3>
+						4 results for "&#9734; &#9734; &#9734; &#9734; &#9734;"
+					</h3>
+				</div>
+
+				<picture>
+				
+					<!-- Map displaying returned results -->
+					<!-- TODO: Use iframe tags to embed map -->
+					<img alt = "Map displaying returned results" class = "image-wrapper" src = "assets/img/map-results.png">
+				</picture>
+			</article>
+
+			<article>
+
+				<!-- Table containing returned results and data about these results -->
+				<div class = "specific-padding scrollable-div">
+					<table class = "table">
+						<tr>
+							<th>Farm Image</th>
+							<th>Farm</th>
+							<th>Date Joined</th>
+							<th>Most Recent Review</th>
+							<th>Average Rating</th>
+						</tr>
+						<tr>
+							<td>
+								<picture>
+									<img alt = "User-uploaded image of their farm" class = "results-image" src = "assets/img/two-silos.jpg">
+								</picture>
+							</td>
+							<td>
+								<a href = "individual_sample.html">
+									Farmer Kev's Farm
+								</a>
+							</td>
+							<td>January 8th, 2018</td>
+							<td>January 9th, 2018</td>
+							<td>5 stars</td>
+						</tr>
+						<tr>
+							<td>
+								<picture>
+									<img alt = "User-uploaded image of their farm" class = "results-image" src = "assets/img/corn-field.jpeg">
+								</picture>
+							</td>
+							<td>
+								<a href = "individual_sample.html">
+									Woodfield Farm & Market
+								</a>
+							</td>
+							<td>January 8th, 2018</td>
+							<td>January 9th, 2018</td>
+							<td>5 stars</td>
+						</tr>
+						<tr>
+							<td>
+								<picture>
+									<img alt = "User-uploaded image of their farm" class = "results-image" src = "assets/img/cow-calves.jpeg">
+								</picture>
+							</td>
+							<td>
+								<a href = "individual_sample.html">
+									Maple Grove Farm
+								</a>
+							</td>
+							<td>January 8th, 2018</td>
+							<td>January 9th, 2018</td>
+							<td>5 stars</td>
+						</tr>
+						<tr>
+							<td>
+								<picture>
+									<img alt = "User-uploaded image of their farm" class = "results-image" src = "assets/img/truck-mountains.jpg">
+								</picture>
+							</td>
+							<td>
+								<a href = "individual_sample.html">
+									Lit Farm
+								</a>
+							</td>
+							<td>January 8th, 2018</td>
+							<td>January 9th, 2018</td>
+							<td>5 stars</td>
+						</tr>
+					</table>	
+				</div>		
+			</article>
+		</main>					
+
+		<!-- Footer -->
+		<footer>
+			<p> 
+				Made with 
+				<picture>
+					<source srcset = "assets/img/corn.png">
+					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
+				</picture>
+				&nbsp;by Kevin Hardy-Cooper &copy; 2018
+			</p>
+		</footer>
+	</body>
+</html>

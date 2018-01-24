@@ -18,7 +18,7 @@
 
 /* When in landscape mode, attach footer to bottom of content instead of it's usual fixed position at bottom of page*/
 @media only screen and (max-height: 600px) {
-	.footer {
+	footer {
 		position: relative;
 	}
     .animal {
@@ -31,7 +31,7 @@
     .animal {
         visibility: hidden;
     }
-    .footer {
+    footer {
         position: relative;
     }
 }

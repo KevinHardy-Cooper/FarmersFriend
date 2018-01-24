@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Character encoding -->
+		<meta charset = "UTF-8">
+
+		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		
+		<!-- Page author -->
+		<meta name = "author" content = "Kevin Hardy-Cooper">
+
+		<!-- Page description -->
+		<meta name = "description" content = "Create account to find and review farms">
+
+		<!-- Title of the page -->
+		<title>Farmer's Friend</title>
+
+		<!-- Importing external stylesheets -->
+		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="stylesheets/registration.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+
+			<!-- Navbar -->
+			<nav>
+				<ul>
+					<li class = "justify-left">
+						<a href = "index.html">
+							Farmer's Friend
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "sign_in.html">
+							Sign In
+						</a>
+					</li>
+					<li class = "justify-right">
+
+						<!-- When on this page, show tab as coloured -->
+						<a class = "active" href = "">
+							Sign Up
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "submission.html">
+							Register Farm
+						</a>
+					</li>
+					<li class = "justify-right">
+						<a href = "search.html">
+							Search
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!-- Skipping some lines for formatting -->
+		<br>
+		<br>
+
+		<main>
+			<article>
+
+				<!-- Headline for the page -->
+				<h1 class = "specific-padding">
+					Create an Account
+				</h1>
+
+				<!-- Form begins... -->
+				<div class = "specific-padding large-text">
+					
+					<!-- TODO: Set action attribute to somewhere useful -->
+					<form method = "post">
+
+						<!-- Full Name field -->
+						<div class = "input-spacing required">
+							<label>
+								Full Name:
+								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user-full-name" required>
+							</label>
+						</div>
+
+						<!-- Email Address field -->
+						<div class = "input-spacing required">
+							<label>
+								Email Address:
+								<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "user-email-address" required>
+							</label>
+						</div>
+						
+						<!-- Enter Password field -->
+						<div class = "input-spacing required">
+							<label>
+								Create a password:
+								<input class = "large-field" type = "password" name = "user-password" required>
+							</label>
+						</div>
+
+						<!-- Re-enter Password field -->
+						<div class = "input-spacing required">
+							<label>
+								Re-enter password:
+								<input class = "large-field" type = "password" required>
+							</label>
+						</div>
+
+						<!-- Date of Birth field -->
+						<div class = "input-spacing">
+							<label>
+								Why do you want to make a Farmer's Friend account? <br> Please check all that apply:
+							</label>
+
+							<br>
+
+							<input class = "large-field" type = "checkbox" name = "purpose" value = "to-write-reviews"> To Write Reviews <br>
+
+							<input class = "large-field" type = "checkbox" name = "purpose" value = "to-register-farms"> To Register Farm(s) <br>
+
+							<input class = "large-field" type = "checkbox" name = "purpose" value = "to-browse-amazing-farms"> To Browse Amazing Farms <br>
+						</div>
+
+						<!-- Are you a farmer field -->
+						<!-- TODO: Increase the size of the radio buttons -->
+						<div class = "input-spacing">
+							<label>Are you a farmer?</label>
+							<input class = "large-field" type = "radio" name = "user-is-farmer" value = "yes"> Yes
+							<input class = "large-field" type = "radio" name = "user-is-farmer" value = "no"> No
+						</div>
+
+						<!-- Submit button field -->
+						<div class = "input-spacing">
+							<input class = "large-field" type = "submit" value = "Create">
+						</div>
+					</form>
+				</div>
+			</article>	
+
+			<picture>
+				<img class = "animal animal-right" alt = "Image of a cow">
+			</picture>
+			
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			<p> 
+				Made with 
+				<picture>
+					<source srcset = "assets/img/corn.png">
+					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
+				</picture>
+				&nbsp;by Kevin Hardy-Cooper &copy; 2018
+			</p>
+		</footer>
+	</body>
+</html>
