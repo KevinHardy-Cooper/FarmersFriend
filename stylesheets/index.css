@@ -16,7 +16,7 @@
 */
 
 /* When screen gets too small in width, remove image */
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 374px) {
 	.horiz-div {
 		position: relative;
 	}
@@ -26,18 +26,21 @@
 }
 
 /* When screen gets too small in height, remove image */
-@media only screen and (max-height: 630px) {
+@media only screen and (max-height: 430px) {
 	.barn-image {
-		visibility: hidden;
-	}
-	.horiz-div {
-		position: relative;
+		width: 200px;
 	}
 }
 
 /* When screen gets too small in height, remove image */
 @media only screen and (max-height: 374px) {
 	footer {
+		bottom: 0;
+	}
+	.barn-image {
+		visibility: hidden;
+	}
+	.horiz-div {
 		position: relative;
 	}
 }

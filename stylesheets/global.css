@@ -41,7 +41,7 @@ nav li a {
     text-decoration: none;
 
     /* Setting text colour to grey */
-    color: grey;
+    color: #686868;
 }
 
 /* Stylings for unordered list item when active */
@@ -83,7 +83,7 @@ nav li.justify-right {
 footer {
 
     /* Setting text colour to grey */
-    color: grey;
+    color: #686868;
 
     /* Setting the position of the element */
     position: fixed;
@@ -301,6 +301,7 @@ th {
     }
 
     h1 {
+        font-size: 14pt;
         text-align: center;
     }
 }
@@ -310,6 +311,7 @@ th {
         font-size: 7pt;
     }
     h1 {
+        font-size: 14pt;
         text-align: center;
     }
     footer {

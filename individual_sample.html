@@ -3,16 +3,16 @@
 	<head>
 
 		<!-- Character encoding -->
-		<meta charset = "UTF-8">
+		<meta charset = "UTF-8"/>
 
 		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1"/>
 		
 		<!-- Page author -->
-		<meta name = "author" content = "Kevin Hardy-Cooper">
+		<meta name = "author" content = "Kevin Hardy-Cooper"/>
 
 		<!-- Page description -->
-		<meta name = "description" content = "Farm page with reviews">
+		<meta name = "description" content = "Farm page with reviews"/>
 
 		<!-- Title of the page -->
 		<title>Farmer's Friend</title>
@@ -77,7 +77,7 @@
 						<picture>
 
 							<!-- Image of farm -->
-							<img class = "user-farm-image" src = "assets/img/two-silos.jpg" alt = "User-uploaded image of farm">
+							<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "assets/img/two-silos.jpg"/>
 						</picture>
 
 						<!-- Specific Object\s description -->
@@ -85,103 +85,124 @@
 							<span itemprop = "description">
 								Hobby farm that sells free-range eggs and more than enough swiss chard.
 							</span>
-							<br>
-							<div itemprop = "geo" itemscope itemtype = "http://schema.org/GeoCoordinates">
-								Coordinates: +40.22222,&nbsp;-87.55555
-								<meta itemprop = "latitude" content = "40.22222"/>
-								<meta itemprop = "longitude" content = "-87.55555"/>
-						  	</div>
-							<br>
-							Average Rating: 5 stars
 						</p>
+						<div itemprop = "geo" itemscope itemtype = "http://schema.org/GeoCoordinates">
+							Coordinates: +40.22222,&nbsp;-87.55555
+							<meta itemprop = "latitude" content = "40.22222"/>
+							<meta itemprop = "longitude" content = "-87.55555"/>
+					  	</div>
+						<br>
+						Average Rating: 5 stars
+						<br>
+						<br>
 					</div>
 				</div>
 			</article>	
 
-			<article>
-				<picture>
-					
-					<!-- Map displaying returned results -->
-					<!-- TODO: Use iframe tags to embed map -->
-					<img alt = "Map displaying returned results" class = "image-wrapper" src = "assets/img/map-results.png">
-				</picture>
-			</article>
+			<picture>
+				
+				<!-- Map displaying returned results -->
+				<!-- TODO: Use iframe tags to embed map -->
+				<img alt = "Map displaying returned results" class = "image-wrapper" src = "assets/img/map-results.png"/>
+			</picture>
 		
 			<article>
+
+				<h3 class = "specific-padding">
+					Reviews
+				</h3>
 
 				<!-- Part 3 of the Meta-data add-on task, inspired by "http://schema.org/Review" -->
 				
 				<!-- Table containing returned reviews and data about these reviews -->
 				<div class = "specific-padding scrollable-div">
-					<table class = "table">
-						<tr>
-							<th class = "wide-td">Review</th>
-							<th>Date</th>
-							<th>Rating</th>
-							<th>Reviewed By</th>
-						</tr>
-						<tr>
-							<div itemprop="review" itemscope itemtype="http://schema.org/Review">
+					
+						<table class = "table">
+							<tr>
+								<th class = "wide-td">Review</th>
+								<th>Date</th>
+								<th>Rating</th>
+								<th>Reviewed By</th>
+							</tr>
+							
+							<tr>
 								<td>
-									<span itemprop="reviewBody">Wow so great</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewBody">Wow so great</span>
+									</div>
 								</td>
 								<td>January 9th, 2018</td>
 								<td>
-									<span itemprop = "reviewRating">5</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewRating">5</span>
+									</div>
 									stars
 								</td>
 								<td>
-									<span itemprop = "author">Not Not Farmer Kev</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "author">Not Not Farmer Kev</span>
+									</div>
 								</td>
-							</div>
-						</tr>
-						<tr>
-							<div itemprop="review" itemscope itemtype="http://schema.org/Review">
+							</tr>
+							<tr>
 								<td>
-									<span itemprop="reviewBody">Great so wow</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewBody">Great so wow</span>
+									</div>
 								</td>
 								<td>January 10th, 2018</td>
 								<td>
-									<span itemprop = "reviewRating">5</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewRating">5</span>
+									</div>
 									stars
 								</td>
 								<td>
-									<span itemprop = "author">Not Not Not Not Farmer Kev</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "author">Not Not Not Not Farmer Kev</span>
+									</div>
 								</td>
-							</div>
-						</tr>
-						<tr>
-							<div itemprop="review" itemscope itemtype="http://schema.org/Review">
+							</tr>
+							<tr>
 								<td>
-									<span itemprop="reviewBody">Gee whiz I loves me their pork tenderloin!!!</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewBody">Gee whiz I loves me their pork tenderloin!!!</span>
+									</div>
 								</td>
 								<td>January 9th, 2018</td>
 								<td>
-									<span itemprop = "reviewRating">5</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewRating">5</span>
+									</div>
 									stars
 								</td>
 								<td>
-									<span itemprop = "author">The Neighbour</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "author">The Neighbour</span>
+									</div>
 								</td>
-							</div>
-						</tr>
-						<tr>
-							<div itemprop="review" itemscope itemtype="http://schema.org/Review">
+							</tr>
+							<tr>
 								<td>
-									<span itemprop="reviewBody">OMG THIS FARM IS SO QUAINT</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewBody">OMG THIS FARM IS SO QUAINT</span>
+									</div>
 								</td>
 								<td>January 9th, 2018</td>
 								<td>
-									<span itemprop = "reviewRating">5</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "reviewRating">5</span>
+									</div>
 									stars
 								</td>
 								<td>
-									<span itemprop = "author">Citiot</span>
+									<div itemprop = "review" itemscope itemtype = "http://schema.org/Review">
+										<span itemprop = "author">Citiot</span>
+									</div>
 								</td>
-							</div>
-						</tr>
-					</table>	
-				</div>	
+							</tr>
+						</table>	
+					</div>
 			</article>
 		</main>
 
@@ -191,7 +212,7 @@
 				Made with 
 				<picture>
 					<source srcset = "assets/img/corn.png">
-					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
+					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"/> 
 				</picture>
 				&nbsp;by Kevin Hardy-Cooper &copy; 2018
 			</p>
