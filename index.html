@@ -43,8 +43,22 @@
 		<meta name = "twitter:image" content = "assets/img/vector-farm.png"/>
 
 		<!-- If the user saves this webpage to their home screen -->
-		<link rel = "apple-touch-icon" href = "assets/img/icon.png"/>
-		<link rel = "apple-touch-startup-image" href = "assets/img/icon.png"/>
+		<!-- For Apple -->
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+
+		<!-- For Android -->
+		<link rel="manifest" href="manifest.json"/>
+
+		<!-- Removing default Apple toolbars and menu bars -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!-- Icon meta links -->
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+		<link rel="manifest" href="assets/icon/site.webmanifest">
+		<link rel="mask-icon" href="assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 		<header>
