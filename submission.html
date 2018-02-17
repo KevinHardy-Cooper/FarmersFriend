@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -80,7 +81,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Farm Name:
-								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm-name" required>
+								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm-name" id = "farm-name" required>
 							</label>
 						</div>
 
@@ -88,23 +89,25 @@
 						<div class = "input-spacing required">
 							<label>
 								Description:
-								<textarea placeholder = "Why would people want to visit?" name = "farm-description" required></textarea>
+								<textarea placeholder = "Why would people want to visit?" name = "farm-description" id = "farm-description" required></textarea>
 							</label>	
 						</div>
+
+						<button type = "button" class = "large-field" onclick = "setCoords()">Set Coordinates of Farm to Your Location</button>
 						
 						<!-- Latitude field -->
 						<div class = "input-spacing required">
 							<label>
 								Latitude:
-								<input class = "large-field" type = "number" placeholder = "Enter latitude" name = "farm-latitude" required>
+								<input class = "large-field" type = "number" placeholder = "Enter latitude" name = "farm-latitude" id = "farm-latitude" required>
 							</label>
 						</div>
 
 						<!-- Longitude field -->
-						<div class = "input-spacing rsequired">
+						<div class = "input-spacing required">
 							<label>
 								Longitude:
-								<input class = "large-field" type = "number" placeholder = "Enter longitude" name = "farm-longitude" required>
+								<input class = "large-field" type = "number" placeholder = "Enter longitude" name = "farm-longitude" id = "farm-longitude" required>
 							</label>	
 						</div>
 
@@ -118,7 +121,7 @@
 
 						<!-- Submit buttom field -->
 						<div class = "input-spacing">
-							<input class = "large-field" type = "submit" value = "Create">
+							<input class = "large-field" type = "button" onclick = "clientSideFormValidation()" value = "Create">
 						</div>
 					</form>
 				</div>
@@ -143,3 +146,24 @@
 		</footer>
 	</body>
 </html>
+<script>
+	function clientSideFormValidation() {
+		var farm_name = document.getElementById("farm-name").value;
+		var farm_description = document.getElementById("farm-description").value;
+		var farm_latitude = document.getElementById("farm-latitude").value;
+		var farm_longitude = document.getElementById("farm-longitude").value;
+
+		// time for the regex
+		// farm name must contain at least one letter, some numbers, and the only special characters it can contain are ' and & and ,
+		// description requires no validation other than requires at least one letter, and a limit of 140 characters a la twitter
+		// latitude must be a number, positive or negative, can be an integer or a double, and there is a max limit and a min limit
+		// longitude is the same as latitude
+	}
+
+	function setCoords() {
+		// once again, ask for ocation of user via html5 geoloaction
+		// if they accept, then do
+			// grab lon and lat, set dom fields to contain these values
+		// if they don't accept, then output: "fine, fill it out yourself then"
+	}
+</script>

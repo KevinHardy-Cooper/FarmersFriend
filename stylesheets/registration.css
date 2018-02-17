@@ -17,7 +17,7 @@
 */
 
 /* When in landscape mode, attach footer to bottom of content instead of it's usual fixed position at bottom of page*/
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 630px) {
 	footer {
 		position: relative;
 	}

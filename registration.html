@@ -80,7 +80,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Full Name:
-								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user-full-name" required>
+								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user-full-name" id = "user-full-name" required>
 							</label>
 						</div>
 
@@ -88,7 +88,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Email Address:
-								<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "user-email-address" required>
+								<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "user-email-address" id = "user-email-address" required>
 							</label>
 						</div>
 						
@@ -96,15 +96,18 @@
 						<div class = "input-spacing required">
 							<label>
 								Create a password:
-								<input class = "large-field" type = "password" name = "user-password" required>
+								<input class = "large-field" type = "password" name = "user-password" id = "user-password" required>
 							</label>
+							<p>
+								Password must contain be at least 7 charcters long, must contain at least one lowercase and uppercase letter, and at least one number.  No spaces or special characters allowed.
+							</p> 
 						</div>
 
 						<!-- Re-enter Password field -->
 						<div class = "input-spacing required">
 							<label>
 								Re-enter password:
-								<input class = "large-field" type = "password" required>
+								<input class = "large-field" type = "password" id = "re-entered-password" required>
 							</label>
 						</div>
 
@@ -151,14 +154,14 @@
 
 						<!-- Submit button field -->
 						<div class = "input-spacing">
-							<input class = "large-field" type = "submit" value = "Create">
+							<input class = "large-field" type = "button" onclick = "clientSideFormValidation()" value = "Create">
 						</div>
 					</form>
 				</div>
 			</article>	
 
 			<picture>
-				<img class = "animal animal-right" alt = "Image of a cow">
+				<img class = "animal animal-right" alt = "Image of a cow" src = "filler">
 			</picture>
 			
 		</main>
@@ -176,3 +179,18 @@
 		</footer>
 	</body>
 </html>
+<script>
+	function clientSideFormValidation() {
+		var user_full_name = document.getElementById("user-full-name");
+		var user_email_address = document.getElementById("user-email-address");
+		var user_password = document.getElementById("user-password");
+		var re_entered_password = document.getElementById("re-entered-password");
+
+		//now that we have the fields that need to be validated, let the reg ex begin
+		// the full name cannot contain any numbers or special characters, letters only/  must be longer than 4 characters
+		// the email address cna use the html5 form validation, and then must use a more complicated regex expression after that
+		// password must obey the rules stated above
+		// re-entered password must equal the first password
+		
+	}
+</script>
