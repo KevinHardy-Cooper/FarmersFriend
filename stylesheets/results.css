@@ -17,3 +17,12 @@
 footer {
     position: relative;
 }
+
+/*
+* --- MAP STYLINGS ---
+*/
+#resultMap {
+	margin: auto;
+	width: 90%;
+	height: 300px;
+}

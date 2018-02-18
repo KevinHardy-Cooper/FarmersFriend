@@ -281,6 +281,43 @@ th {
     right: 10px;
 }
 
+/*
+* --- SPINNER ---
+*/
+
+/* inspired by https://www.w3schools.com/howto/howto_css_loader.asp */
+.spinner {
+    /* centers horizontally */
+    margin: auto;
+
+    /* hiding div initially */
+    display: none;
+
+    /* setting border colours and size */
+    border: 5px solid lightgrey;
+    border-radius: 50%;
+    border-top: 5px solid green;
+
+    /* sizing the overall div */
+    width: 20px;
+    height: 20px;
+
+    /* animate spinner according to the rule spin*/
+    animation: spin 1s linear infinite;
+}
+
+/* defining webkit keyframes for the spin rule */
+@-webkit-keyframes spin {
+
+    /* describing the rotation for the spinner */
+    0% { 
+        -webkit-transform: rotate(0deg); 
+    }
+    100% { 
+        -webkit-transform: rotate(360deg); 
+    }
+}
+
 
 /*
 * -- RESPONSIVE STYLINGS ---
