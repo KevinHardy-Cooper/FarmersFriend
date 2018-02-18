@@ -318,6 +318,14 @@ th {
     }
 }
 
+/*
+* --- ERROR STYLINGS ---
+*/
+
+.errorStatus {
+    color: red;
+}
+
 
 /*
 * -- RESPONSIVE STYLINGS ---
