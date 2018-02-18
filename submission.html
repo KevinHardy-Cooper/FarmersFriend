@@ -75,7 +75,7 @@
 				<div class = "specific-padding large-text">
 
 					<!-- TODO: Set action attribute to somewhere useful -->
-					<form method = "post">
+					<form id = "registration" method = "post"  onsubmit = "clientSideFormValidation()">
 
 						<!-- Farm Name field -->
 						<div class = "input-spacing required">
@@ -85,11 +85,11 @@
 							</label>
 						</div>
 
-						<!-- Description field -->
+						<!-- Description field, with maximium amount of characters set to 200 -->
 						<div class = "input-spacing required">
 							<label>
 								Description:
-								<textarea placeholder = "Why would people want to visit?" name = "farm-description" id = "farm-description" required></textarea>
+								<textarea placeholder = "Why would people want to visit?" name = "farm-description" id = "farm-description" maxlength = "200" required></textarea>
 							</label>	
 						</div>
 
@@ -104,7 +104,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Latitude:
-								<input class = "large-field" type = "number" placeholder = "Enter latitude" name = "farm-latitude" id = "farm-latitude" required>
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm-latitude" id = "farm-latitude" required>
 							</label>
 						</div>
 
@@ -112,7 +112,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Longitude:
-								<input class = "large-field" type = "number" placeholder = "Enter longitude" name = "farm-longitude" id = "farm-longitude" required>
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm-longitude" id = "farm-longitude" required>
 							</label>	
 						</div>
 
@@ -126,7 +126,7 @@
 
 						<!-- Submit buttom field -->
 						<div class = "input-spacing">
-							<input class = "large-field" type = "button" onclick = "clientSideFormValidation()" value = "Create">
+							<input class = "large-field" type = "submit" value = "Create">
 						</div>
 					</form>
 				</div>
@@ -153,11 +153,15 @@
 </html>
 <script>
 	function clientSideFormValidation() {
-		var farm_name = document.getElementById("farm-name").value;
-		var farm_description = document.getElementById("farm-description").value;
-		var farm_latitude = document.getElementById("farm-latitude").value;
-		var farm_longitude = document.getElementById("farm-longitude").value;
+		var farmName = document.getElementById("farm-name").value;
+		var farmDescription = document.getElementById("farm-description").value;
+		var farmLatitude = document.getElementById("farm-latitude").value;
+		var farmLongitude = document.getElementById("farm-longitude").value;
 
+		console.log(validateFarmName(farmName));
+		console.log(validateFarmDescription(farmDescription));
+		alert("here!");
+		
 		// time for the regex
 		// farm name must contain at least one letter, some numbers, and the only special characters it can contain are ' and & and ,
 		// description requires no validation other than requires at least one letter, and a limit of 140 characters a la twitter
@@ -165,12 +169,28 @@
 		// longitude is the same as latitude
 	}
 
+	function validateFarmName(farmName) {
+
+		// Must start with a letter, then followed by at least one letter.  If there is a space, apostrophe or hyphen, then it must be followed by at least one letter.  If there is a space, apostrophe or hyphen then there must be letters before these characters.
+		var farmNamePattern = /^[A-Za-z][A-Za-z]+([ '-][A-Za-z]+)*$/;
+		return farmNamePattern.test(farmName);
+	}
+
+	function validateFarmDescription(farmDescription) {
+		
+		// The form textarea field already has a maxlength set to 200 characters
+		// Now we just need to validate that special characters are turned into unicode
+		farmDescription.replace(/</g, "&lt;");
+
+		document.getElementById("geoResults").innerHTML = farmDescription;
+		return farmDescription;
+	}
+
+	// place user coordinates as the farm lat and lon
 	function setCoords() {
+
 		// once again, ask for location of user via html5 geoloaction
 		getLocation();
-		// if they accept, then do
-			// grab lon and lat, set dom fields to contain these values
-		// if they don't accept, then output: "fine, fill it out yourself then"
 	}
 
 	// Start the location delegate
