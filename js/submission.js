@@ -1,45 +1,52 @@
+// This function is the main client-side validation delegate 
 function validate(form) {	
 
+	// This JSON contains the required fields and their respective messages
+	var fieldStatuses = [
+		{
+			name: "farm_name_status",
+			formValue: form.farm_name.value,
+			emptyMessage: "No farm name entered",
+			errorMessage: "Invalid farm name",
+			successMessage: ""
+		},
+		{
+			name: "farm_descr_status",
+			formValue: form.farm_description.value,
+			emptyMessage: "No farm description entered",
+			errorMessage: "Invalid farm description",
+			successMessage: ""	
+		},
+		{
+			name: "farm_lat_status",
+			formValue: form.farm_latitude.value,
+			emptyMessage: "No latitude entered",
+			errorMessage: "Invalid latitude",
+			successMessage: ""	
+		},
+		{
+			name: "farm_lon_status",
+			formValue: form.farm_longitude.value,
+			emptyMessage: "No longitude entered",
+			errorMessage: "Invalid longitude",
+			successMessage: ""
+		},
+	];
+
 	// check for empty required fields if HTML5 validation is not built into browser
-	if (form.farm_name.value == "")	{
-		document.getElementById("farm_name_status").innerHTML = "No farm name entered";
-		return false;
-	}
-	if (form.farm_description.value == "") {
-		document.getElementById("farm_descr_status") = "No description entered";
-		return false;
-	}
-	if (form.farm_latitude.value == "") {
-		document.getElementById("farm_lat_status") = "No latitude entered";
-		return false;
-	}
-	if (form.farm_longitude.value == "") {
-		document.getElementById("farm_lon_status") = "No longitude entered";
-		return false;
+	for (var field in fieldStatuses) {
+		document.getElementById(fieldStatuses[field].name).innerHTML = (fieldStatuses[field].formValue == "") ? fieldStatuses[field].emptyMessage : fieldStatuses[field].successMessage;
 	}
 
-	// now we will check if the values entered are valid
-	// farm name must contain at least one letter, some numbers, and the only special characters it can contain are ' and & and ,
-	if (!validateFarmName(form.farm_name.value)) {
-		document.getElementById("farm_name_status").innerHTML = "Invalid farm name";
-	}
+	// now we check for valid field values 
+	for (var field in fieldStatuses) {
 
-	if (!validateFarmDescription(form.farm_description.value)) {
-		document.getElementById("farm_descr_status").innerHTML = "Invalid farm description";
-	}
-
-	// latitude must be a number, positive or negative, can be an integer or a double, and there is a max limit and a min limit
-	if (!validateLatitude(form.farm_latitude.value)) {
-		document.getElementById("farm_lat_status").innerHTML = "Invalid latitude";
-	}
-
-	// longitude is the same as latitude
-	if (!validateLongitude(form.farm_longitude.value)) {
-		document.getElementById("farm_lon_status").innerHTML = "Invalid longitude";
+		//if the validator returns invalid, display appropriately
+		document.getElementById(fieldStatuses[field].name).innerHTML = (!validationFunctionForField(fieldStatuses[field].name, fieldStatuses[field].formValue)) ? fieldStatuses[field].errorMessage : fieldStatuses[field].successMessage;
 	}
 
 	// after we have set the error messages, determine if the form should be submitted
-	if (!validateFarmName(form.farm_name.value) || !validateFarmDescription(form.farm_description.value) || !validateLatitude(form.farm_latitude.value) || !validateLongitude(form.farm_longitude.value)) {
+	if (!validateFarmName(form.farm_name.value) || !validateFarmDescription(form.farm_description.value) || !validateCoord(form.farm_latitude.value, "farm_lat_status") || !validateCoord(form.farm_longitude.value, "farm_lon_status")) {
 		document.getElementById("formStatus").innerHTML = "Cannot submit form";
 		return false;
 	}
@@ -48,6 +55,19 @@ function validate(form) {
 	// description requires no validation other than requires at least one letter, and a limit of 140 characters a la twitter
 	form.farm_description.value = alterFarmDescription(form.farm_description.value);
 	return true;
+}
+
+// This function uses the correct validator given the field
+function validationFunctionForField(field, val1) {
+	switch(field) {
+		case "farm_name_status":
+			return validateFarmName(val1);
+		case "farm_descr_status":
+			return validateFarmDescription(val1);	
+		case "farm_lat_status":
+		case "farm_lon_status":
+			return validateCoord(val1, field);
+	}
 }
 
 function validateFarmName(farmName) {
@@ -82,47 +102,16 @@ function alterFarmDescription(farmDescription) {
 	return farmDescription;
 }
 
-function validateLatitude(farmLatitude) {
-	if (farmLatitude > Number.MAX_SAFE_INTEGER || farmLatitude < ( -1  * Number.MAX_SAFE_INTEGER)) {
-		document.getElementById("farm_lat_status").innerHTML = "Invalid latitude";
+// Check to see if the value the user entered is between negative and positive values
+function validateCoord(farmCoord, farmCoordStatus) {
+	if (farmCoord > Number.MAX_SAFE_INTEGER || farmCoord < ( -1  * Number.MAX_SAFE_INTEGER)) {
 		return false;
 	}
 	return true;
-}
-function validateLongitude(farmLongitude) {
-	if (farmLongitude > Number.MAX_SAFE_INTEGER || farmLongitude < (-1 * Number.MAX_SAFE_INTEGER)) {
-		document.getElementById("farm_lon_status").innerHTML = "Invalid longitude";
-		return false;
-	}
-	return true;
-}
-
-// place user coordinates as the farm lat and lon
-function setCoords() {
-
-	// once again, ask for location of user via html5 geoloaction
-	getLocation();
-}
-
-// Start the location delegate
-function getLocation() {
-
-	// if HTML5 geolocation exists
-		if (navigator.geolocation) {
-
-			// Need to show loader
-		document.getElementById("spinner").style = "display:block";
-
-			// Get the current position of the user, if successful call showPosition, if not successful showError
-		navigator.geolocation.getCurrentPosition(showPosition, showError);
-		
-	} else { // If HTML5 geolocation does not exist
-		document.getElementById("geoResults").innerHTML = "Geolocation is not supported by this browser.";
-	}
 }
 
 // Show the user's position
-function showPosition(position) {
+function positionAction(position) {
 
 	// Reset geo status
 	document.getElementById("geoResults").innerHTML = "";
@@ -135,24 +124,3 @@ function showPosition(position) {
 	document.getElementById("farm_longitude").value = position.coords.longitude;
 }
 
-// Show error to user
-function showError(error) {
-
-	// Need to hide loader
-	document.getElementById("spinner").style = "display:none";
-
-	switch(error.code) {
-		case error.PERMISSION_DENIED:
-			document.getElementById("geoResults").innerHTML  = "User denied the request for Geolocation."
-			break;
-		case error.POSITION_UNAVAILABLE:
-			document.getElementById("geoResults").innerHTML  = "Location information is unavailable."
-			break;
-		case error.TIMEOUT:
-			document.getElementById("geoResults").innerHTML  = "The request to get user location timed out."
-			break;
-		case error.UNKNOWN_ERROR:
-			document.getElementById("geoResults").innerHTML  = "An unknown error occurred."
-			break;
-	}
-}

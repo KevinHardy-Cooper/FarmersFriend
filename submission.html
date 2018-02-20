@@ -46,7 +46,7 @@
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "#">
+						<a class = "active" href = "submission.html">
 							Register Farm
 						</a>
 					</li>
@@ -83,8 +83,8 @@
 								Farm Name:
 								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm_name" id = "farm_name" required>
 							</label>
-							<div id = "farm_name_status" class  = "errorStatus"></div>
 						</div>
+						<div id = "farm_name_status" class  = "errorStatus"></div>
 
 						<!-- Description field, with maximium amount of characters set to 140 -->
 						<div class = "input-spacing required">
@@ -92,13 +92,13 @@
 								Description:
 								<textarea placeholder = "Why would people want to visit?" name = "farm_description" id = "farm_description" maxlength = "140" required></textarea>
 							</label>	
-							<div id = "farm_descr_status" class  = "errorStatus"></div>
 						</div>
+						<div id = "farm_descr_status" class  = "errorStatus"></div>
 
-						<button type = "button" class = "large-field" onclick = "setCoords()">Set To My Location</button>
+						<button type = "button" class = "large-field" onclick = "getLocation()">Set To My Location</button>
 
 						<!-- will contain the status regarding the geolocation services -->
-						<div id = "geoResults"></div>
+						<div id = "geoResults" class = "errorStatus"></div>
 
 						<div class = "spinner" id = "spinner"></div>
 						
@@ -108,8 +108,8 @@
 								Latitude:
 								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm_latitude" id = "farm_latitude" required>
 							</label>
-							<div id = "farm_lat_status" class  = "errorStatus"></div>
 						</div>
+						<div id = "farm_lat_status" class  = "errorStatus"></div>
 
 						<!-- Longitude field -->
 						<div class = "input-spacing required">
@@ -117,9 +117,9 @@
 								Longitude:
 								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" required>
 							</label>	
-							<div id = "farm_lon_status" class  = "errorStatus"></div>
 						</div>
-
+						<div id = "farm_lon_status" class  = "errorStatus"></div>
+						
 						<!-- Choose image field -->
 						<div class = "input-spacing">
 							<label>
@@ -156,4 +156,5 @@
 		</footer>
 	</body>
 </html>
+<script src = "./js/global.js"></script>
 <script src = "./js/submission.js"></script>

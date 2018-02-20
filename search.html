@@ -50,7 +50,7 @@
 					<li class = "justify-right">
 
 					<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "#">
+						<a class = "active" href = "search.html">
 							Search
 						</a>
 					</li>
@@ -119,13 +119,13 @@
 						</button>
 					</form>
 					<br>
-					Don't know what your looking for?
+					Don't know what you're looking for?
 					<button type = "button" onclick = "getLocation()" class = "large-field">
-						Find Farms Near Me
+						Find Farms Near You
 					</button>
 					
 					<!-- will contain the status regarding the geolocation services -->
-					<div id = "geoResults"></div>
+					<div id = "geoResults" class = "errorStatus"></div>
 
 					<!-- will contain the spinner, if we need it -->
 					<div id = "spinner" class = "spinner"></div>
@@ -152,5 +152,6 @@
 		</footer>
 	</body>
 </html>
-
+<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
+<script src = "./js/global.js"></script>
 <script src = "./js/search.js"></script>

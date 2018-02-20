@@ -40,7 +40,7 @@
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "">
+						<a class = "active" href = "registration.html">
 							Sign Up
 						</a>
 					</li>
@@ -82,8 +82,17 @@
 								Full Name:
 								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user_full_name" id = "user_full_name" required>
 							</label>
-							<div id = "user_full_name_status" class  = "errorStatus"></div>
 						</div>
+						<div id = "user_full_name_status" class  = "errorStatus"></div>
+
+						<!-- Birthday field -->
+						<div class = "input-spacing required">
+							<label>
+								Date of Birth:
+								<input class = "large-field" type = "date" placeholder = "yyyy-mm-dd" name = "user_birthday" id = "user_birthday" required>
+							</label>
+						</div>
+						<div id = "user_birthday_status" class  = "errorStatus"></div>
 
 						<!-- Email Address field -->
 						<div class = "input-spacing required">
@@ -91,8 +100,8 @@
 								Email Address:
 								<input class = "large-field" type = "email" placeholder = "farmer@farm.com" name = "user_email_address" id = "user_email_address" required>
 							</label>
-							<div id = "user_email_address_status" class  = "errorStatus"></div>
 						</div>
+						<div id = "user_email_address_status" class  = "errorStatus"></div>
 						
 						<!-- Enter Password field -->
 						<div class = "input-spacing required">
@@ -100,11 +109,12 @@
 								Create a password:
 								<input class = "large-field" type = "password" name = "user_password" id = "user_password" placeholder = "***********" required>
 							</label>
-							<div id = "user_password_status" class  = "errorStatus"></div>
-							<p>
-								Password must contain be at least 7 charcters long, must contain at least one lowercase and uppercase letter, and at least one number.  No spaces or special characters allowed.
-							</p> 
+							
 						</div>
+						<div id = "user_password_status" class  = "errorStatus"></div>
+						<p>
+							Password must contain be at least 7 characters long, must contain at least one lowercase and uppercase letter, and at least one number.  No spaces or special characters allowed.
+						</p> 
 
 						<!-- Re-enter Password field -->
 						<div class = "input-spacing required">
@@ -112,8 +122,8 @@
 								Re-enter password:
 								<input class = "large-field" type = "password" id = "re_entered_password" name = "re_entered_password" placeholder = "***********" required>
 							</label>
-							<div id = "re_entered_password_status" class  = "errorStatus"></div>
 						</div>
+						<div id = "re_entered_password_status" class  = "errorStatus"></div>
 
 						<!-- Date of Birth field -->
 						<div class = "input-spacing">

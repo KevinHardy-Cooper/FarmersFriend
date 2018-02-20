@@ -1,10 +1,11 @@
-// dummy array that will contain lats and lngs of farms
-var farmLatLng = [43.260659, -79.921782];
-
-// dummy data to populate sample page
-var farmName = "Farmer Kev's Farm";
-var farmDescr = "Hobby farm that sells free-range eggs and more than enough swiss chard.";
-var farmAvRating = "Average Rating: 5 stars";
+// dummy JSON containing farm data
+var farm = {
+	name: "Farmer Kev's Farm",
+	description: "Hobby farm that sells free-range eggs and more than enough swiss chard.", 
+	averageRating: "Average Rating: 5 stars",
+	latitude: 43.260659,
+	longitude: -79.921782
+}
 
 // dummy array that will contain sample reviews
 var farmReviews = [
@@ -43,20 +44,16 @@ var farmReviews = [
 ];
 
 // creates map element
-createMap(farmLatLng);
+createMap(farm);
 
 // setting information for the farm onto the page
-setFarmInfo(farmName, farmDescr, farmAvRating, farmLatLng);
+setFarmInfo(farm);
 
 // populating the table
 populateTable(farmReviews);
 
-// dummy array that will contain lats and lngs of farms
-var farmLatLng = [43.260659, -79.921782];
-
-
 // This function takes in the coords of the farm, and creates a map object centered around that farm's coords
-function createMap(farmLatLng) {
+function createMap(farm) {
 
 	// create the map and load it into the div with id="objectMap"
 	var objectMap = L.map('objectMap');
@@ -71,34 +68,34 @@ function createMap(farmLatLng) {
 	).addTo(objectMap); // add the tiles to the map object
 
 	// center the map view around the farm
-	objectMap.setView(farmLatLng, 14);
+	objectMap.setView([farm.latitude, farm.longitude], 14);
 
 	// adds marker to map
-	createMarker(objectMap);
+	createMarker(farm, objectMap);
 }
 
 // this function takes in the map object and adds a marker to it
-function createMarker(objectMap) {
+function createMarker(farm, objectMap) {
 
 	// create a map marker for the farm at the farm's coords
-	L.marker(farmLatLng)
+	L.marker([farm.latitude, farm.longitude])
 
 		// add this marker to the map object
 		.addTo(objectMap)
 
 		// include a pop-up for the marker that contains the farm's name
-		.bindPopup("<b>" + farmName + "</b>")
+		.bindPopup("<b>" + farm.name + "</b>")
 
 		// set the popup to open when map is loaded
 		.openPopup();
 }
 
 // This function takes in the farm information and displays it on the page
-function setFarmInfo(farmName, farmDescr, farmAvRating, farmLatLng) {
-	document.getElementById("farm_name").innerHTML = farmName;
-	document.getElementById("description").innerHTML = farmDescr;
-	document.getElementById("farm_coords").innerHTML = "Coordinates: " + farmLatLng;
-	document.getElementById("farm_av_rating").innerHTML = farmAvRating;
+function setFarmInfo(farm) {
+	document.getElementById("farm_name").innerHTML = farm.name;
+	document.getElementById("description").innerHTML = farm.description;
+	document.getElementById("farm_coords").innerHTML = "Coordinates: " + farm.latitude + ", " + farm.longitude;
+	document.getElementById("farm_av_rating").innerHTML = farm.averageRating;
 }
 
 // This function adds a row to the table for each review given

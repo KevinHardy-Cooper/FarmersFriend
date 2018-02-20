@@ -1,47 +1,6 @@
-// Start the location delegate
-function getLocation() {
-
-	// if HTML5 geolocation exists
-	if (navigator.geolocation) {
-
-		// Need to show loader
-		document.getElementById("spinner").style = "display:block";
-
-		// Get the current position of the user, if successful call showPosition, if not successful showError
-		navigator.geolocation.getCurrentPosition(showPosition, showError);
-		
-	} else { // If HTML5 geolocation does not exist
-		document.getElementById("geoResults").innerHTML = "Geolocation is not supported by this browser.";
-	}
-}
-
-// Show the user's position
-function showPosition(position) {
-
-	// Grab user's location and return it
+// Uses the user's position in order to send it correctly to findFarmsNearMe
+function positionAction(position) {
 	findFarmsNearMe(position.coords.latitude, position.coords.longitude);
-}
-
-// Show error to user
-function showError(error) {
-
-	// Need to hide loader
-	document.getElementById("spinner").style = "display:none";
-
-	switch(error.code) {
-		case error.PERMISSION_DENIED:
-			document.getElementById("geoResults").innerHTML  = "User denied the request for Geolocation."
-			break;
-		case error.POSITION_UNAVAILABLE:
-			document.getElementById("geoResults").innerHTML  = "Location information is unavailable."
-			break;
-		case error.TIMEOUT:
-			document.getElementById("geoResults").innerHTML  = "The request to get user location timed out."
-			break;
-		case error.UNKNOWN_ERROR:
-			document.getElementById("geoResults").innerHTML  = "An unknown error occurred."
-			break;
-	}
 }
 
 function findFarmsNearMe(lat, lon) {
