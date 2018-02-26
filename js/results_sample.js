@@ -80,8 +80,12 @@ function createMap(latLngArray) {
 					// add this marker to the map object
 			.addTo(resultMap)
 
-			// include a pop-up for the marker that contains a link to the farm's page
-			.bindPopup("<b><a href='individual_sample.html'>" + latLngArray[farm].farm.name + "</a></b>");
+			// include a pop-up for the marker that contains a link to the farm's page, average rating, image of farm
+			.bindPopup("<b><a href='individual_sample.html'>" + latLngArray[farm].farm.name + "</a></b>" + 
+				"<br>" +
+				latLngArray[farm].farm.averageRating + 
+				"<br>" +
+				"<img src='" + latLngArray[farm].farm.img + "' width='100px'/>");
 	}
 }
 
