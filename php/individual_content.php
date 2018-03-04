@@ -51,6 +51,7 @@
 		<br>
 
 		<main>
+			<?php echo $json_row; ?>
 			<article>
 				<div class = "specific-padding">
 

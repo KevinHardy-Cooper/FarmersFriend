@@ -55,15 +55,32 @@
 
 			<!-- Text providing feedback to the user about what page they are on and the state -->
 			<div class = "specific-padding">
-				<h3 id = "searchParams"></h3>
+				<h3><?php 
+
+					if ($name == "" && $rating == 0) {
+						echo count($rows) . ' result(s)';
+					} else if ($name != "" && $rating == 0) {
+						echo count($rows) . ' result(s) for \'' . $name . '\'';
+					} else if ($name == "" && $rating != 0) {
+						echo count($rows) . ' result(s) for ' . $rating . ' star(s)';
+					} else {
+						echo count($rows) . ' result(s) for \'' . $name . '\', '  . $rating . ' star(s)';
+					}
+					?>		
+				</h3>
 			</div>
 
 			<!-- <div> that our map will be loaded into -->
-			<div id="resultMap"></div>
-
+			<div id = "resultMap"></div>
+			
 			<!-- Table containing returned results and data about these results -->
-			<div class = "specific-padding scrollable-div">
-				<table class = "table" id = "resultsTable">
+
+			<!-- took this out because even when the content could fit in the width it still had a weird invisible scroll bar area -->
+			<!-- <div class = "specific-padding scrollable-div"> -->
+				<div class = "specific-padding">
+				<!-- took this out because we can't send php variables to js to populate table -->
+				<!-- <table class = "table" id = "resultsTable"> -->
+					<table class = "table">
 					<tr>
 						<th>Farm Image</th>
 						<th>Farm</th>
@@ -71,6 +88,18 @@
 						<th>Average Rating</th>
 						<th>Write Review</th>
 					</tr>
+					<?php 
+						foreach ($rows as $row) {
+							echo '<tr>';
+							echo '<td><img class = \'results-image\' alt = \'User-uploaded image of their farm\' src=\'' . $row['imagePath'] . '\'></td>';
+							echo '<td><a href = ' . '../php/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
+							echo '<td>' . $row['dateJoined'] . '</td>';
+							// this needs to be changed by making a better sql query
+							echo '<td>' . $row['rating'] . ' stars</td>';
+							echo '<td><button class = \'large-field\'>Review</button></td>';
+							echo '</tr>';
+						}
+					?>
 				</table>	
 			</div>		
 		</main>					
@@ -80,6 +109,9 @@
 		
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
 		<script src = "../js/results_sample.js"></script>
+		<script>
+			createMap(<?php echo $json_rows ?>);
+		</script>
 	</body>
 </html>
  

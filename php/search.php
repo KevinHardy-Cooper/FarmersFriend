@@ -65,7 +65,7 @@
 
 				<!-- Search Form begins... -->
 				<div class = "middle-div large-text">
-					<form method = "get" action = "search_by_name.php">
+					<form method = "get" action = "search_results.php">
 
 						<!-- Name field -->
 						<label>
