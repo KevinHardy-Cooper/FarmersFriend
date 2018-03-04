@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<!-- Character encoding -->
-		<meta charset = "UTF-8"/>
-
-		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1"/>
-		
-		<!-- Page author -->
-		<meta name = "author" content = "Kevin Hardy-Cooper"/>
+<!-- Including common head elements -->
+<?php include '../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Sign into your account to review farms, and post farms"/>
-		
-		<!-- Title of the page -->
-		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheet -->
-		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="stylesheets/sign_in.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/sign_in.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -28,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a  href = "index.html">
+						<a  href = "../index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "sign_in.html">
+						<a class = "active" href = "sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.html">
+						<a href = "registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.html">
+						<a href = "submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.html">
+						<a href = "search.php">
 							Search
 						</a>
 					</li>
@@ -80,12 +67,12 @@
 				<div class = "middle-div large-text">
 
 					<!-- After successful login, email / username will be displayed where "Sign In" is in the navbar -->
-					<form method = "post" action = "index.html">
+					<form method = "post" action = "../index.php">
 
 						<!-- Email field -->
 						<label>
 							Email:
-							<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "sign-in-email" required/>
+							<input class = "large-field" type = "email" placeholder = "user@farm.com" name = "sign-in-email" maxlength = "40" required/>
 						</label>
 
 						<br>
@@ -93,7 +80,7 @@
 						<!-- Password field -->
 						<label>
 							Password:			
-							<input class = "large-field" type = "password" placeholder = "***********" name = "sign-in-password" required/>
+							<input class = "large-field" type = "password" placeholder = "***********" name = "sign-in-password" maxlength = "40" required/>
 						</label>	
 						
 						<br>
@@ -105,21 +92,13 @@
 			</article>
 
 			<picture>
-				<img class = "animal" alt = "Image of a horse" src = "./assets/img/vector-horse.png"/>
+				<img class = "animal" alt = "Image of a horse" src = "../assets/img/vector-horse.png"/>
 			</picture>
 
 		</main>
 
-		<!-- Footer -->
-		<footer>
-			<p> 
-				Made with 
-				<picture>
-					<source srcset = "assets/img/corn.png">
-					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"/> 
-				</picture>
-				&nbsp;by Kevin Hardy-Cooper &copy; 2018
-			</p>
-		</footer>
+		<!-- Including common footer element -->
+		<?php include '../php/inc/footer.inc' ?>
+		
 	</body>
 </html>

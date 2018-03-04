@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<!-- Character encoding -->
-		<meta charset = "UTF-8">
-
-		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-		
-		<!-- Page author -->
-		<meta name = "author" content = "Kevin Hardy-Cooper">
+<!-- Including common head elements -->
+<?php include '../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Create account to find and review farms">
 
-		<!-- Title of the page -->
-		<title>Farmer's Friend</title>
-
 		<!-- Importing external stylesheets -->
-		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="stylesheets/registration.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/registration.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -28,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "index.html">
+						<a href = "../index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.html">
+						<a href = "sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "registration.html">
+						<a class = "active" href = "registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.html">
+						<a href = "submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.html">
+						<a href = "search.php">
 							Search
 						</a>
 					</li>
@@ -80,7 +67,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Full Name:
-								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user_full_name" id = "user_full_name" required>
+								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user_full_name" id = "user_full_name" maxlength = "40" required>
 							</label>
 						</div>
 						<div id = "user_full_name_status" class  = "errorStatus"></div>
@@ -89,7 +76,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Date of Birth:
-								<input class = "large-field" type = "date"  name = "user_birthday" id = "user_birthday" required>
+								<input class = "large-field" type = "date"  name = "user_birthday" id = "user_birthday" maxlength = "40" required>
 							</label>
 						</div>
 						<div id = "user_birthday_status" class  = "errorStatus"></div>
@@ -98,7 +85,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Email Address:
-								<input class = "large-field" type = "email" placeholder = "farmer@farm.com" name = "user_email_address" id = "user_email_address" required>
+								<input class = "large-field" type = "email" placeholder = "farmer@farm.com" name = "user_email_address" id = "user_email_address" maxlength = "40" required>
 							</label>
 						</div>
 						<div id = "user_email_address_status" class  = "errorStatus"></div>
@@ -107,7 +94,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Create a password:
-								<input class = "large-field" type = "password" name = "user_password" id = "user_password" placeholder = "***********" required>
+								<input class = "large-field" type = "password" name = "user_password" id = "user_password" placeholder = "***********" maxlength = "40" required>
 							</label>
 							
 						</div>
@@ -120,7 +107,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Re-enter password:
-								<input class = "large-field" type = "password" id = "re_entered_password" name = "re_entered_password" placeholder = "***********" required>
+								<input class = "large-field" type = "password" id = "re_entered_password" name = "re_entered_password" placeholder = "***********" maxlength = "40" required>
 							</label>
 						</div>
 						<div id = "re_entered_password_status" class  = "errorStatus"></div>
@@ -157,11 +144,11 @@
 						<div class = "input-spacing">
 							Are you a farmer?
 							<label>
-								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "yes"> 
+								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "true"> 
 								Yes
 							</label>
 							<label>	
-								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "no"> 
+								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "false"> 
 								No
 							</label>
 						</div>
@@ -176,24 +163,15 @@
 			</article>	
 
 			<picture>
-				<img class = "animal animal-right" alt = "Image of a cow" src = "./assets/img/vector-cow.png">
+				<img class = "animal animal-right" alt = "Image of a cow" src = "../assets/img/vector-cow.png">
 			</picture>
 			
 		</main>
 
-		<!-- Footer -->
-		<footer>
-			<p> 
-				Made with 
-				<picture>
-					<source srcset = "assets/img/corn.png">
-					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
-				</picture>
-				&nbsp;by Kevin Hardy-Cooper &copy; 2018
-			</p>
-		</footer>
+		<!-- Including common footer element -->
+		<?php include '../php/inc/footer.inc' ?>
 		
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "./js/registration.js"></script>
+		<script src = "../js/registration.js"></script>
 	</body>
 </html>

@@ -37,7 +37,7 @@ function createFormElement() {
 	var form = document.createElement("form");
 	form.setAttribute("name", "coordsForm");
 	form.setAttribute("method", "get");
-	form.setAttribute("action", "results_sample.html");
+	form.setAttribute("action", "../php/results_sample.php");
 
 	// do not display form for when we add it to the DOM
 	form.setAttribute("style", "display:none");

@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<!-- Character encoding -->
-		<meta charset = "UTF-8"/>
-
-		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1"/>
-		
-		<!-- Page author -->
-		<meta name = "author" content = "Kevin Hardy-Cooper"/>
+<!-- Including common head elements -->
+<?php include '../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Search for farms"/>
 
-		<!-- Title of the page -->
-		<title>Farmer's Friend</title>
-
 		<!-- Importing external stylesheet -->
-		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="stylesheets/search.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/search.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -28,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "index.html">
+						<a href = "../index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.html">
+						<a href = "sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.html">
+						<a href = "registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.html">
+						<a href = "submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
 
 					<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "search.html">
+						<a class = "active" href = "search.php">
 							Search
 						</a>
 					</li>
@@ -78,12 +65,12 @@
 
 				<!-- Search Form begins... -->
 				<div class = "middle-div large-text">
-					<form method = "get" action = "results_sample.html">
+					<form method = "get" action = "search_by_name.php">
 
 						<!-- Name field -->
 						<label>
 							Search
-							<input class = "large-field" type = "search" placeholder = "Names" name = "name"/>
+							<input class = "large-field" type = "search" placeholder = "Names" name = "name" maxlength = "40" />
 						</label>
 						<label>
 							or
@@ -113,8 +100,8 @@
 						<!-- Submit button field -->
 						<button type = "submit" class = "large-field">
 							<picture>
-								<source srcset = "assets/img/magnifying-glass.png">
-								<img alt = "Search" class = "mag-glass" src = "assets/img/magnifying-glass.png"/>
+								<source srcset = "../assets/img/magnifying-glass.png">
+								<img alt = "Search" class = "mag-glass" src = "../assets/img/magnifying-glass.png"/>
 							</picture>
 						</button>
 					</form>
@@ -134,25 +121,16 @@
 			</article>
 
 			<picture>
-				<img class = "animal" alt = "Image of a chicken" src = "./assets/img/vector-chicken.png"/>
+				<img class = "animal" alt = "Image of a chicken" src = "../assets/img/vector-chicken.png"/>
 			</picture>
 
 		</main>
 		
-		<!-- Footer -->
-		<footer>
-			<p> 
-				Made with 
-				<picture>
-					<source srcset = "assets/img/corn.png">
-					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
-				</picture>
-				&nbsp;by Kevin Hardy-Cooper &copy; 2018
-			</p>
-		</footer>
+		<!-- Including common footer element -->
+		<?php include '../php/inc/footer.inc' ?>
 
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "./js/global.js"></script>
-		<script src = "./js/search.js"></script>
+		<script src = "../js/global.js"></script>
+		<script src = "../js/search.js"></script>
 	</body>
 </html>

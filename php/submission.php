@@ -1,26 +1,12 @@
- 
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<!-- Character encoding -->
-		<meta charset = "UTF-8">
-
-		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-		
-		<!-- Page author -->
-		<meta name = "author" content = "Kevin Hardy-Cooper">
+<!-- Including common head elements -->
+<?php include '../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Post farm to be searched for and reviewed">
-		
-		<!-- Title of the page -->
-		<title>Farmer's Friend</title>
 
 		<!-- Importing external stylesheets -->
-		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="stylesheets/submission.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/submission.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -29,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "index.html">
+						<a href = "../index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.html">
+						<a href = "sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.html">
+						<a href = "registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "submission.html">
+						<a class = "active" href = "submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.html">
+						<a href = "search.php">
 							Search
 						</a>
 					</li>
@@ -81,7 +67,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Farm Name:
-								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm_name" id = "farm_name" required>
+								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm_name" id = "farm_name" maxlength = "40" required>
 							</label>
 						</div>
 						<div id = "farm_name_status" class  = "errorStatus"></div>
@@ -106,7 +92,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Latitude:
-								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm_latitude" id = "farm_latitude" required>
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm_latitude" id = "farm_latitude" maxlength = "40" required>
 							</label>
 						</div>
 						<div id = "farm_lat_status" class  = "errorStatus"></div>
@@ -115,7 +101,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Longitude:
-								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" required>
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" maxlength = "40" required>
 							</label>	
 						</div>
 						<div id = "farm_lon_status" class  = "errorStatus"></div>
@@ -138,25 +124,16 @@
 			</article>
 
 			<picture>
-				<img class = "animal animal-right" alt = "Image of a pig" src = "./assets/img/vector-pig.png">
+				<img class = "animal animal-right" alt = "Image of a pig" src = "../assets/img/vector-pig.png">
 			</picture>
 
 		</main>
 
-		<!-- Footer -->
-		<footer>
-			<p> 
-				Made with 
-				<picture>
-					<source srcset = "assets/img/corn.png">
-					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
-				</picture>
-				&nbsp;by Kevin Hardy-Cooper &copy; 2018
-			</p>
-		</footer>
+		<!-- Including common footer element -->
+		<?php include '../php/inc/footer.inc' ?>
 
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "./js/global.js"></script>
-		<script src = "./js/submission.js"></script>
+		<script src = "../js/global.js"></script>
+		<script src = "../js/submission.js"></script>
 	</body>
 </html>

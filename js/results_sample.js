@@ -7,7 +7,7 @@ var farmResults = [
 			averageRating: "5.0 stars",
 			latitude: 43.27,
 			longitude: -79.921782,
-			img: "assets/img/two-silos.jpg"
+			img: "../assets/img/two-silos.jpg"
 		}
 	},
 	{
@@ -17,7 +17,7 @@ var farmResults = [
 			averageRating: "5.0 stars",
 			latitude: 43.260659,
 			longitude: -79.921782,
-			img: "assets/img/corn-field.jpeg"
+			img: "../assets/img/corn-field.jpeg"
 		}
 	},
 	{
@@ -27,7 +27,7 @@ var farmResults = [
 			averageRating: "5.0 stars",
 			latitude: 43.260659,
 			longitude: -79.93,
-			img: "assets/img/cow-calves.jpeg"
+			img: "../assets/img/cow-calves.jpeg"
 		}
 	},
 	{
@@ -37,7 +37,7 @@ var farmResults = [
 			averageRating: "5.0 stars",
 			latitude: 43.26,
 			longitude: -79.92,
-			img: "assets/img/truck-mountains.jpg"
+			img: "../assets/img/truck-mountains.jpg"
 		}
 	},
 ];
@@ -81,7 +81,7 @@ function createMap(latLngArray) {
 			.addTo(resultMap)
 
 			// include a pop-up for the marker that contains a link to the farm's page, average rating, image of farm
-			.bindPopup("<b><a href='individual_sample.html'>" + latLngArray[farm].farm.name + "</a></b>" + 
+			.bindPopup("<b><a href='../php/individual_sample.php'>" + latLngArray[farm].farm.name + "</a></b>" + 
 				"<br>" +
 				latLngArray[farm].farm.averageRating + 
 				"<br>" +
@@ -139,7 +139,7 @@ function createRow(farm) {
 
 	// TODO: this href will change dynamically
 	// This name string contains the anchor tag and farm name
-	var name = "<a href = "+ "individual_sample.html" + ">" + farm.name + "</a>";
+	var name = "<a href = "+ "../php/individual_sample.php" + ">" + farm.name + "</a>";
 
 	// Create a cell using this name string
 	var nameTd = createCell(name);

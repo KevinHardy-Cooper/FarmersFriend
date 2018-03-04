@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<!-- Character encoding -->
-		<meta charset = "UTF-8">
-
-		<!-- Assisting with scaling from desktop to mobile, inspired by https://www.w3schools.com/css/css_rwd_viewport.asp -->
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-		
-		<!-- Page author -->
-		<meta name = "author" content = "Kevin Hardy-Cooper">
+<!-- Including common head elements -->
+<?php include '../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Results of search for farms">
 
-		<!-- Title of the page -->
-		<title>Farmer's Friend</title>
-
 		<!-- Importing external stylesheet -->
-		<link href="stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="stylesheets/results.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="../stylesheets/results.css" type="text/css" rel="stylesheet"/>
 
 		<!-- Embedded map -->
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
@@ -32,27 +19,27 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "index.html">
+						<a href = "../index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.html">
+						<a href = "sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.html">
+						<a href = "registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.html">
+						<a href = "submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.html">
+						<a href = "search.php">
 							Search
 						</a>
 					</li>
@@ -88,20 +75,11 @@
 			</div>		
 		</main>					
 
-		<!-- Footer -->
-		<footer>
-			<p> 
-				Made with 
-				<picture>
-					<source srcset = "assets/img/corn.png">
-					<img alt = "Corn" class = "footer-emoji" src = "assets/img/corn.png"> 
-				</picture>
-				&nbsp;by Kevin Hardy-Cooper &copy; 2018
-			</p>
-		</footer>
+		<!-- Including common footer element -->
+		<?php include '../php/inc/footer.inc' ?>
 		
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "./js/results_sample.js"></script>
+		<script src = "../js/results_sample.js"></script>
 	</body>
 </html>
  
