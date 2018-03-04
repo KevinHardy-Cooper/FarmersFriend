@@ -51,24 +51,25 @@
 		<br>
 
 		<main>
-			<?php echo $json_row; ?>
 			<article>
 				<div class = "specific-padding">
 
 					<!-- Specific Object's name -->
-					<h3 id = "farm_name"></h3>
+					<h3><?php echo $rows[0]['name'];?></h3>
 
 					<picture>
 
 						<!-- Image of farm -->
-						<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "../assets/img/two-silos.jpg"/>
+						<?php 
+							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "'. $rows[0]['imagePath'] . '"/>';
+						?>
 					</picture>
 
-					<!-- Specific Object\s description -->
-					<p id  = "description"></p>
-					<div id = "farm_coords"></div>
+					<!-- Specific Object's description -->
+					<p><?php echo $rows[0]['description']; ?></p>
+					<div><?php echo $rows[0]['latitude'] . ', ' . $rows[0]['longitude']; ?> </div>
 					<br>
-					<div id = "farm_av_rating"></div>
+					<div><?php echo $rows[0]['rating'] . ' stars'; ?></div>
 					<br>
 					<br>
 				</div>
@@ -92,6 +93,17 @@
 								<th>Rating</th>
 								<th>Reviewer</th>
 							</tr>
+							<?php 
+								foreach ($rows as $row) {
+									echo '<tr>';
+									echo '<td>' . $row['content'] . '</td>';
+									echo '<td>' . $row['dateWritten'] . '</td>';
+									echo '<td>' . $row['rating'] . ' stars</td>';
+									// this needs to be changed by making a better sql query
+									echo '<td>' . $row['userID'] . '</td>';
+									echo '</tr>';
+								}
+							?>
 						</table>	
 					</div>
 			</article>
@@ -102,5 +114,8 @@
 	
 	<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
 	<script src = "../js/individual_sample.js"></script>
+	<script>
+			createMap(<?php echo $json_row ?>);
+	</script>
 	</body>
 </html>

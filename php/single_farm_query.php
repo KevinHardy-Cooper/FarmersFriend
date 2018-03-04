@@ -6,9 +6,12 @@
   
   $result = mysqli_query($mysqli, $query);
 
-  $row = mysqli_fetch_array($result);
-   
-  $json_row = json_encode($row);
+    $rows = [];
+    while($row = mysqli_fetch_array($result)) {
+      $rows[] = $row;
+    }
+    $json_row = json_encode($rows[0]);
+  
   
   $mysqli->close();
 

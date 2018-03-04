@@ -72,6 +72,8 @@ function createMap(latLngArray) {
 	// TODO will need to center around either top search result coords or where user is
 	resultMap.setView([43.263,-79.919], 15);
 
+
+
 	// iterating through array of coordinates for farms
 	for (var farm in latLngArray) {
 
@@ -81,7 +83,7 @@ function createMap(latLngArray) {
 			.addTo(resultMap)
 
 			// include a pop-up for the marker that contains a link to the farm's page, average rating, image of farm
-			.bindPopup("<b><a href='../php/individual_page.php'>" + latLngArray[farm].name + "</a></b>" + 
+			.bindPopup("<b><a href='../php/individual_page.php?farm=" + latLngArray[farm].farmID + "'>" + latLngArray[farm].name + "</a></b>" + 
 				"<br>" +
 				latLngArray[farm].rating + " stars" + 
 				"<br>" +
