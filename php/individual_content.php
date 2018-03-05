@@ -100,7 +100,7 @@
 									echo '<td>' . $row['dateWritten'] . '</td>';
 									echo '<td>' . $row['rating'] . ' stars</td>';
 									// this needs to be changed by making a better sql query
-									echo '<td>' . $row['userID'] . '</td>';
+									echo '<td>' . $row['name'] . '</td>';
 									echo '</tr>';
 								}
 							?>
