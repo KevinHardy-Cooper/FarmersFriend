@@ -95,8 +95,8 @@
 							echo '<td><a href = ' . '../php/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
 							echo '<td>' . $row['dateJoined'] . '</td>';
 							// this needs to be changed by making a better sql query
-							echo '<td>' . $row['rating'] . ' stars</td>';
-							echo '<td><button class = \'large-field\'>Review</button></td>';
+							echo '<td>' . $row['averageRating'] . ' stars</td>';
+							echo '<td><a href = \'../php/review.php?farm=' . $row['farmID'] . '\'>Review</a></td>';
 							echo '</tr>';
 						}
 					?>

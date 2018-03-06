@@ -3,16 +3,16 @@
   $name = $_GET['name'];
   $rating = $_GET['rating'];
 
-  $query = "SELECT farmID, name, latitude, longitude, imagePath, dateJoined, AVG(rating) as rating from Farms inner join reviews on Farms.farmID = reviews.farm";
+  $query = "select * from farms inner join (select farm, avg(rating) as averageRating from reviews group by farm) as averages on farms.farmID = averages.farm";
 
   if ($name == "" && $rating == 0) {
 
   } elseif ($name == "" && $rating != 0) {
-    $query = $query . " WHERE Reviews.rating = " . $rating;
+    $query = $query . " WHERE averageRating >= " . $rating;
   } elseif ($name != "" && $rating == 0) {
-    $query = $query . " WHERE Farms.name LIKE '%" . $name . "%'";
+    $query = $query . " WHERE name LIKE '%" . $name . "%'";
   } else {
-    $query = $query . " LIKE '%" . $name . "%' AND Reviews.rating = " . $rating;
+    $query = $query . " WHERE name LIKE '%" . $name . "%' AND averageRating >= " . $rating;
   }
   
   $result = mysqli_query($mysqli, $query);

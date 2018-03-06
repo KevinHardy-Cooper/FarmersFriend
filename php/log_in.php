@@ -5,18 +5,19 @@
 $email = $_POST['sign-in-email'];
 $password = $_POST['sign-in-password'];
 
-echo $email;
-echo $password;
-
 $query = "SELECT * FROM Users WHERE email = '" . $email . "' AND password = '" . $password . "'";
-
-echo $query;
   
 $result = mysqli_query($mysqli, $query);
 
 $row = mysqli_fetch_array($result);
 
-echo $row;
-
+if (!$row) {
+	echo 'no';
+} else {
+	echo 'yes';
+	$newquery = "UPDATE Users SET isLoggedIn = 'true' where userID = " . $row['userID'];
+	mysqli_query($mysqli, $newquery);
+	header( 'Location: ../index.php' );
+}
 
 ?>

@@ -1,0 +1,65 @@
+/*
+* === CREATE OBJECT PAGE SPECIFIC STYLINGS ===
+*/
+
+/*
+* --- TEXTAREA ---
+*/
+
+/* Stylings inspired by https://www.w3schools.com/css/css_form.asp*/
+textarea {
+
+    /* textarea seems to want to be displayed inline, so setting it to block */
+    display: block;
+    
+	/* Setting the dimensions of description box */
+    height: 150px;
+    width: 250px;
+
+    /* Set border specs */
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+
+    /* Disabling ability to resize textarea box */
+    resize: none;
+
+    /* Setting the font size within the textarea */
+    font-size: 15pt;
+}
+
+/*
+* --- ANIMAL IMAGE ---
+*/
+
+.animal {
+    
+    /* Setting the content of the element */
+    content: url("../assets/img/vector-sheep.png");
+}
+
+/*
+* -- RESPONSIVE STYLINGS ---
+*/
+
+/* When in landscape mode, attach footer to bottom of content instead of it's usual fixed position at the bottom of the page, and change height of textarea */
+@media only screen and (max-height: 600px) {
+    .animal {
+        visibility: hidden;
+    }
+    footer {
+        position: relative;
+    }
+    textarea {
+        height: 50px;
+    }
+}
+
+/* When the screen gets too small width-wise, remove animal from page, and set footer to bottom of content */
+@media only screen and (max-width: 370px) {
+    .animal {
+        visibility: hidden;
+    }
+    footer {
+        position: relative;
+    }
+}

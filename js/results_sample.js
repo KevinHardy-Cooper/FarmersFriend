@@ -85,7 +85,7 @@ function createMap(latLngArray) {
 			// include a pop-up for the marker that contains a link to the farm's page, average rating, image of farm
 			.bindPopup("<b><a href='../php/individual_page.php?farm=" + latLngArray[farm].farmID + "'>" + latLngArray[farm].name + "</a></b>" + 
 				"<br>" +
-				latLngArray[farm].rating + " stars" + 
+				latLngArray[farm].averageRating + " stars" + 
 				"<br>" +
 				"<img src='" + latLngArray[farm].imagePath + "' width='100px'/>");
 	}

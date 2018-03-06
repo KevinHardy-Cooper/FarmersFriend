@@ -36,8 +36,8 @@ function findFarmsNearMe(lat, lon) {
 function createFormElement() {
 	var form = document.createElement("form");
 	form.setAttribute("name", "coordsForm");
-	form.setAttribute("method", "get");
-	form.setAttribute("action", "../php/results_sample.php");
+	form.setAttribute("method", "post");
+	form.setAttribute("action", "../php/query_close_farms.php");
 
 	// do not display form for when we add it to the DOM
 	form.setAttribute("style", "display:none");
