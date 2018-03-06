@@ -67,7 +67,7 @@
 				<div class = "middle-div large-text">
 
 					<!-- After successful login, email / username will be displayed where "Sign In" is in the navbar -->
-					<form method = "post" action = "../index.php">
+					<form method = "post" action = "log_in.php">
 
 						<!-- Email field -->
 						<label>

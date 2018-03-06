@@ -55,7 +55,7 @@
 				<div class = "specific-padding">
 
 					<!-- Specific Object's name -->
-					<h3><?php echo $rows[0]['name'];?></h3>
+					<h3><?php echo $rows[0]['farmName'];?></h3>
 
 					<picture>
 
@@ -69,7 +69,7 @@
 					<p><?php echo $rows[0]['description']; ?></p>
 					<div><?php echo $rows[0]['latitude'] . ', ' . $rows[0]['longitude']; ?> </div>
 					<br>
-					<div><?php echo $rows[0]['rating'] . ' stars'; ?></div>
+					<div><?php echo $row2['averageRating'] . ' stars'; ?></div>
 					<br>
 					<br>
 				</div>
@@ -100,7 +100,7 @@
 									echo '<td>' . $row['dateWritten'] . '</td>';
 									echo '<td>' . $row['rating'] . ' stars</td>';
 									// this needs to be changed by making a better sql query
-									echo '<td>' . $row['name'] . '</td>';
+									echo '<td>' . $row['userName'] . '</td>';
 									echo '</tr>';
 								}
 							?>

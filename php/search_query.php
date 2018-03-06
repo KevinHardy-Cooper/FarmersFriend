@@ -3,7 +3,7 @@
   $name = $_GET['name'];
   $rating = $_GET['rating'];
 
-  $query = "SELECT * FROM Farms INNER JOIN Reviews ON Farms.farmID = Reviews.farm";
+  $query = "SELECT farmID, name, latitude, longitude, imagePath, dateJoined, AVG(rating) as rating from Farms inner join reviews on Farms.farmID = reviews.farm";
 
   if ($name == "" && $rating == 0) {
 

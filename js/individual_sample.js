@@ -84,7 +84,7 @@ function createMarker(farm, objectMap) {
 		.addTo(objectMap)
 
 		// include a pop-up for the marker that contains the farm's name
-		.bindPopup("<b>" + farm.name + "</b>")
+		.bindPopup("<b>" + farm.farmName + "</b>")
 
 		// set the popup to open when map is loaded
 		.openPopup();
