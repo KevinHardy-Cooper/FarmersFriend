@@ -52,14 +52,14 @@
 
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">
-					Review a farm.
+					Review <?php echo $result[0]['name']; ?>.
 				</h1>
 
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 
 					<!-- TODO: Set action attribute to somewhere useful -->
-					<form method = "post">
+					<form method = "post" action = "post_review.php">
 
 						<!-- Description field, with maximium amount of characters set to 140 -->
 						<div class = "input-spacing required">
@@ -95,6 +95,10 @@
 									</option>
 								</select>
 							</label>
+						</div>
+
+						<div >
+							<input name = "farm" value = <?php echo $result[0]['farmID']; ?> hidden>
 						</div>
 
 						<!-- Submit buttom field -->

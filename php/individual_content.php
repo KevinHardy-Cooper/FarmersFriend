@@ -55,21 +55,21 @@
 				<div class = "specific-padding">
 
 					<!-- Specific Object's name -->
-					<h3><?php echo $rows[0]['farmName'];?></h3>
+					<h3><?php echo $result[0]['farmName'];?></h3>
 
 					<picture>
 
 						<!-- Image of farm -->
 						<?php 
-							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "'. $rows[0]['imagePath'] . '"/>';
+							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "'. $result[0]['imagePath'] . '"/>';
 						?>
 					</picture>
 
 					<!-- Specific Object's description -->
-					<p><?php echo $rows[0]['description']; ?></p>
-					<div><?php echo $rows[0]['latitude'] . ', ' . $rows[0]['longitude']; ?> </div>
+					<p><?php echo $result[0]['description']; ?></p>
+					<div><?php echo $result[0]['latitude'] . ', ' . $result[0]['longitude']; ?> </div>
 					<br>
-					<div><?php echo $row2['averageRating'] . ' stars'; ?></div>
+					<div><?php echo $average_rating['averageRating'] . ' stars'; ?></div>
 					<br>
 					<br>
 				</div>
@@ -94,7 +94,7 @@
 								<th>Reviewer</th>
 							</tr>
 							<?php 
-								foreach ($rows as $row) {
+								foreach ($result as $row) {
 									echo '<tr>';
 									echo '<td>' . $row['content'] . '</td>';
 									echo '<td>' . $row['dateWritten'] . '</td>';
@@ -103,6 +103,7 @@
 									echo '<td>' . $row['userName'] . '</td>';
 									echo '</tr>';
 								}
+								echo '<tr><td><a href = \'../php/review_landing.php?farm=' . $row['farmID'] . '\'>Review</a></td></tr>';
 							?>
 						</table>	
 					</div>
@@ -115,7 +116,7 @@
 	<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
 	<script src = "../js/individual_sample.js"></script>
 	<script>
-			createMap(<?php echo $json_row ?>);
+			createMap(<?php echo $json_farm_info ?>);
 	</script>
 	</body>
 </html>

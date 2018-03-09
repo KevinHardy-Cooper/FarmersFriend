@@ -53,7 +53,8 @@
 // populateTable(farmReviews);
 
 // This function takes in the coords of the farm, and creates a map object centered around that farm's coords
-function createMap(farm) {
+function createMap(farms) {
+	var farm = farms[0];
 
 	// create the map and load it into the div with id="objectMap"
 	var objectMap = L.map('objectMap');

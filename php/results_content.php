@@ -58,13 +58,13 @@
 				<h3><?php 
 
 					if ($name == "" && $rating == 0) {
-						echo count($rows) . ' result(s)';
+						echo count($result) . ' result(s)';
 					} else if ($name != "" && $rating == 0) {
-						echo count($rows) . ' result(s) for \'' . $name . '\'';
+						echo count($result) . ' result(s) for \'' . $name . '\'';
 					} else if ($name == "" && $rating != 0) {
-						echo count($rows) . ' result(s) for ' . $rating . ' star(s)';
+						echo count($result) . ' result(s) for ' . $rating . ' star(s)';
 					} else {
-						echo count($rows) . ' result(s) for \'' . $name . '\', '  . $rating . ' star(s)';
+						echo count($result) . ' result(s) for \'' . $name . '\', '  . $rating . ' star(s)';
 					}
 					?>		
 				</h3>
@@ -89,14 +89,14 @@
 						<th>Write Review</th>
 					</tr>
 					<?php 
-						foreach ($rows as $row) {
+						foreach ($result as $row) {
 							echo '<tr>';
 							echo '<td><img class = \'results-image\' alt = \'User-uploaded image of their farm\' src=\'' . $row['imagePath'] . '\'></td>';
 							echo '<td><a href = ' . '../php/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
 							echo '<td>' . $row['dateJoined'] . '</td>';
 							// this needs to be changed by making a better sql query
 							echo '<td>' . $row['averageRating'] . ' stars</td>';
-							echo '<td><a href = \'../php/review.php?farm=' . $row['farmID'] . '\'>Review</a></td>';
+							echo '<td><a href = \'../php/review.review_landing?farm=' . $row['farmID'] . '\'>Review</a></td>';
 							echo '</tr>';
 						}
 					?>
