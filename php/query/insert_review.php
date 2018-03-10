@@ -1,4 +1,3 @@
-<?php include 'database.php'; ?>
 <?php 
 	$content = $_POST['review_content'];
 	$rating = $_POST['rating'];
@@ -8,7 +7,7 @@
 	$date = getdate();
 	$dateWritten = $date['year'] . "-" . $date['mon'] . "-" . $date['mday'];
 
-	$stmt = $pdo -> prepare("INSERT INTO Farms VALUES (null, :content, :dateWritten, :rating, :reviewer, :farm)");
+	$stmt = $pdo -> prepare("INSERT INTO Reviews VALUES (0, :content, :dateWritten, :rating, :reviewer, :farm)");
 
 	$stmt -> bindValue(':farm', $farm);
 	$stmt -> bindValue(':content', $content);
@@ -16,7 +15,4 @@
 	$stmt -> bindValue(':reviewer', $reviewer);
 	$stmt -> bindValue(':dateWritten', $dateWritten);
 	$stmt -> execute();
-	print_r($stmt);
 ?>
-<?php include 'submitted_review.php';?>
-

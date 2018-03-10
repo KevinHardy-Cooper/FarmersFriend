@@ -1,12 +1,12 @@
 <!-- Including common head elements -->
-<?php include '../php/inc/head.inc' ?>
+<?php include '../../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Search for farms"/>
 
 		<!-- Importing external stylesheet -->
-		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="../stylesheets/search.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/search.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -15,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "../index.php">
+						<a href = "/index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.php">
+						<a href = "/php/static/sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.php">
+						<a href = "/php/static/registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.php">
+						<a href = "/php/static/submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
 
 					<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "search.php">
+						<a class = "active" href = "/php/static/search.php">
 							Search
 						</a>
 					</li>
@@ -65,7 +65,7 @@
 
 				<!-- Search Form begins... -->
 				<div class = "middle-div large-text">
-					<form method = "get" action = "search_results.php">
+					<form method = "get" action = "/php/dynamic/search_results.php">
 
 						<!-- Name field -->
 						<label>
@@ -100,8 +100,8 @@
 						<!-- Submit button field -->
 						<button type = "submit" class = "large-field">
 							<picture>
-								<source srcset = "../assets/img/magnifying-glass.png">
-								<img alt = "Search" class = "mag-glass" src = "../assets/img/magnifying-glass.png"/>
+								<source srcset = "/assets/img/magnifying-glass.png">
+								<img alt = "Search" class = "mag-glass" src = "/assets/img/magnifying-glass.png"/>
 							</picture>
 						</button>
 					</form>
@@ -121,16 +121,16 @@
 			</article>
 
 			<picture>
-				<img class = "animal" alt = "Image of a chicken" src = "../assets/img/vector-chicken.png"/>
+				<img class = "animal" alt = "Image of a chicken" src = "/assets/img/vector-chicken.png"/>
 			</picture>
 
 		</main>
 		
 		<!-- Including common footer element -->
-		<?php include '../php/inc/footer.inc' ?>
+		<?php include '../../php/inc/footer.inc'; ?>
 
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "../js/global.js"></script>
-		<script src = "../js/search.js"></script>
+		<script src = "/js/global.js"></script>
+		<script src = "/js/search.js"></script>
 	</body>
 </html>

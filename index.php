@@ -1,5 +1,5 @@
 <!-- Including common head elements -->
-<?php include './php/inc/head.inc' ?>
+<?php include 'php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Find and review farms"/>
@@ -23,22 +23,22 @@
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "php/sign_in.php">
+						<a href = "php/static/sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "php/registration.php">
+						<a href = "php/static/registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "php/submission.php">
+						<a href = "php/static/submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "php/search.php">
+						<a href = "php/static/search.php">
 							Search
 						</a>
 					</li>
@@ -62,14 +62,14 @@
 				<picture>
 
 					<!-- Nice image of barn -->
-					<img class = "middle-div barn-image" alt = "Image of a barn" src = "./assets/img/vector-farm.png"/>
+					<img class = "middle-div barn-image" alt = "Image of a barn" src = "assets/img/vector-farm.png"/>
 				</picture>
 			</article>
 
 		</main>
 		
 		<!-- Including common footer element -->
-		<?php include './php/inc/footer.inc' ?>
+		<?php include 'php/inc/footer.inc' ?>
 
 	</body>
 </html>

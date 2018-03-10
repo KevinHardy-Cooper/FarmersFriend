@@ -1,5 +1,3 @@
-<?php include 'database.php' ?>
-
 <?php
 	$latitude = $_POST['latitude'];
 	$longitude = $_POST['longitude'];
@@ -14,5 +12,3 @@
 
     $json_rows = json_encode($result);
 ?>
-
-<?php include 'results_content.php' ?>

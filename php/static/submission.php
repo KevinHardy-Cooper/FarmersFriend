@@ -1,12 +1,12 @@
 <!-- Including common head elements -->
-<?php include '../php/inc/head.inc' ?>
+<?php include '../../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Post farm to be searched for and reviewed">
 
 		<!-- Importing external stylesheets -->
-		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="../stylesheets/submission.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -15,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "../index.php">
+						<a href = "/index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.php">
+						<a href = "/php/static/sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.php">
+						<a href = "/php/static/registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "submission.php">
+						<a class = "active" href = "/php/static/submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.php">
+						<a href = "/php/static/search.php">
 							Search
 						</a>
 					</li>
@@ -61,7 +61,7 @@
 				<div class = "specific-padding large-text">
 
 					<!-- TODO: Set action attribute to somewhere useful -->
-					<form method = "post"  onsubmit = "return validate(this)">
+					<form method = "post"  onsubmit = "return validate(this)" action = "../dynamic/post_farm.php">
 
 						<!-- Farm Name field -->
 						<div class = "input-spacing required">
@@ -110,7 +110,7 @@
 						<div class = "input-spacing">
 							<label>
 								Select image to upload:
-								<input class = "thick-border" type = "file" name = "farm-image">
+								<input class = "thick-border" type = "file" name = "farm_image">
 							</label>
 						</div>
 
@@ -124,16 +124,16 @@
 			</article>
 
 			<picture>
-				<img class = "animal animal-right" alt = "Image of a pig" src = "../assets/img/vector-pig.png">
+				<img class = "animal animal-right" alt = "Image of a pig" src = "/assets/img/vector-pig.png">
 			</picture>
 
 		</main>
 
 		<!-- Including common footer element -->
-		<?php include '../php/inc/footer.inc' ?>
+		<?php include '../../php/inc/footer.inc'; ?>
 
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "../js/global.js"></script>
-		<script src = "../js/submission.js"></script>
+		<script src = "/js/global.js"></script>
+		<script src = "/js/submission.js"></script>
 	</body>
 </html>

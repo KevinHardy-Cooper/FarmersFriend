@@ -1,12 +1,12 @@
 <!-- Including common head elements -->
-<?php include '../php/inc/head.inc' ?>
+<?php include '../../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Sign into your account to review farms, and post farms"/>
 
 		<!-- Importing external stylesheet -->
-		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="../stylesheets/sign_in.css" type="text/css" rel="stylesheet"/>
+		<link href = "/stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href = "/stylesheets/sign_in.css" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -15,29 +15,29 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a  href = "../index.php">
+						<a  href = "/index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
 
 						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "sign_in.php">
+						<a class = "active" href = "/php/static/sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.php">
+						<a href = "/php/static/registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.php">
+						<a href = "/php/static/submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.php">
+						<a href = "/php/static/search.php">
 							Search
 						</a>
 					</li>
@@ -67,7 +67,7 @@
 				<div class = "middle-div large-text">
 
 					<!-- After successful login, email / username will be displayed where "Sign In" is in the navbar -->
-					<form method = "post" action = "log_in.php">
+					<form method = "post" action = "/php/query/select_user.php">
 
 						<!-- Email field -->
 						<label>
@@ -92,13 +92,13 @@
 			</article>
 
 			<picture>
-				<img class = "animal" alt = "Image of a horse" src = "../assets/img/vector-horse.png"/>
+				<img class = "animal" alt = "Image of a horse" src = "/assets/img/vector-horse.png"/>
 			</picture>
 
 		</main>
 
 		<!-- Including common footer element -->
-		<?php include '../php/inc/footer.inc' ?>
+		<?php include '../../php/inc/footer.inc'; ?>
 		
 	</body>
 </html>

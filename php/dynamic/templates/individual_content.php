@@ -1,12 +1,12 @@
 <!-- Including common head elements -->
-<?php include '../php/inc/head.inc' ?>
+<?php include '../inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Farm page with reviews"/>
 
 		<!-- Importing external stylesheet -->
-		<link href = "../stylesheets/global.css" type = "text/css" rel = "stylesheet"/>
-		<link href = "../stylesheets/specificObject.css" type = "text/css" rel = "stylesheet"/>
+		<link href = "/stylesheets/global.css" type = "text/css" rel = "stylesheet"/>
+		<link href = "/stylesheets/specificObject.css" type = "text/css" rel = "stylesheet"/>
 
 		<!-- Embedded map -->
 		<link rel = "stylesheet" href = "https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity = "sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin = ""/>
@@ -18,27 +18,27 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "../index.php">
+						<a href = "/index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.php">
+						<a href = "/php/static/sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.php">
+						<a href = "/php/static/registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.php">
+						<a href = "/php/static/submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.php">
+						<a href = "/php/static/search.php">
 							Search
 						</a>
 					</li>
@@ -61,7 +61,7 @@
 
 						<!-- Image of farm -->
 						<?php 
-							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "'. $result[0]['imagePath'] . '"/>';
+							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "../'. $result[0]['imagePath'] . '"/>';
 						?>
 					</picture>
 
@@ -103,7 +103,7 @@
 									echo '<td>' . $row['userName'] . '</td>';
 									echo '</tr>';
 								}
-								echo '<tr><td><a href = \'../php/review_landing.php?farm=' . $row['farmID'] . '\'>Review</a></td></tr>';
+								echo '<tr><td><a href = \'../dynamic/review_page.php?farm=' . $row['farmID'] . '\'>Review</a></td></tr>';
 							?>
 						</table>	
 					</div>
@@ -111,10 +111,10 @@
 		</main>
 
 		<!-- Including common footer element -->
-		<?php include '../php/inc/footer.inc' ?>
+		<?php include '../inc/footer.inc' ?>
 	
 	<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-	<script src = "../js/individual_sample.js"></script>
+	<script src = "/js/individual_sample.js"></script>
 	<script>
 			createMap(<?php echo $json_farm_info ?>);
 	</script>

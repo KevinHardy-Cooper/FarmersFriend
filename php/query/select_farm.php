@@ -1,5 +1,3 @@
-<?php include 'database.php'; ?>
-
 <?php
 	$farm = $_GET['farm'];
 
@@ -10,4 +8,3 @@
 
 	$result = $stmt -> fetchAll();
 ?>
-<?php include 'review_content.php'; ?>

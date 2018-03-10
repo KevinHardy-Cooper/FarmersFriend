@@ -1,12 +1,12 @@
 <!-- Including common head elements -->
-<?php include '../php/inc/head.inc' ?>
+<?php include '../inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Results of search for farms">
 
 		<!-- Importing external stylesheet -->
-		<link href="../stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="../stylesheets/results.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/results.css" type="text/css" rel="stylesheet"/>
 
 		<!-- Embedded map -->
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
@@ -19,27 +19,27 @@
 			<nav>
 				<ul>
 					<li class = "justify-left">
-						<a href = "../index.php">
+						<a href = "/index.php">
 							Farmer's Friend
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "sign_in.php">
+						<a href = "/php/static/sign_in.php">
 							Sign In
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "registration.php">
+						<a href = "/php/static/registration.php">
 							Sign Up
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "submission.php">
+						<a href = "/php/static/submission.php">
 							Register Farm
 						</a>
 					</li>
 					<li class = "justify-right">
-						<a href = "search.php">
+						<a href = "/php/static/search.php">
 							Search
 						</a>
 					</li>
@@ -91,12 +91,12 @@
 					<?php 
 						foreach ($result as $row) {
 							echo '<tr>';
-							echo '<td><img class = \'results-image\' alt = \'User-uploaded image of their farm\' src=\'' . $row['imagePath'] . '\'></td>';
-							echo '<td><a href = ' . '../php/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
+							echo '<td><img class = \'results-image\' alt = \'User-uploaded image of their farm\' src=\'../' . $row['imagePath'] . '\'></td>';
+							echo '<td><a href = ' . '../dynamic/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
 							echo '<td>' . $row['dateJoined'] . '</td>';
 							// this needs to be changed by making a better sql query
 							echo '<td>' . $row['averageRating'] . ' stars</td>';
-							echo '<td><a href = \'../php/review.review_landing?farm=' . $row['farmID'] . '\'>Review</a></td>';
+							echo '<td><a href = \'review_page.php?farm=' . $row['farmID'] . '\'>Review</a></td>';
 							echo '</tr>';
 						}
 					?>
@@ -105,10 +105,10 @@
 		</main>					
 
 		<!-- Including common footer element -->
-		<?php include '../php/inc/footer.inc' ?>
+		<?php include '../inc/footer.inc' ?>
 		
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<script src = "../js/results_sample.js"></script>
+		<script src = "/js/results_sample.js"></script>
 		<script>
 			createMap(<?php echo $json_rows ?>);
 		</script>

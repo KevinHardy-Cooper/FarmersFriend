@@ -37,7 +37,7 @@ function createFormElement() {
 	var form = document.createElement("form");
 	form.setAttribute("name", "coordsForm");
 	form.setAttribute("method", "post");
-	form.setAttribute("action", "../php/query_close_farms.php");
+	form.setAttribute("action", "../dynamic/close_farms_page.php");
 
 	// do not display form for when we add it to the DOM
 	form.setAttribute("style", "display:none");
