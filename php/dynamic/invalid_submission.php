@@ -1,5 +1,5 @@
 <!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
+<?php include '../../php/inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Post farm to be searched for and reviewed">
@@ -26,7 +26,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Farm Name:
-								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm_name" id = "farm_name" maxlength = "40" required>
+								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm_name" id = "farm_name" maxlength = "40" value = <?php echo $name; ?> required>
 							</label>
 						</div>
 						<div id = "farm_name_status" class  = "errorStatus"></div>
@@ -35,7 +35,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Description:
-								<textarea placeholder = "Why would people want to visit?" name = "farm_description" id = "farm_description" maxlength = "140" required></textarea>
+								<textarea placeholder = "Why would people want to visit?" name = "farm_description" id = "farm_description" maxlength = "140" required><?php echo $description; ?></textarea>
 							</label>	
 						</div>
 						<div id = "farm_descr_status" class  = "errorStatus"></div>
@@ -51,7 +51,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Latitude:
-								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm_latitude" id = "farm_latitude" maxlength = "40" required>
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm_latitude" id = "farm_latitude" maxlength = "40" value = <?php echo $latitude; ?> required>
 							</label>
 						</div>
 						<div id = "farm_lat_status" class  = "errorStatus"></div>
@@ -60,7 +60,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Longitude:
-								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" maxlength = "40" required>
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" maxlength = "40" value = <?php echo $latitude; ?> required>
 							</label>	
 						</div>
 						<div id = "farm_lon_status" class  = "errorStatus"></div>
@@ -92,7 +92,7 @@
 		<?php include '../../php/inc/footer.inc'; ?>
 
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<!-- <script src = "/js/global.js"></script> -->
-		<!-- <script src = "/js/submission.js"></script> -->
+		<script src = "/js/global.js"></script>
+		<script src = "/js/submission.js"></script>
 	</body>
 </html>

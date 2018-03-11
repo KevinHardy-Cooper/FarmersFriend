@@ -1,10 +1,4 @@
 <?php 
-	$name = $_POST['farm_name'];
-	$description = $_POST['farm_description'];
-	$latitude = $_POST['farm_latitude'];
-	$longitude = $_POST['farm_longitude'];
-	$imagePath = ""; #$_POST['farm_image'];
-
 	$date = getdate();
 	$dateJoined = $date['year'] . "-" . $date['mon'] . "-" . $date['mday'];
 

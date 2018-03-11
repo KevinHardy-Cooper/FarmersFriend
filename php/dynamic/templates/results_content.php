@@ -11,47 +11,9 @@
 		<!-- Embedded map -->
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
 		<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
-	</head>
-	<body>
-		<header>
-
-			<!-- Navbar -->
-			<nav>
-				<ul>
-					<li class = "justify-left">
-						<a href = "/index.php">
-							Farmer's Friend
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/sign_in.php">
-							Sign In
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/registration.php">
-							Sign Up
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/submission.php">
-							Register Farm
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/search.php">
-							Search
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<!-- Adding some line spaces for formatting -->
-		<br>
-		<br>
-
-		<main>
+	
+<!-- Including common navbar elements -->
+<?php $active = 'nope'; include '../inc/navbar.inc.php'; ?>
 
 			<!-- Text providing feedback to the user about what page they are on and the state -->
 			<div class = "specific-padding">
@@ -106,7 +68,8 @@
 						}
 					?>
 				</table>	
-			</div>		
+			</div>	
+			</article>	
 		</main>					
 
 		<!-- Including common footer element -->

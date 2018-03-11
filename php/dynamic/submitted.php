@@ -7,48 +7,9 @@
 		<!-- Importing external stylesheets -->
 		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
 		<link href="/stylesheets/review.css" type="text/css" rel="stylesheet"/>
-	</head>
-	<body>
-		<header>
 
-			<!-- Navbar -->
-			<nav>
-				<ul>
-					<li class = "justify-left">
-						<a href = "/index.php">
-							Farmer's Friend
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/sign_in.php">
-							Sign In
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/registration.php">
-							Sign Up
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/submission.php">
-							Register Farm
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/search.php">
-							Search
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<!-- Skipping some lines for formatting -->
-		<br>
-		<br>
-
-		<main>
-			<article>
+<!-- Including common navbar elements -->
+<?php $active = 'nope'; include '../inc/navbar.inc.php'; ?>
 
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">

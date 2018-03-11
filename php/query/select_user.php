@@ -12,7 +12,7 @@
 		echo 'no';
 	} else {
 		echo 'yes';
-		$newquery = "UPDATE Users SET isLoggedIn = 'true' where userID = " . $row['userID'];
+		$newquery = "UPDATE Users SET isLoggedIn = 'true' WHERE userID = " . $row['userID'];
 		mysqli_query($mysqli, $newquery);
 		header( 'Location: ../index.php' );
 	}

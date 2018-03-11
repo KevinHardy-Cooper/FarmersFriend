@@ -1,5 +1,5 @@
 <!-- Including common head elements -->
-<?php include '../../php/inc/head.inc' ?>
+<?php include '../inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Create account to find and review farms">
@@ -7,50 +7,9 @@
 		<!-- Importing external stylesheets -->
 		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
 		<link href="/stylesheets/registration.css" type="text/css" rel="stylesheet"/>
-	</head>
-	<body>
-		<header>
 
-			<!-- Navbar -->
-			<nav>
-				<ul>
-					<li class = "justify-left">
-						<a href = "/index.php">
-							Farmer's Friend
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/sign_in.php">
-							Sign In
-						</a>
-					</li>
-					<li class = "justify-right">
-
-						<!-- When on this page, show tab as coloured -->
-						<a class = "active" href = "/php/static/registration.php">
-							Sign Up
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/submission.php">
-							Register Farm
-						</a>
-					</li>
-					<li class = "justify-right">
-						<a href = "/php/static/search.php">
-							Search
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		
-		<!-- Skipping some lines for formatting -->
-		<br>
-		<br>
-
-		<main>
-			<article>
+<!-- Including common navbar elements -->
+<?php $active = 'sign_up'; include '../inc/navbar.inc.php'; ?>
 
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">

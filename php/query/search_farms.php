@@ -3,7 +3,7 @@
   $name = $_GET['name'];
   $rating = $_GET['rating'];
 
-  $query = "select * from farms left join (select farm, avg(rating) as averageRating from reviews group by farm) as averages on farms.farmID = averages.farm";
+  $query = "SELECT * FROM Farms LEFT JOIN (SELECT farm, avg(rating) AS averageRating FROM reviews GROUP BY farm) AS averages ON farms.farmID = averages.farm";
 
   if ($name != "" && $rating != 0) {
     $stmt = $pdo -> prepare($query . " WHERE name LIKE :name AND averageRating >= :rating ");
