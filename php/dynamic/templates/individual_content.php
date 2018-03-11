@@ -69,7 +69,14 @@
 					<p><?php echo $result[0]['description']; ?></p>
 					<div><?php echo $result[0]['latitude'] . ', ' . $result[0]['longitude']; ?> </div>
 					<br>
-					<div><?php echo $average_rating['averageRating'] . ' stars'; ?></div>
+					<div><?php 
+							if ($average_rating['averageRating'] == 0) {
+								echo 'Not yet reviewed';
+							} else {
+								echo $average_rating['averageRating'] . ' stars';
+							}
+						?>
+					</div>
 					<br>
 					<br>
 				</div>
@@ -94,16 +101,20 @@
 								<th>Reviewer</th>
 							</tr>
 							<?php 
-								foreach ($result as $row) {
-									echo '<tr>';
-									echo '<td>' . $row['content'] . '</td>';
-									echo '<td>' . $row['dateWritten'] . '</td>';
-									echo '<td>' . $row['rating'] . ' stars</td>';
-									// this needs to be changed by making a better sql query
-									echo '<td>' . $row['userName'] . '</td>';
-									echo '</tr>';
+								if ($average_rating['average_rating'] != 0) {
+									foreach ($result as $row) {
+										echo '<tr>';
+										echo '<td>' . $row['content'] . '</td>';
+										echo '<td>' . $row['dateWritten'] . '</td>';
+										echo '<td>' . $row['rating'] . ' stars</td>';
+										// this needs to be changed by making a better sql query
+										echo '<td>' . $row['userName'] . '</td>';
+										echo '</tr>';
+									}
+									echo '<tr><td><a href = \'../dynamic/review_page.php?farm=' . $row['farmID'] . '\'>Review</a></td></tr>';
+								} else {
+									echo '<tr><td><a href = \'../dynamic/review_page.php?farm=' . $result[0]['farmID'] . '\'>Review</a></td></tr>';	
 								}
-								echo '<tr><td><a href = \'../dynamic/review_page.php?farm=' . $row['farmID'] . '\'>Review</a></td></tr>';
 							?>
 						</table>	
 					</div>

@@ -1,50 +1,5 @@
-// dummy array that will contain sample farms
-// var farmResults = [
-// 	{
-// 		farm: {
-// 			name: "Farmer Kev's Farm",
-// 			dateJoined: "January 8th, 2018",
-// 			averageRating: "5.0 stars",
-// 			latitude: 43.27,
-// 			longitude: -79.921782,
-// 			img: "../assets/img/two-silos.jpg"
-// 		}
-// 	},
-// 	{
-// 		farm: {
-// 			name: "Woodfield Farm & Market",
-// 			dateJoined: "January 8th, 2018",
-// 			averageRating: "5.0 stars",
-// 			latitude: 43.260659,
-// 			longitude: -79.921782,
-// 			img: "../assets/img/corn-field.jpeg"
-// 		}
-// 	},
-// 	{
-// 		farm: {
-// 			name: "Maple Grove Farm",
-// 			dateJoined: "January 8th, 2018",
-// 			averageRating: "5.0 stars",
-// 			latitude: 43.260659,
-// 			longitude: -79.93,
-// 			img: "../assets/img/cow-calves.jpeg"
-// 		}
-// 	},
-// 	{
-// 		farm: {
-// 			name: "Lit Farm",
-// 			dateJoined: "January 8th, 2018",
-// 			averageRating: "5.0 stars",
-// 			latitude: 43.26,
-// 			longitude: -79.92,
-// 			img: "../assets/img/truck-mountains.jpg"
-// 		}
-// 	},
-// ];
-
 // This function takes in an array that will be used for coordinates
 function createMap(latLngArray) {
-	console.log(latLngArray);
 
 	// create the map and load it into the div with id="resultMap"
 	var resultMap = L.map('resultMap');
@@ -65,12 +20,17 @@ function createMap(latLngArray) {
 	} else {
 		resultMap.setView([latLngArray[0].latitude, latLngArray[0].longitude], 13);
 	}
-	
-
-
 
 	// iterating through array of coordinates for farms
 	for (var farm in latLngArray) {
+
+		var ratingString;
+		// this case will occur when a farm is added but no one has reviewed it yet
+		if ((typeof latLngArray[farm].averageRating) === 'object') {
+			ratingString = "Not yet reviewed";
+		} else {
+			ratingString = latLngArray[farm].averageRating + " stars";
+		}
 
 		// create a map marker for the farm
 		L.marker([latLngArray[farm].latitude, latLngArray[farm].longitude])
@@ -80,7 +40,7 @@ function createMap(latLngArray) {
 			// include a pop-up for the marker that contains a link to the farm's page, average rating, image of farm
 			.bindPopup("<b><a href='../dynamic/individual_page.php?farm=" + latLngArray[farm].farmID + "'>" + latLngArray[farm].name + "</a></b>" + 
 				"<br>" +
-				latLngArray[farm].averageRating + " stars" + 
+				ratingString + 
 				"<br>" +
 				"<img src='../" + latLngArray[farm].imagePath + "' width='100px'/>");
 	}

@@ -95,7 +95,12 @@
 							echo '<td><a href = ' . '../dynamic/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
 							echo '<td>' . $row['dateJoined'] . '</td>';
 							// this needs to be changed by making a better sql query
-							echo '<td>' . $row['averageRating'] . ' stars</td>';
+							if ($row['averageRating'] == null) {
+								echo '<td>Not yet reviewed</td>';
+							} else {
+								echo '<td>' . $row['averageRating'] . ' stars</td>';
+							}
+
 							echo '<td><a href = \'review_page.php?farm=' . $row['farmID'] . '\'>Review</a></td>';
 							echo '</tr>';
 						}

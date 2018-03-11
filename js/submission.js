@@ -50,10 +50,6 @@ function validate(form) {
 		document.getElementById("formStatus").innerHTML = "Cannot submit form";
 		return false;
 	}
-
-	// after we have replaced special characters, set this new value to the value in the form
-	// description requires no validation other than requires at least one letter, and a limit of 140 characters a la twitter
-	form.farm_description.value = alterFarmDescription(form.farm_description.value);
 	return true;
 }
 
@@ -82,24 +78,6 @@ function validateFarmDescription(farmDescription) {
 	// check that farm description is between 1 and 140 characters
 	var farmDescriptionPattern = /^.{1,140}$/;
 	return farmDescriptionPattern.test(farmDescription);
-}
-
-function alterFarmDescription(farmDescription) {
-	
-	// The form textarea field already has a maxlength set to 140 characters
-	// Now we just need to validate that special characters are turned into unicode
-	farmDescription = farmDescription.replace(/</g, "&lt;");
-	farmDescription = farmDescription.replace(/>/g, "&gt;");
-	farmDescription = farmDescription.replace(/"/g, "&quot;");
-	farmDescription = farmDescription.replace(/'/g, "&apos;");
-	farmDescription = farmDescription.replace(/!/g, "&#33;");
-	farmDescription = farmDescription.replace(/@/g, "&#64;");
-	farmDescription = farmDescription.replace(/#/g, "&#35;");
-	farmDescription = farmDescription.replace(/$/g, "&#36;");
-	farmDescription = farmDescription.replace(/%/g, "&#37;");
-	farmDescription = farmDescription.replace(/^/g, "&#94;");
-	farmDescription = farmDescription.replace(/&/g, "&amp;");
-	return farmDescription;
 }
 
 // Check to see if the value the user entered is between negative and positive values
