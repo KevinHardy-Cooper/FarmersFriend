@@ -1,16 +1,3 @@
-<!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
-
-		<!-- Page description -->
-		<meta name = "description" content = "Create account to find and review farms">
-
-		<!-- Importing external stylesheets -->
-		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="/stylesheets/registration.css" type="text/css" rel="stylesheet"/>
-
-<!-- Including common navbar elements -->
-<?php $active = 'sign_up'; include '../inc/navbar.inc.php'; ?>
-
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">
 					Create an account.
@@ -26,7 +13,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Full Name:
-								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user_full_name" id = "user_full_name" maxlength = "40" required>
+								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user_full_name" id = "user_full_name" maxlength = "40" value = <?php echo $name; ?> required>
 							</label>
 						</div>
 						<div id = "user_full_name_status" class  = "errorStatus"></div>
@@ -35,7 +22,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Date of Birth:
-								<input class = "large-field" type = "date"  name = "user_birthday" id = "user_birthday" maxlength = "40" required>
+								<input class = "large-field" type = "date"  name = "user_birthday" id = "user_birthday" maxlength = "40" value = <?php echo $birthday; ?> required>
 							</label>
 						</div>
 						<div id = "user_birthday_status" class  = "errorStatus"></div>
@@ -44,7 +31,7 @@
 						<div class = "input-spacing required">
 							<label>
 								Email Address:
-								<input class = "large-field" type = "email" placeholder = "farmer@farm.com" name = "user_email_address" id = "user_email_address" maxlength = "40" required>
+								<input class = "large-field" type = "email" placeholder = "farmer@farm.com" name = "user_email_address" id = "user_email_address" maxlength = "40" value = <?php echo $email; ?> required>
 							</label>
 						</div>
 						<div id = "user_email_address_status" class  = "errorStatus"></div>
@@ -80,19 +67,19 @@
 							<br>
 
 							<label>
-								<input class = "large-field" type = "checkbox" name = "purpose[]" value = "To Write Reviews"> 
+								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_write_reviews" > 
 								To Write Reviews
 							</label> 
 							<br>
 
 							<label>
-								<input class = "large-field" type = "checkbox" name = "purpose[]" value = "To Register Farms"> 
+								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_register_farms"> 
 								To Register Farm(s)
 							</label>	 
 							<br>
 
 							<label>
-								<input class = "large-field" type = "checkbox" name = "purpose[]" value = "To Browse Amazing Farms"> 
+								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_browse_amazing_farms"> 
 								To Browse Amazing Farms 
 							</label>
 							<br>

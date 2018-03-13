@@ -17,6 +17,17 @@
 		include '../query/insert_farm.php';
 		include 'submitted.php';
 	} else {
+
+		include '../../php/inc/head.inc';
+
+		echo '<meta name = "description" content = "Post farm to be searched for and reviewed">
+
+		<!-- Importing external stylesheets -->
+		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
+		<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>';
+
+		$active = 'register'; include '../inc/navbar.inc.php';
+
 		// data doesn't validate so display error message
 		echo "<h3>Please correct the following problems listed below:</h2>";
 		foreach ($errors as $error) {
@@ -32,13 +43,14 @@
 		} else if (!preg_match($pattern, $field_list[$field_name])) {
 			setErrorMessage($errors, 'Invalid', $field_name);
 		}
-
 	}
 
 	function validateCoord(&$errors, $field_list, $field_name) {
 		if (!isset($field_list[$field_name]) || $field_list[$field_name] == '') {
 			setErrorMessage($errors, 'Required', $field_name);
 		} elseif ($field_list[$field_name] > PHP_INT_MAX || $field_list[$field_name] < ( -1 * PHP_INT_MAX)) {
+			setErrorMessage($errors, 'Invalid', $field_name);
+		} elseif ($field_list[$field_name] > 180 || $field_list[$field_name] < -180) {
 			setErrorMessage($errors, 'Invalid', $field_name);
 		}
 	}

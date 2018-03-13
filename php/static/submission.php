@@ -92,7 +92,7 @@
 		<?php include '../../php/inc/footer.inc'; ?>
 
 		<!-- Importing external javascript here because the DOM must be loaded prior to importing -->
-		<!-- <script src = "/js/global.js"></script> -->
-		<!-- <script src = "/js/submission.js"></script> -->
+		<script src = "/js/global.js"></script>
+		<script src = "/js/submission.js"></script>
 	</body>
 </html>

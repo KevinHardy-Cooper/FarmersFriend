@@ -8,6 +8,10 @@
 		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
 		<link href="/stylesheets/review.css" type="text/css" rel="stylesheet"/>
 
+		<!-- Including external script -->
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src = "/js/ajax.js"></script>
+
 <!-- Including common navbar elements -->
 <?php $active = 'nope'; include '../inc/navbar.inc.php'; ?>
 
@@ -19,8 +23,7 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 
-					<!-- TODO: Set action attribute to somewhere useful -->
-					<form method = "post" action = "post_review.php">
+					<form>
 
 						<!-- Description field, with maximium amount of characters set to 140 -->
 						<div class = "input-spacing required">
@@ -59,7 +62,7 @@
 						</div>
 
 						<div >
-							<input name = "farm" value = <?php echo $result[0]['farmID']; ?> hidden>
+							<input type = "hidden" name = "farm" value = <?php echo $result[0]['farmID']; ?> >
 						</div>
 
 						<!-- Submit buttom field -->
