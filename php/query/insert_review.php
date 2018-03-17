@@ -1,8 +1,12 @@
 <?php 
+	
+	include 'select_user_based_on_session.php';
+
 	$content = $_POST['review_content'];
 	$rating = $_POST['rating'];
 	$farm = $_POST['farm'];
-	$reviewer = 1; # this needs to change once we have valid user sessions
+	$reviewer = $result[0]['userID'];
+	echo $reviewer;
 
 	$date = getdate();
 	$dateWritten = $date['year'] . "-" . $date['mon'] . "-" . $date['mday'];

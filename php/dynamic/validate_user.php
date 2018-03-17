@@ -9,6 +9,7 @@
 	foreach ($purpose_array as $p) {
 		$purpose = $purpose . ", " . $p; 
 	}
+	$purpose = substr($purpose, 2, strlen($purpose)-1);
 	$user_is_farmer = $_POST['user_is_farmer'];
 
 	$errors = array();

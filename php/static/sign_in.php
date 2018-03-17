@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!-- Including common head elements -->
 <?php include '../inc/head.inc' ?>
 
@@ -46,7 +48,13 @@
 						<!-- Submit button field -->
 						<input class = "large-field" type = "submit" value = "Sign In"/>
 					</form>
-				</div>		
+				</div>	
+
+				<?php 
+					if ($_GET['session'] == 'notLoggedIn') {
+						echo '<div class = \'errorStatus horiz-div\'>You must log in to review farms!</div>';
+					}
+				?>	
 			</article>
 
 			<picture>

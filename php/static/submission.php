@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!-- Including common head elements -->
 <?php include '../inc/head.inc' ?>
 
