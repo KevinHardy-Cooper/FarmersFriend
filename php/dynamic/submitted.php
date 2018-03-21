@@ -1,5 +1,5 @@
 <!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
+<?php include '../../inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Review a farm">
@@ -9,7 +9,7 @@
 		<link href="/stylesheets/review.css" type="text/css" rel="stylesheet"/>
 
 <!-- Including common navbar elements -->
-<?php $active = 'nope'; include '../inc/navbar.inc.php'; ?>
+<?php $active = 'nope'; include '../../inc/navbar.inc.php'; ?>
 
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">
@@ -24,6 +24,6 @@
 		</main>
 
 		<!-- Including common footer element -->
-		<?php include '../inc/footer.inc' ?>
+		<?php include '../../inc/footer.inc' ?>
 	</body>
 </html>

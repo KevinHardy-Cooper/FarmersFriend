@@ -1,3 +1,10 @@
+/**
+ * File: global.js 
+ * Author: Kevin Hardy-Cooper
+ * Date: March 20, 2018
+ * ABSTRACT: Contains global methods such as getLocation and showError which are used by several modules 
+ */
+
 // Start the location delegate
 function getLocation() {
 

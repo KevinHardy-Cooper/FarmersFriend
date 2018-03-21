@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$date = getdate();
 	$dateJoined = $date['year'] . "-" . $date['mon'] . "-" . $date['mday'];
 

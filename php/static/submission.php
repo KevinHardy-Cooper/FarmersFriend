@@ -11,7 +11,7 @@
 		<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>
 
 <!-- Including common navbar elements -->
-<?php $active = 'register'; include '../inc/navbar.inc.php'; ?>
+<?php $active = 'register'; include '../../inc/navbar.inc.php'; ?>
 
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">
@@ -22,7 +22,7 @@
 				<div class = "specific-padding large-text">
 
 					<!-- TODO: Set action attribute to somewhere useful -->
-					<form method = "post"  onsubmit = "return validate(this)" action = "../dynamic/post_farm.php">
+					<form method = "post"  onsubmit = "return validate(this)" action = "../dynamic/delegate/post_farm.php">
 
 						<!-- Farm Name field -->
 						<div class = "input-spacing required">

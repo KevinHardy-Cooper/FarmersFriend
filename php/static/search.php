@@ -25,7 +25,7 @@
 
 				<!-- Search Form begins... -->
 				<div class = "middle-div large-text">
-					<form method = "get" action = "/php/dynamic/search_results.php">
+					<form method = "get" action = "/php/dynamic/delegate/search_results.php">
 
 						<!-- Name field -->
 						<label>

@@ -1,3 +1,10 @@
+/**
+ * File: submission.js 
+ * Author: Kevin Hardy-Cooper
+ * Date: March 20, 2018
+ * ABSTRACT: Contains client-side validation for submitting a new farm
+ */
+
 // This function is the main client-side validation delegate 
 function validate(form) {	
 

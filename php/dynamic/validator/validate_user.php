@@ -1,4 +1,13 @@
+<!-- 
+ - File: validate_user.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the server-side validator for the registration of a user
+ -->
+
 <?php
+
+
 	$name = $_POST['user_full_name'];
 	$birthday = $_POST['user_birthday'];
 	$email = $_POST['user_email_address'];
@@ -21,8 +30,8 @@
 
 	if (count($errors) == 0) {
 		// data validates so continue with processing
-		include '../query/insert_user.php';
-		include 'submitted.php';
+		include '../../query/insert_user.php';
+		include '../submitted.php';
 	} else {
 
 		include '../inc/head.inc' ;
@@ -34,13 +43,13 @@
 			<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
 			<link href="/stylesheets/registration.css" type="text/css" rel="stylesheet"/>';
 
-		$active = 'sign_up'; include '../inc/navbar.inc.php';
+		$active = 'sign_up'; include '../../inc/navbar.inc.php';
 		// data doesn't validate so display error message
 		echo "<h3>Please correct the following problems listed below:</h2>";
 		foreach ($errors as $error) {
 			echo "<div class = 'errorStatus'>" . $error . "</div>";
 		}
-		include 'invalid_registration.php';
+		include '../invalid_registration.php';
 	}
 
 	function validateBirthday(&$errors, $birthday) {

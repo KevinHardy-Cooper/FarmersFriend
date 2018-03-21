@@ -22,7 +22,7 @@
 				<div class = "specific-padding large-text">
 					
 					<!-- TODO: Set action attribute to somewhere useful -->
-					<form method = "post" onsubmit = "return validate(this)" action = "../dynamic/post_user.php">
+					<form method = "post" onsubmit = "return validate(this)" action = "../dynamic/delegate/post_user.php">
 
 						<!-- Full Name field -->
 						<div class = "input-spacing required">

@@ -14,11 +14,11 @@
 
 	if (count($errors) == 0) {
 		// data validates so continue with processing
-		include '../query/insert_farm.php';
-		include 'submitted.php';
+		include '../../query/insert_farm.php';
+		include '../submitted.php';
 	} else {
 
-		include '../../php/inc/head.inc';
+		include '../../../php/inc/head.inc';
 
 		echo '<meta name = "description" content = "Post farm to be searched for and reviewed">
 
@@ -26,14 +26,14 @@
 		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
 		<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>';
 
-		$active = 'register'; include '../inc/navbar.inc.php';
+		$active = 'register'; include '../../inc/navbar.inc.php';
 
 		// data doesn't validate so display error message
 		echo "<h3>Please correct the following problems listed below:</h2>";
 		foreach ($errors as $error) {
 			echo "<div class = 'errorStatus'>" . $error . "</div>";
 		}
-		include 'invalid_submission.php';
+		include '../invalid_submission.php';
 		
 	}
 

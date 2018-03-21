@@ -1,5 +1,12 @@
+<!-- 
+ - File: review_content.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the page template for a user to make a review.  Will populate dynamically based on passed-in farm ID
+ -->
+
 <!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
+<?php include '../../inc/head.inc' ?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Review a farm">
@@ -10,12 +17,11 @@
 
 		<!-- Including external script -->
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src = "/js/ajax.js"></script>
 
 <!-- Including common navbar elements -->
-<?php $active = 'nope'; include '../inc/navbar.inc.php'; ?>
+<?php $active = 'nope'; include '../../inc/navbar.inc.php'; ?>
 
-				<!-- Headline for the page -->
+				<!-- Headline for the page, via the server -->
 				<h1 class = "specific-padding">
 					Review <?php echo $result[0]['name']; ?>.
 				</h1>
@@ -23,7 +29,7 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 
-					<form>
+					<form action = "post_review.php" method = "post">
 
 						<!-- Description field, with maximium amount of characters set to 140 -->
 						<div class = "input-spacing required">
@@ -61,7 +67,8 @@
 							</label>
 						</div>
 
-						<div >
+						<!-- the purpose of this field is because we need to send the farm ID with the review -->
+						<div>
 							<input type = "hidden" name = "farm" value = <?php echo $result[0]['farmID']; ?> >
 						</div>
 
@@ -80,6 +87,6 @@
 		</main>
 
 		<!-- Including common footer element -->
-		<?php include '../inc/footer.inc' ?>
+		<?php include '../../inc/footer.inc' ?>
 	</body>
 </html>

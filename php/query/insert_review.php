@@ -6,8 +6,6 @@
 	$rating = $_POST['rating'];
 	$farm = $_POST['farm'];
 	$reviewer = $result[0]['userID'];
-	echo $reviewer;
-
 	$date = getdate();
 	$dateWritten = $date['year'] . "-" . $date['mon'] . "-" . $date['mday'];
 
