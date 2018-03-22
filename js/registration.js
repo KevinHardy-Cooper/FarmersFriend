@@ -125,7 +125,7 @@ function validateBirthday(birthday) {
 		}
 
 		// grab month out of birthday string, and take out hyphen if user entered single digit
-		var month = birthday.substring(6, 8);
+		var month = birthday.substring(5, 8);
 		month = parseInt(month.replace("-", ""));
 
 		// grab day out of birthday string, and take out hyphen if user entered single digit
