@@ -1,8 +1,16 @@
-<?php session_start(); ?>
+<!-- 
+ - File: registration.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the static page used for creating a new user
+ -->
+<?php 
+	# enable the session to persist
+	session_start();
 
-<!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
-
+	# Including common head elements
+	include '../inc/head.inc' 
+?>
 		<!-- Page description -->
 		<meta name = "description" content = "Create account to find and review farms">
 
@@ -21,7 +29,7 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 					
-					<!-- TODO: Set action attribute to somewhere useful -->
+					<!-- First validate form field values on the client side, then post form to server -->
 					<form method = "post" onsubmit = "return validate(this)" action = "../dynamic/delegate/post_user.php">
 
 						<!-- Full Name field -->

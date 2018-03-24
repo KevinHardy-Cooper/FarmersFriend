@@ -1,3 +1,9 @@
+<!-- 
+ - File: head.inc
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains common elements related to the head and the beginning of a php page
+ -->
 <!DOCTYPE html>
 	<html>
 		<head>

@@ -16,7 +16,8 @@
 		<link href="/stylesheets/review.css" type="text/css" rel="stylesheet"/>
 
 		<!-- Including external script -->
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src = "http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src = "../../../js/ajax.js"></script>
 
 <!-- Including common navbar elements -->
 <?php $active = 'nope'; include '../../inc/navbar.inc.php'; ?>
@@ -29,7 +30,8 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 
-					<form action = "post_review.php" method = "post">
+					<!-- This form does not have an explicit method or action because it is submitted via ajax -->
+					<form>
 
 						<!-- Description field, with maximium amount of characters set to 140 -->
 						<div class = "input-spacing required">

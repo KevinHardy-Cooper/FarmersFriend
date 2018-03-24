@@ -1,3 +1,9 @@
+<!-- 
+ - File: invalid_registration.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the rest of registration page and pre-fills submitted answers
+ -->
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">
 					Create an account.
@@ -6,13 +12,15 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 					
-					<!-- TODO: Set action attribute to somewhere useful -->
+					<!-- First validate form field values on the client side, then post form to server -->
 					<form method = "post" onsubmit = "return validate(this)" action = "../dynamic/delegate/post_user.php">
 
 						<!-- Full Name field -->
 						<div class = "input-spacing required">
 							<label>
 								Full Name:
+
+								<!-- fill field with $name variable from submission -->
 								<input class = "large-field" type = "text" placeholder = "Johnny Appleseed" name = "user_full_name" id = "user_full_name" maxlength = "40" value = <?php echo $name; ?> required>
 							</label>
 						</div>
@@ -22,6 +30,8 @@
 						<div class = "input-spacing required">
 							<label>
 								Date of Birth:
+
+								<!-- fill field with $birthday variable from submission -->
 								<input class = "large-field" type = "date"  name = "user_birthday" id = "user_birthday" maxlength = "40" value = <?php echo $birthday; ?> required>
 							</label>
 						</div>
@@ -31,6 +41,8 @@
 						<div class = "input-spacing required">
 							<label>
 								Email Address:
+
+								<!-- fill field with $email variable from submission -->
 								<input class = "large-field" type = "email" placeholder = "farmer@farm.com" name = "user_email_address" id = "user_email_address" maxlength = "40" value = <?php echo $email; ?> required>
 							</label>
 						</div>
@@ -40,6 +52,8 @@
 						<div class = "input-spacing required">
 							<label>
 								Create a password:
+
+								<!-- made the security decision to not populate this field with the previously submitted password value -->
 								<input class = "large-field" type = "password" name = "user_password" id = "user_password" placeholder = "***********" maxlength = "40" required>
 							</label>
 							
@@ -53,6 +67,8 @@
 						<div class = "input-spacing required">
 							<label>
 								Re-enter password:
+
+								<!-- made the security decision to not populate this field with the previously submitted password value -->
 								<input class = "large-field" type = "password" id = "re_entered_password" name = "re_entered_password" placeholder = "***********" maxlength = "40" required>
 							</label>
 						</div>
@@ -67,34 +83,68 @@
 							<br>
 
 							<label>
-								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_write_reviews" > 
+								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_write_reviews" 
+								<?php 
+									# if the purpose array contains the value for this checkbox, then check the box
+									if (in_array("to_write_reviews", $purpose_array)) {
+										echo "checked";
+									} 
+								?> 
+								> 
 								To Write Reviews
 							</label> 
 							<br>
 
 							<label>
-								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_register_farms"> 
+								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_register_farms" 
+								<?php 
+									# if the purpose array contains the value for this checkbox, then check the box
+									if (in_array("to_register_farms", $purpose_array)) {
+										echo "checked";
+									} 
+								?> 
+								> 
 								To Register Farm(s)
 							</label>	 
 							<br>
 
 							<label>
-								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_browse_amazing_farms"> 
+								<input class = "large-field" type = "checkbox" name = "purpose" value = "to_browse_amazing_farms"
+								<?php 
+									# if the purpose array contains the value for this checkbox, then check the box
+									if (in_array("to_browse_amazing_farms", $purpose_array)) {
+										echo "checked";
+									} 
+								?> 
+								> 
 								To Browse Amazing Farms 
 							</label>
 							<br>
 						</div>
 
 						<!-- Are you a farmer field -->
-						<!-- TODO: Increase the size of the radio buttons -->
 						<div class = "input-spacing">
 							Are you a farmer?
 							<label>
-								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "true"> 
+								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "true"
+								<?php 
+									# if the purpose array contains the value for this checkbox, then check the box
+									if ($isFarmer == true) {
+										echo "checked";
+									} 
+								?>
+								> 
 								Yes
 							</label>
 							<label>	
-								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "false"> 
+								<input class = "large-field" type = "radio" name = "user_is_farmer" value = "false"
+								<?php 
+									# if the purpose array contains the value for this checkbox, then check the box
+									if ($isFarmer == false) {
+										echo "checked";
+									} 
+								?>
+								> 
 								No
 							</label>
 						</div>

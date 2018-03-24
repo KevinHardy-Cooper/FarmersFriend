@@ -43,11 +43,12 @@
 		include '../../../php/inc/head.inc';
 
 		# echo head elements for the page
-		echo '<meta name = "description" content = "Post farm to be searched for and reviewed">
+		echo '
+			<meta name = "description" content = "Post farm to be searched for and reviewed">
 
-		<!-- Importing external stylesheets -->
-		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>';
+			<!-- Importing external stylesheets -->
+			<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
+			<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>';
 
 		# Including common navbar elements and set active page
 		$active = 'register'; include '../../inc/navbar.inc.php';
@@ -87,13 +88,17 @@
 			setErrorMessage($errors, 'Required', $field_name);
 		} elseif ($field_list[$field_name] > PHP_INT_MAX || $field_list[$field_name] < ( -1 * PHP_INT_MAX)) {
 
-			# if 
+			# if the user has entered invalid values for coordinates (in this case, greater or less than the maximium integer for the system)
+			# set error message to reflect this
 			setErrorMessage($errors, 'Invalid', $field_name);
 		} elseif ($field_list[$field_name] > 180 || $field_list[$field_name] < -180) {
+
+			# if the user has entered invalid values for coordinates (in this case, greater than 180 or less than -180) set error message to reflect this
 			setErrorMessage($errors, 'Invalid', $field_name);
 		}
 	}
 
+	# this method sets the error message for the error and gives the user better feedback on what field had the problem
 	function setErrorMessage(&$errors, $error_message, $field_name) {
 		switch($field_name) {
 			case 'farm_name': 
@@ -110,5 +115,4 @@
 				break;
 		}
 	}
-
 ?>

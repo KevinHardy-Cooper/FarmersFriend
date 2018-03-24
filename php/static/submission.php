@@ -1,8 +1,16 @@
-<?php session_start(); ?>
+<!-- 
+ - File: submission.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the static page used for creating a new farm
+ -->
+ <?php 
+	# enable the session to persist
+	session_start();
 
-<!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
-
+	# Including common head elements
+	include '../inc/head.inc' 
+?>
 		<!-- Page description -->
 		<meta name = "description" content = "Post farm to be searched for and reviewed">
 
@@ -21,7 +29,7 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 
-					<!-- TODO: Set action attribute to somewhere useful -->
+					<!-- First validate form field values on the client side, then post form to server -->
 					<form method = "post"  onsubmit = "return validate(this)" action = "../delegate/post_farm.php" enctype = "multipart/form-data">
 
 						<!-- Farm Name field -->

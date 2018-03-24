@@ -1,8 +1,16 @@
-<?php session_start(); ?>
+<!-- 
+ - File: search.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the static page for searching for a farm
+ -->
+<?php 
+	# enable the session to persist
+	session_start();
 
-<!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
-
+	# Including common head elements
+	include '../inc/head.inc' 
+?>
 		<!-- Page description -->
 		<meta name = "description" content = "Search for farms"/>
 

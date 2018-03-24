@@ -1,7 +1,16 @@
-<?php session_start(); ?>
+<!-- 
+ - File: index.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the static landing page
+ -->
+<?php 
+	# enable the session to persist
+	session_start();
 
-<!-- Including common head elements -->
-<?php include 'php/inc/head.inc'; ?>
+	# Including common head elements
+	include 'php/inc/head.inc' 
+?>
 
 		<!-- Page description -->
 		<meta name = "description" content = "Find and review farms"/>

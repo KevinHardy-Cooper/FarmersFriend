@@ -1,3 +1,10 @@
+<!-- 
+ - File: submitted.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains a page alerting the user that the form that they just submitted was successful
+ -->
+
 <!-- Including common head elements -->
 <?php include '../../inc/head.inc' ?>
 
@@ -15,7 +22,6 @@
 				<h1 class = "specific-padding">
 					Thanks for submitting!
 				</h1>
-
 
 			<picture>
 				<img class = "animal animal-right" alt = "Image of a sheep" src = "/assets/img/vector-sheep.png">

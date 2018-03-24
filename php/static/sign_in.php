@@ -1,8 +1,16 @@
-<?php session_start(); ?>
+<!-- 
+ - File: sign_in.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the static page used for signing in
+ -->
+<?php 
+	# enable the session to persist
+	session_start();
 
-<!-- Including common head elements -->
-<?php include '../inc/head.inc' ?>
-
+	# Including common head elements
+	include '../inc/head.inc' 
+?>
 		<!-- Page description -->
 		<meta name = "description" content = "Sign into your account to review farms, and post farms"/>
 
@@ -50,9 +58,10 @@
 					</form>
 				</div>	
 
+				<!-- If the user has attempted to review a farm or create a farm without being logged in, then they will be directed to this page and will be alerted to what they need to do next  -->
 				<?php 
 					if ($_GET['session'] == 'notLoggedIn') {
-						echo '<div class = \'errorStatus horiz-div\'>You must log in to review farms!</div>';
+						echo '<div class = \'errorStatus horiz-div\'>You must log in to perform that function!</div>';
 					}
 				?>	
 			</article>

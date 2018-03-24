@@ -1,15 +1,9 @@
-<!-- Including common head elements -->
-<?php include '../../php/inc/head.inc' ?>
-
-		<!-- Page description -->
-		<meta name = "description" content = "Post farm to be searched for and reviewed">
-
-		<!-- Importing external stylesheets -->
-		<link href="/stylesheets/global.css" type="text/css" rel="stylesheet"/>
-		<link href="/stylesheets/submission.css" type="text/css" rel="stylesheet"/>
-
-<!-- Including common navbar elements -->
-<?php $active = 'register'; include '../inc/navbar.inc.php'; ?>
+<!-- 
+ - File: invalid_registration.php
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains the rest of submission page and pre-fills submitted answers 
+ -->
 
 				<!-- Headline for the page -->
 				<h1 class = "specific-padding">
@@ -19,13 +13,15 @@
 				<!-- Form begins... -->
 				<div class = "specific-padding large-text">
 
-					<!-- TODO: Set action attribute to somewhere useful -->
+					<!-- First validate form field values on the client side, then post form to server -->
 					<form method = "post"  onsubmit = "return validate(this)" action = "../dynamic/delegate/post_farm.php">
 
 						<!-- Farm Name field -->
 						<div class = "input-spacing required">
 							<label>
 								Farm Name:
+
+								<!-- fill field with $name variable from submission -->
 								<input class = "large-field" type = "text" placeholder = "Kevin's Farm" name = "farm_name" id = "farm_name" maxlength = "40" value = <?php echo $name; ?> required>
 							</label>
 						</div>
@@ -35,6 +31,8 @@
 						<div class = "input-spacing required">
 							<label>
 								Description:
+
+								<!-- fill field with $description variable from submission -->
 								<textarea placeholder = "Why would people want to visit?" name = "farm_description" id = "farm_description" maxlength = "140" required><?php echo $description; ?></textarea>
 							</label>	
 						</div>
@@ -51,6 +49,8 @@
 						<div class = "input-spacing required">
 							<label>
 								Latitude:
+
+								<!-- fill field with $latitude variable from submission -->
 								<input class = "large-field" type = "number" step = "any" placeholder = "Enter latitude" name = "farm_latitude" id = "farm_latitude" maxlength = "40" value = <?php echo $latitude; ?> required>
 							</label>
 						</div>
@@ -60,7 +60,9 @@
 						<div class = "input-spacing required">
 							<label>
 								Longitude:
-								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" maxlength = "40" value = <?php echo $latitude; ?> required>
+
+								<!-- fill field with $longitude variable from submission -->
+								<input class = "large-field" type = "number" step = "any" placeholder = "Enter longitude" name = "farm_longitude" id = "farm_longitude" maxlength = "40" value = <?php echo $longitude; ?> required>
 							</label>	
 						</div>
 						<div id = "farm_lon_status" class  = "errorStatus"></div>

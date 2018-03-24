@@ -1,4 +1,9 @@
-<!-- Footer -->
+<!-- 
+ - File: footer.inc
+ - Author: Kevin Hardy-Cooper
+ - Date: March 20, 2018
+ - ABSTRACT: Contains common elements related to the page footer
+ -->
 <footer>
 	<p> 
 		Made with 
