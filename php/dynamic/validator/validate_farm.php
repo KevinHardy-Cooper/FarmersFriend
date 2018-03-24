@@ -12,7 +12,7 @@
 	$description = $_POST['farm_description'];
 	$latitude = $_POST['farm_latitude'];
 	$longitude = $_POST['farm_longitude'];
-	$imagePath = ""; # TODO: $_POST['farm_image'], once I get s3 set up this will contain the link for the s3 api;
+	$imagePath = $file_name; # TODO: $_POST['farm_image'], once I get s3 set up this will contain the link for the s3 api;
 
 	# this array will contain the error messages to be displayed for the user
 	$errors = array();
