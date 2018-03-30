@@ -9,7 +9,7 @@
 	session_start();
 
 	# Including common head elements
-	include '../inc/head.inc' 
+	include '../../inc/head.inc' 
 ?>
 		<!-- Page description -->
 		<meta name = "description" content = "Post farm to be searched for and reviewed">

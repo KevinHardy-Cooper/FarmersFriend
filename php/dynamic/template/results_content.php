@@ -60,7 +60,7 @@
 							foreach ($result as $row) {
 
 								# open new row and fill with farm image, name, date, average rating
-								echo '<tr><td><img class = \'results-image\' alt = \'User-uploaded image of their farm\' src=\'../../' . $row['imagePath'] . '\'></td>';
+								echo '<tr><td><img class = \'results-image\' alt = \'User-uploaded image of their farm\' src=\'' . $row['imagePath'] . '\'></td>';
 								echo '<td><a href = ../../dynamic/delegate/individual_page.php?farm=' . $row['farmID'] . '>' . $row['name'] . '</a></td>';
 								echo '<td>' . $row['dateJoined'] . '</td>';
 								
@@ -87,7 +87,7 @@
 		<script src = "/js/map.js"></script>
 		<script>
 			// calling the createMap method in map.js, giving it the farms it needs to populate the resultMap div
-			createMap(<?php echo $json_rows ?>, 'resultMap');
+			createMap(<?php echo $json_rows ?>, 'resultMap', 2);
 		</script>
 	</body>
 </html>

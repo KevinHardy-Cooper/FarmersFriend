@@ -33,7 +33,7 @@
 						<!-- Image of farm, image path served via server -->
 						<!-- TODO: get image from s3 -->
 						<?php 
-							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "../../'. $result[0]['imagePath'] . '"/>';
+							echo '<img class = "user-farm-image" alt = "User-uploaded image of farm" src = "'. $result[0]['imagePath'] . '"/>';
 						?>
 					</picture>
 
@@ -99,7 +99,7 @@
 							} 
 
 							# at the bottom of the table, provide user with the option to write a review
-							echo '<tr><td><a href = \'../../dynamic/delegate/review_page.php?farm=' . $review['farmID'] . '\'>Review</a></td></tr>';
+							echo '<tr><td><a href = \'../../dynamic/delegate/review_page.php?farm=' . $result[0]['farmID'] . '\'>Review</a></td></tr>';
 						?>
 					</table>	
 				</div>
@@ -113,7 +113,7 @@
 		<script src = "/js/map.js"></script>
 		<script>
 				// calling the createMap method in map.js, giving it the farms it needs to populate the objectMap div
-				createMap(<?php echo $json_farm_info ?>, 'objectMap');
+				createMap(<?php echo $json_farm_info ?>, 'objectMap', 1);
 		</script>
 	</body>
 </html>

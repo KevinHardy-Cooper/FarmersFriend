@@ -6,7 +6,7 @@
  */
 
 // This function takes in the coords of the farm, and creates a map object containing the resulting farm(s)
-function createMap(farms, mapDiv) {
+function createMap(farms, mapDiv, type) {
 
 	// create the map and load it into the div with id = mapDiv
 	var resultMap = L.map(mapDiv);
@@ -39,8 +39,11 @@ function createMap(farms, mapDiv) {
 		return;
 	} else if (farms.length == 1) {
 
+		// Will contain the text to indicate if the farm has been rated yet
+		var ratingString = determineRatingMessage(farms[0]);
+
 		// if there is only one farm, then set the popup content appropriately for the page
-		popUpString = setPopUpContent(farms, 0, "");
+		popUpString = setPopUpContent(farms, 0, ratingString, type);
 
 		// display the one marker for the farm
 		createMarker(farms[0], resultMap, popUpString);
@@ -53,7 +56,7 @@ function createMap(farms, mapDiv) {
 			var ratingString = determineRatingMessage(farms[farm]);
 
 			// if there is more than one farm, then set the popup content appropriately for the page
-			popUpString = setPopUpContent(farms, farm, ratingString);
+			popUpString = setPopUpContent(farms, farm, ratingString, type);
 
 			// adds marker to map
 			createMarker(farms[farm], resultMap, popUpString);
@@ -63,10 +66,10 @@ function createMap(farms, mapDiv) {
 
 
 // set the content of the popup
-function setPopUpContent(farms, index, ratingString) {
+function setPopUpContent(farms, index, ratingString, type) {
 
 	// if there is only one farm, then we just want the popup to contain the farm name
-	if (farms.length == 1) {
+	if (type == 1) {
 		return "<b>" + farms[index].farmName + "</b>";
 	} else {
 
@@ -74,7 +77,7 @@ function setPopUpContent(farms, index, ratingString) {
 		// the average rating of the farm and an image of the farm
 		return "<b><a href='../../dynamic/delegate/individual_page.php?farm=" + farms[index].farmID + "'>" + farms[index].name + "</a></b>" + 
 			"<br>" + ratingString + "<br>" +
-			"<img src='../../" + farms[index].imagePath + "' width='100px'/>";
+			"<img src='" + farms[index].imagePath + "' width='100px'/>";
 	}
 }
 
