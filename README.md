@@ -13,6 +13,9 @@ A client-server web application built with a plethora of tools:
 
 Allows user to upload, review, and search for farms based on location, name or rating.  Pretty much Yelp but better because it's for farms.
 
+### Fun Facts
+1. The resulting project earned a 111.6% and was worth 60% of the course.  You do the math.
+
 ### Helpful Tutorials
 1. Take COMPSCI 4WW3 - Web Computing and Web Systems at McMaster University.
 
