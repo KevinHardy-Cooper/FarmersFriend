@@ -13,14 +13,8 @@ A client-server web application built with a plethora of tools:
 
 Allows user to upload, review, and search for farms based on location, name or rating.  Pretty much Yelp but better because it's for farms.
 
-## Prerequisites
-1. _Your favourite web browser_ Open the [live website](https://hardyckj2.cs4ww3.ca).
-
 ### Helpful Tutorials
 1. Take COMPSCI 4WW3 - Web Computing and Web Systems at McMaster University.
-
-## Live Demo?!
-1. Ya, go to [Farmer's Friend](https://hardyckj2.cs4ww3.ca) of course!
 
 ## Contributions
 Kevin Hardy-Cooper, January 9th - April 2nd 2018
